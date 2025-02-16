@@ -21,6 +21,7 @@
   position: sticky;
   top: 0;
   overflow-y: auto;
+  z-index: 101;
   @include tab{
     position: fixed; /* `sticky` を解除 */
     height: auto; /* 高さを自動調整 */
@@ -34,6 +35,7 @@
   padding: 0 24px;
   @include tab{
     margin-bottom: 0;
+    padding: 0;
   }
 }
 .header__nav-links{
@@ -90,7 +92,7 @@
 
 .active{
   .menu-toggle{
-      
+    top: 24px;
     .menu-icon{
       @include tab{
         &:nth-child(1){
@@ -128,6 +130,7 @@
       padding: 104px 24px 24px;
       text-align: center;
       transition: all 0.3s ease-in-out;
+      overflow-y: auto;
     }
   }
     li{
@@ -157,6 +160,7 @@
   @include tab{
     padding: 0;
     margin-bottom: 48px;
+    max-width: 100%;
   }
 }
 .fv__ttl{
@@ -164,6 +168,9 @@
   margin-bottom: 24px;
   @include tab{
     font-size: 32px;
+  }
+  @include sp{
+    font-size: 24px;
   }
 }
 .fv__caption{
@@ -187,10 +194,16 @@
   display: flex;
   flex-wrap: wrap;
   gap: 2%;
+  @include sp{
+    padding: 24px 48px;
+  }
   li{
     width: 32%;
     margin-bottom: 16px;
     list-style-type:disc;
+    @include sp{
+      width: 100%;
+    }
     a{
       color: $secondary-color;
     }
@@ -206,6 +219,12 @@
   margin-bottom: 24px;
   &:last-child{
     mask-border: 0;
+  }
+}
+
+.acco__ttl{
+  @include sp{
+    width: 80%;
   }
 }
 
@@ -284,6 +303,9 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  @include sp{
+    margin-left: 16px;
+  }
 }
 
 .input__cont-good{
@@ -291,21 +313,30 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  @include sp{
+    margin-left: 16px;
+  }
 }
 
 .input__form-good1{
-  width: 400px;
+  max-width: 400px;
+  width: 100%;
 }
 .input__form-good2{
-  width: 56px;
+  max-width: 56px;
+  width: 100%;
 }
 .input__form-good3{
-  width: 230px;
+  max-width: 230px;
+  width: 100%;
 }
 
 .input__cont-ttl{
   color: $primary-color-plain;
   margin-left: -24px;
+  @include sp{
+    margin-left: -16px;
+  }
 }
 
 .black__cont{
