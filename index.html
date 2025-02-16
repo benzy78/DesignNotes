@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>Template</title>
+    <title>My Design Guideline</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <!--style css-->
@@ -16,16 +16,349 @@
     <!-- wow -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet"
         type="text/css" media="all">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
     <div class="wrapper">
-        <header>
-            <h1>template</h1>
+        <header class="header">
+            <h1 class="header__logo">My Design Guideline</h1>
+            <nav class="header__nav">
+                <ul>
+                    <li><a href="#color">カラー</a></li>
+                    <li><a href="#font">フォント</a></li>
+                    <li><a href="#layout">レイアウト</a></li>
+                    <li><a href="#blank">余白</a></li>
+                    <li><a href="#button">ボタン</a></li>
+                    <li><a href="#icon">アイコン</a></li>
+                    <li><a href="#component">コンポーネント</a></li>
+                    <li><a href="#animation">アニメーション</a></li>
+                    <li><a href="#tips">Tips</a></li>
+                </ul>
+            </nav>
         </header>
+        <div class="maincontents">
+            <section class="firstview">
+                <h2 class="fv__ttl">My Design Guideline</h2>
+                <p class="fv__caption">これはデザインの知見とガイドラインをまとめたものです。</p>
+                <div class="fv__contents">
+                    <p class="fv__index-ttl">目次</p>
+                    <ul class="fv__cont-list">
+                        <li><a href="#color">カラー</a></li>
+                        <li><a href="#font">フォント</a></li>
+                        <li><a href="#layout">レイアウト</a></li>
+                        <li><a href="#blank">余白</a></li>
+                        <li><a href="#button">ボタン</a></li>
+                        <li><a href="#icon">アイコン</a></li>
+                        <li><a href="#component">コンポーネント</a></li>
+                        <li><a href="#animation">アニメーション</a></li>
+                        <li><a href="#tips">Tips</a></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="section" id="color">
+                <h2 class="section-hed2">カラー</h2>
+                <ul class="section-list">
+                    <li>プライマリーカラー：サイト・アプリのブランドイメージを伝える色で、主要なボタンや強調部分、ヘッダーなどに用いる。背景色とのコントラスト比が4.5:1以上を維持できるカラーにする必要がある。なお、プライマリーカラーは複数あっても良い。ブランドイメージやコンセプト、ジャンルからあったものをカラーパレットから選ぶ。<a href="https://design.digital.go.jp/foundations/color/color-palette/">デジタル庁デザインシステム　カラーパレット</a>を参照する。</li>
+                    <li>セカンダリーカラー：プライマリーカラーの補完的な役割をする色。選択肢を提供するボタンや、機能や状態を表すものなどに使用。プライマリーカラーと同じ色相で、明度の高低で決める。背景色とのコントラスト比は3:1以上にする。</li>
+                    <li>ターシャリーカラー：セカンダリーカラーと反対の明度で作る。セカンダリーカラーが明るいなら、ターシャリーは暗い色に。逆も同様に。</li>
+                    <li>バックグラウンドカラー：基本は白やグレー。他には、同じ色相でプライマリー、セカンダリーのコントラスト比を考えて選定すると良い。</li>
+                    <li>ニュートラルカラー：黒やグレー、白色。主にテキストや境界線などに使われる色。コントラスト比を考えて、適当な色を使う。</li>
+                    <li>ステートカラー：デフォルト時、hover時、acttive時の状態を表す色。</li>
+                    <li>アクセントカラー：特定の要素（CTAボタンなど）に注意を引きたい色に用いる。ただし、アクセントカラーを利用し過ぎると、デザインの統一感が崩れるし、アクセントカラーは必ずしも使う必要はない。</li>
+                    <li>セマンティックカラー：意味や目的を割り当てられたカラー。よく使うのは、サクセス時の緑系、エラー時の赤系など。基本的に、それぞれ、色相を保ち（サクセスなら緑、エラーや重要な警告なら赤）、サイトのイメージに合わせて、彩度や明度を調整する。</li>
+                </ul>
+            </section><!-- color end -->
+            <section class="section" id="font">
+                <h2 class="section-hed2">フォント</h2>
+                <section class="section-mini">
+                    <h3 class="section-hed3">フォントサイズ</h3>
+                    <ul class="section-list">
+                        <li>見出しなどのインパクトが必要な要素：48~64px</li>
+                        <li>本文は16~24px。基本的に長文は16pxの方が読みやすいし、画面幅も取りすぎないから良い。長文で文字がデカいと、一画面あたりの情報量が減るからユーザービリティが落ちる。</li>
+                        <li>最小は14pxとする。それ以上小さいと読みづらいので使用しない。</li>
+                        <li>欧文は和文より小さいので、同じ役割のテキストでは、基本的に欧文は和文より大きくする。フォントによって大きさが異なるので、具体的な数値の指定はなく、フォントに合わせて指定する。</li>
+                        <li>基本的に8px単位、それが難しければ4px単位で大きさを指定する。</li>
+                        <li>同じ役割のものは同じ大きさに。（例：各セクションの見出しとなるh2なら32pxとか）</li>
+                        <li>ユーザーによっては、ユーザーエージェントにより、文字サイズを拡大・縮小して使う場合もあるため、特定の文字サイズに依存したデザインにしてはいけない（文字サイズを変更したらデザインが崩れるものはダメってこと）。これに関連して、文字画像は基本ロゴ以外では用いない。</li>
+                    </ul>
+                </section>
+                
+                <section class="section-mini">
+                    <h3 class="section-hed3">line-height</h3>
+                    <ul class="section-list">
+                        <li>基本的には1.5以上ある方が読みやすい。</li>
+                        <li>ただし、見出しなどフォントサイズが大きいもの（目安としては40px以上くらい）は1.3~1.4くらいの方が読みやすい。</li>
+                        <li>また、ボタンなどの一行で表示されるようなものは、高さの計算や余白の計算が複雑になるので、line-heightを1にしても良い。</li>
+                        <li>加えて、管理者画面など、読みやすさ・使いやすさより、情報量を優先する必要性がある場合は、1.3程度にしてもOK。</li>
+                    </ul>
+                    <p class="section-p">まとめ</p>
+                    <ul class="section-list">
+                        <li><strong>見出し</strong>：1.3~1.5</li>
+                        <li><strong>本文（長文）</strong>：1.7~1.75</li>
+                        <li><strong>ボタン（コンポーネント）</strong>：1</li>
+                    </ul>
+                </section>
+                
+                <section class="section-mini">
+                    <h3 class="section-hed3">figma上のテキストスタイルの管理</h3>
+                    <p class="section-p"><a href="https://design.digital.go.jp/foundations/typography/">デジタル庁のデザインシステムのガイドライン</a>の命名を参考に。「テキストスタイル-フォントサイズ 太さ-行の高さ」で指定。例えば、<strong>「Std-16N-175」</strong>のように。</p>
+                    <p class="section-p">テキストスタイルは5種類に分類。</p>
+                    <ol class="section-list">
+                        <li>Display(Dsp)視覚的にインパクトを与えたい要素に使用。</li>
+                        <li>Standard（Std）本文や通常の見出しに使用。</li>
+                        <li>Dense（Dns）管理画面など表示情報量を優先したい場合に使用。</li>
+                        <li>Oneline（Oln）一行展開を前提とした、コンポーネントパーツに使用するもの。</li>
+                        <li>Monoコード系のコンテンツに使用。</li>
+                    </ol>
+                </section>
+            </section><!-- font end -->
+
+            <section class="section" id="layout">
+                <h2 class="section-hed2">レイアウト</h2>
+                <ul class="section-list">
+                    <li>基本的にリキッドレイアウトを採用。画面幅に合わせて流動的に変動させる。そのため、widthの指定は基本的に固定値をとらずに、max-width:X%;とwidth:100%;のように％で指定する。</li>
+                    <li>ブレイクポイントはスマホで768px, タブレットで992pxとする。</li>
+                </ul>
+            </section><!-- layout end -->
+
+            <section class="section" id="blank">
+                <h2 class="section-hed2">余白</h2>
+                <ul class="section-list">
+                    <li>基本8の倍数で余白を取る。8で難しい時は、4の倍数で余白を取る。</li>
+                    <li>具体的な数値の決まりはないが、同じ要素の組み合わせには同じ余白を取るとか、関連性のあるものの余白は他より小さく取るとか。</li>
+                </ul>
+            </section><!-- blank end -->
+
+            <section class="section" id="button">
+                <h2 class="section-hed2">ボタン</h2>
+                <ul class="section-list">
+                    <li>押せる範囲を44px×44px以上に。</li>
+                    <li>ボタンの幅はwidth100%, max-width, textalign centerで指定し、文字数によってボタンの幅が変わらないようにする。同じ役割のボタン（例えばプライマリーボタン）の大きさが、ボタンによって異なると、ボタンの重要性や役割に対する認識を誤認させる恐れがあることに加え、統一感もなくなってしまう。</li>
+                    <li>ボタンが並ぶ場合、最低でも16px、できれば24px以上離す。特にタブレット・スマホで誤操作を避けるために重要。</li>
+                </ul>
+                <section class="section-mini">
+                    <h3 class="section-hed3">プライマリーボタンとセカンダリーボタンで違う色は極力使わない。</h3>
+                    <p class="section-p">
+                        基本的に、プライマリーボタンは、bgcをプライマリーカラー、フォントcolorを白にして、セカンダリーボタンはborderとフォントcolorをプライマリーカラーに、ターシャリーは文字と下線で表現（ターシャリーは別の表現も検討していいかも）。
+                        セカンダリーボタンを、bgcをセカンダリーカラー、フォントを白にしてしまうと、ユーザーにとっては、プライマリーボタンとセカンダリーボタンのどちらが重要度の高いボタンなのかわかりづらい。
+                    </p>
+                    <div class="box">
+                        <p class="box-label">ボタンの例（上段：悪い例、下段：良い例）</p>
+                        <div class="btn__cont">
+                            <a href="" class="btn">wrong-btn</a>
+                            <a href="" class="btn btn--wrong01">wrong-btn</a>
+                            <a href="" class="btn btn--wrong02">wrong-btn</a>
+                        </div>
+                        <div class="btn__cont">
+                            <a href="" class="btn">good-btn</a>
+                            <a href="" class="btn btn--good01">good-btn</a>
+                            <a href="" class="btn--good02">good-btn</a>
+                        </div>
+                    </div>
+                </section>
+                <section class="section-mini">
+                    <h3 class="section-hed3">hover時のアニメーション</h3>
+                    <p class="section-p">
+                        プライマリーボタンをセカンダリーボタンの色に反転させるのはやめた方がいい（そうしてるサイト多いけど）。
+                        プライマリー、セカンダリーは重要度を決める役割なのだから、ホバー時に反転させるのは適切なアニメーションではない。
+                        hover時は2px程度上に上昇させて、背景色を少し暗くするアニメーションがボタンであることを伝えられ、自然な変化（グーグルもボタンはそうしてるものが多い）。
+                    </p>
+                    <div class="box">
+                        <p class="box-label">ボタンの例（左：悪い例、右：良い例）</p>
+                        <div class="btn__cont">
+                            <a href="" class="btn btn--wrong03">wrong-btn</a>
+                            <a href="" class="btn">good-btn</a>
+                        </div>
+                    </div>
+                </section>
+                
+            </section><!-- button end  -->
+
+            <section class="section" id="icon">
+                <h2 class="section-hed2">アイコン</h2>
+                <ul class="section-list">
+                    <li>ハンバーガーメニューなどのアイコンを用いたボタンは、基本的にラベルとセットで使う。アイコンはユーザーによって、予期する意味が異なるので、誤解を生まないようにするためにアイコンを説明するラベルが必要。そもそも、アイコンそのものが単体では何を意味するかわからない場合も多い。</li>
+                    <li>一般的に使われている意味とは異なる部分で、アイコンを用いない。例えば、歯車アイコンは設定の意味で使われるのが一般的であるため、ユーザー情報のボタンに歯車アイコンを使わないとか。</li>
+                </ul>
+            </section><!-- icon end -->
+
+            <section class="section" id="component">
+                <h2 class="section-hed2">コンポーネント</h2>
+                <section class="section-mini">
+                    <h3 class="section-hed3">アコーディオン</h3>
+                    <p class="section-p">アコーディオンでは、アローボタンは使わない。押せる範囲も狭いし、アイコンが示す意味がわかりづらい（アローアイコンは単なる装飾として使われることも多々ある）。基本的に、アコーディオンの開閉ボタンは閉じてる時は＋ボタン、開いているときは×ボタンにする。</p>
+                    <div class="box">
+                        <p class="box-label">例</p>
+                        <div class="acco__card">
+                            <p class="acco__ttl">1. 無料トライアルはありますか？</p>
+                            <p class="acco__answer">ありません</p>
+                            <span class="acco__btn"></span>
+                        </div>
+                    </div>
+                    <p class="section-p">また、アコーディオンはデスクトップでは極力用いない。画面幅の小さいスマホとは違い、デスクトップでは比較的画面幅に余裕があるので、アコーディオンを初めから展開してもそれほど場所を取らない。むしろ、いちいちボタンを押す手間の方が大きい。
+                        ただし、アコーディオンを展開するとまとまりが悪くなる場合（展開したコンテンツが非常に長い場合や、ヘッダーのナビゲーションなど限られた場所で展開する場合）は、デスクトップでもアコーディオンを用いてもいい。要するに、何も考えずになんとなくアコーディオンは使うなってこと。</p>
+                </section>
+                <section class="section-mini">
+                    <h3 class="section-hed3">インプットテキスト</h3>
+                    <p class="section-p">インプットの入力フォームは、入力すべき言葉の長さに合わせたものにする。その方が、入力すべきものをより直感的にわかりやすくできる。入力フォームは、どの入力フォームも同じ大きさに揃えがちなので注意。</p>
+                </section>
+                <section class="section-mini">
+                    <h3 class="section-hed3">重大な警告</h3>
+                    <p class="section-p">重要な内容の削除などの確認モーダルなどは、セマンティックのエラーを使う。意図せずに注視するような、サイトのカラーとは少し異なる違和感を感じるくらいの色にした方が良い。</p>
+                </section>
+            </section><!-- component end -->
+
+            <section class="section" id="animation">
+                <h2 class="section-hed2">アニメーションについて</h2>
+                <p class="section-p">アニメーションは、「サイトの華やかさ」ではなく、「使いやすさを高めるため」に設計することが重要。</p>
+                <section class="section-mini">
+                    <h3 class="section-hed3">良いアニメーションの使い方</h3>
+                    <ol class="section-list">
+                        <li><strong>重要な要素への視線誘導</strong>（動くものに注意が向く習性の利用）:訴求したいポイントや情報などに視線を誘導するためにアニメーション。</li>
+                        <li><strong>ユーザーに対するフィードバックを与える</strong>: ボタンのクリック時に軽微な動きを加えることで、操作が成功したことを視覚的に伝える。 ハンバーガーメニューを押すとバツに変わるとか、アコーディオンのアローボタンの変形とか。</li>
+                        <li><strong>スムーズなトランジション</strong>:ページやセクション間の移動を自然に見せ、体験を一貫させる。</li>
+                    </ol>
+                </section>
+                <section class="section-mini">
+                    <h3 class="section-hed3">悪いアニメーションの使い方</h3>
+                    <ol class="section-list">
+                        <li><strong>目的や意味のないアニメーション</strong>：目的がなく、ただサイトを賑やかな感じや華やかな感じににしたいだけのアニメーションは、ユーザーの目が疲れるし、集中力を損い、離脱率の増加を招く。</li>
+                        <li><strong>情報の遅延</strong>:アニメーションで情報が表示されるまでの時間が遅れると、ユーザーの苛立ちを誘発する場合がある。これもユーザービリティを損ない、離脱率の増加につながる。</li>
+                        <li><strong>混乱のリスク</strong>動きが多いことで、どこに注目すべきかが分かりにくくなり、情報伝達が妨げられる可能性がある。</li>
+                    </ol>
+                </section>
+                <section class="section-mini">
+                    <h3 class="section-hed3">アニメーションの時間</h3>
+                    <p class="section-p">1. 一般的なhoverエフェクト</p>
+                    <table class="section-table">
+                        <thead>
+                            <tr>
+                                <th>アニメーション対象</th>
+                                <th>推奨時間</th>
+                                <th>理由</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ボタン・リンク</td>
+                                <td>0.2~0.3s</td>
+                                <td>クリックのレスポンスを阻害させず、自然な動きだから。</td>
+                            </tr>
+                            <tr>
+                                <td>テキストの色変化</td>
+                                <td>0.2s</td>
+                                <td>ほぼ即時の変化が望ましい</td>
+                            </tr>
+                            <tr>
+                                <td>背景色の変更</td>
+                                <td>0.3~0.4s</td>
+                                <td>早すぎるとチカチカし、遅すぎると不自然</td>
+                            </tr>
+                            <tr>
+                                <td>アイコンの回転・ズーム</td>
+                                <td>0.3~0.4s</td>
+                                <td>スムーズな動きが求められる</td>
+                            </tr>
+                            <tr>
+                                <td>シャドウ・ボーダー</td>
+                                <td>0.3~0.5s</td>
+                                <td>自然な変化を演出</td>
+                            </tr>
+                            <tr>
+                                <td>画像のフェード</td>
+                                <td>0.4~0.6s</td>
+                                <td>視認性を保ちつつ、心地よいエフェクト</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="section-p">2. 大きな動き（スライドなど）</p>
+                    <table class="section-table">
+                        <thead>
+                            <tr>
+                                <th>アニメーション対象</th>
+                                <th>推奨時間</th>
+                                <th>理由</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>メニューのスライド</td>
+                                <td>0.3~0.5s</td>
+                                <td>早すぎると急に現れる印象を与え、遅すぎると操作性が低下するため。</td>
+                            </tr>
+                            <tr>
+                                <td>カードのフリップ</td>
+                                <td>0.4~0.6s</td>
+                                <td>滑らかさを保ちつつ、ストレスなく見ることができる。</td>
+                            </tr>
+                            <tr>
+                                <td>モーダルなどのフェードイン</td>
+                                <td>0.3~0.5s</td>
+                                <td>すぐに表示されるべきだが、若干の遅れがあると自然だから。</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </section>
+            </section><!-- animation end -->
+
+            <section class="section" id="tips">
+                <h2 class="section-hed2">Tips</h2>
+                <ul class="section-list">
+                    <li><strong>背景色にグラデーション</strong>：背景色とか、塗りの面積が大きい要素はグラデーションを使った方が野暮ったくならない。なお、グラデーションを作る場合、色相環で隣接する色を用いると良い。</li>
+                    <li><strong>実機での確認の重要性</strong>：デザインツール上でのデザインと、実際に実機で確認するデザインには結構印象に差がある。特によくあるのは、コントラストの印象と余白、文字サイズ。特に、デザインツール上では、デカく作りがち。基本的に、各パーツごとに、何pxだったら、どのくらいの大きさの印象なのか頭に入れておくこと。</li>
+                </ul>
+                <section class="section-mini">
+                    <h3 class="section-hed3">黒で#000は極力使わない</h3>
+                    <p class="section-p">
+                        黒で#000を使うと、背景色の白やグレーとのコントラストが強すぎて、目が疲れてしまう。
+                        また、紙面上の黒インクは完全な黒ではなく、周囲の光の反射で少しグレーに見える。一方で、デジタルデータの黒（#000）は光を完全に吸収する黒なので、不自然に映る。
+                        したがって、黒を用いる場合は、#1c1c1cなど、少しグレーがかった黒を用いるのがいい。
+                    </p>
+                    <div class="box">
+                        <p class="box-label">例</p>
+                        <div class="black__cont">
+                            <div class="black__box--01">#000000</div>
+                            <div class="black__box--02">#1c1c1c</div>
+                            <div class="black__box--03">#212121</div>
+                        </div>
+                        <ul class="black__list">
+                            <li>#000000<br>「デザインにおいて、色の選び方は視認性や印象に大きな影響を与えます。特に黒の使い方は重要で、純黒（#000）はコントラストが強すぎるため、長時間の閲覧では目が疲れやすくなります。そのため、多くのWebデザインでは少しグレーがかった黒（#333 や #222）が使われることが一般的です。また、ダークモードの背景としては、完全な黒ではなく、#121212 のようなオフブラックが好まれます。適切な黒を選ぶことで、洗練された印象を与え、ユーザーの快適な体験につなげることができます。」</li>
+                            <li>#1c1c1c<br>「デザインにおいて、色の選び方は視認性や印象に大きな影響を与えます。特に黒の使い方は重要で、純黒（#000）はコントラストが強すぎるため、長時間の閲覧では目が疲れやすくなります。そのため、多くのWebデザインでは少しグレーがかった黒（#333 や #222）が使われることが一般的です。また、ダークモードの背景としては、完全な黒ではなく、#121212 のようなオフブラックが好まれます。適切な黒を選ぶことで、洗練された印象を与え、ユーザーの快適な体験につなげることができます。」</li>
+                            <li>#212121<br>「デザインにおいて、色の選び方は視認性や印象に大きな影響を与えます。特に黒の使い方は重要で、純黒（#000）はコントラストが強すぎるため、長時間の閲覧では目が疲れやすくなります。そのため、多くのWebデザインでは少しグレーがかった黒（#333 や #222）が使われることが一般的です。また、ダークモードの背景としては、完全な黒ではなく、#121212 のようなオフブラックが好まれます。適切な黒を選ぶことで、洗練された印象を与え、ユーザーの快適な体験につなげることができます。」</li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="section-mini">
+                    <h3 class="section-hed3">明朝体・セリフ体でboldは使わない</h3>
+                    <p class="section-p">
+                        太くしたいなら、weight500（semibold）まで。明朝やセリフ体は、横線が細く、縦線が太いという特性があり、太さのコントラストが美しさの要因となっているから、boldにするとその美しさが損なわれてしまう。
+                    </p>
+                </section>
+                <section class="section-mini">
+                    <h3 class="section-hed3">インタラクションコストについて</h3>
+                    <p class="section-p">インタラクションコストとは、ユーザーが目的を達成するために必要な労力を指す概念。
+                        主に、認知的コスト、物理的コスト、時間的コストに分類することができる。
+                        認知的コストとは、ユーザーが考える必要のある負担のこと。例えば、「このボタンを押したらどうなるのかわからない」、「どこをクリックしたらいい？」といったもの。
+                        物理的コストとは、クリックやスクロール、入力などの操作負担のこと。例えば、「ボタンが小さくて押しづらい」、「入力フォームが長すぎる」など。
+                        時間的コストとは、目的達成にかかる時間のこと。例えば、「ページの読み込みが遅い」、「複雑なプロセスを経ないと、目的の情報に辿り着けない」など。
+                        基本的には、これらのコストをいかに下げるかが、ユーザー体験を向上させる上では重要となる。
+                    </p>
+                    <p class="section-p">
+                        しかし、認知的コストと物理的コストの2つはトレードオフの関係にあることが多い。この際、どちらを優先すればいいのか。
+                        まず、認知的コストを優先して下げるべきケースは、初心者ユーザーが多い、複雑な情報を扱うUI,タスクの正確性が求められる場合である。例えば、ECサイトの購入プロセスや、金融系のフォーム。
+                        次に、物理的コストを優先して下げるべきケースは、アクティブユーザーが多いサイト・アプリ、上級者向けの専門的なツール（フォトショップとか）、効率が求められる作業などである。
+                    </p>
+                </section>
+            </section><!-- tips end -->
+
+        </div>
     </div>
-    <!--wrapper end-->
+    
+
 
     <!-- script js-->
     <script src="js/script.js"></script>

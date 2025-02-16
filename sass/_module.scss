@@ -1,0 +1,57 @@
+.box{
+  padding: 24px 48px;
+  background-color: $neutral-glay;
+  margin: 24px;
+}
+
+.box-label{
+  margin-bottom: 24px;
+}
+.section{
+  max-width: 80%;
+  width: 100%;
+  margin-bottom: 48px;
+  padding-bottom: 24px;
+  background-color: $neutral-white;
+}
+.section-mini{
+  margin-bottom: 24px;
+}
+.section-hed2{
+  font-size: 24px;
+  padding: 24px;
+  background: $primary-color;
+  color: $BaseColor1;
+  margin-bottom: 24px;
+  line-height: 1;
+}
+.section-hed3{
+  padding: 16px;
+  border-left: 8px solid transparent;
+  border-image: $primary-color;
+  border-image-slice: 1; 
+  margin-bottom: 16px;
+  font-size: 20px;
+  line-height: 1;
+  margin-left: 24px;
+}
+.section-p{
+  font-size: 16px;
+  margin-bottom: 16px;
+  line-height: 1.75;
+  padding: 0 48px;
+}
+.section-list{
+  padding: 0 48px 24px;
+  margin-left: 16px;
+  li{
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+}
+
+.section-table{
+  width: 90%;
+  margin: 0 auto 24px;
+}
