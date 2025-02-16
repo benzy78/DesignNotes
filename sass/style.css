@@ -71,7 +71,6 @@ input, textarea {
   font-family: inherit;
   font-size: inherit;
   border-radius: 8px;
-  -webkit-appearance: none;
 }
 input:focus, textarea:focus {
   outline: none;
@@ -193,8 +192,6 @@ select {
   font-family: inherit;
   font-size: 1em;
   cursor: pointer;
-  -moz-appearance: none;
-  -webkit-appearance: none;
 }
 select::-ms-expand {
   display: none;
