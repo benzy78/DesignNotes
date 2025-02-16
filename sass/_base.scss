@@ -61,7 +61,7 @@ table {
 	border-spacing: 0;
 	width: 100%;
 	table-layout: fixed;
-	border: 1px solid $neutral-black;
+	border: 1px solid $tertiary-color;
 }
 
 th,td {
@@ -79,6 +79,7 @@ input,textarea {
 	background-image: none;
 	font-family: inherit;
 	font-size: inherit;
+	border-radius: 8px;
 	-webkit-appearance: none;
 
 	&:focus {

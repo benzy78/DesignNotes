@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>My Design Guideline</title>
+    <title>My Design Guidelines</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <!--style css-->
@@ -22,12 +22,18 @@
 </head>
 
 <body>
-    <div class="wrapper">
+    <div class="layout">
         <header class="header">
-            <h1 class="header__logo">My Design Guideline</h1>
+            <h1 class="header__logo">My Design Guidelines</h1>
             <nav class="header__nav">
-                <ul>
-                    <li><a href="#color">カラー</a></li>
+                <button class="menu-toggle" aria-label="Toggle navigation">
+                    <span class="menu-icon"></span>
+                    <span class="menu-icon"></span>
+                    <span class="menu-icon"></span>
+                    <span class="menu-label">Menu</span>
+                </button>
+                <ul class="header__nav-links">
+                    <li><a href="./index.html#color">カラー</a></li>
                     <li><a href="#font">フォント</a></li>
                     <li><a href="#layout">レイアウト</a></li>
                     <li><a href="#blank">余白</a></li>
@@ -39,9 +45,9 @@
                 </ul>
             </nav>
         </header>
-        <div class="maincontents">
+        <main class="maincontents">
             <section class="firstview">
-                <h2 class="fv__ttl">My Design Guideline</h2>
+                <h2 class="fv__ttl">My Design Guidelines</h2>
                 <p class="fv__caption">これはデザインの知見とガイドラインをまとめたものです。</p>
                 <div class="fv__contents">
                     <p class="fv__index-ttl">目次</p>
@@ -84,6 +90,17 @@
                         <li>同じ役割のものは同じ大きさに。（例：各セクションの見出しとなるh2なら32pxとか）</li>
                         <li>ユーザーによっては、ユーザーエージェントにより、文字サイズを拡大・縮小して使う場合もあるため、特定の文字サイズに依存したデザインにしてはいけない（文字サイズを変更したらデザインが崩れるものはダメってこと）。これに関連して、文字画像は基本ロゴ以外では用いない。</li>
                     </ul>
+                </section>
+
+                <section class="section-mini">
+                    <h3 class="section-hed3">両端揃えを使わない</h3>
+                    <p class="section-p">
+                        両端揃えを使うと、不自然な空白が生まれてしまい、短度の区切りが認識しづらくなることで、可読性が低下する。
+                        また、画面幅に応じて、単語のスペースが変わるため、レスポンシブデザインとの相性も悪い。
+                        加えて、低視力・読字障がい（ディスクレシア）の人にとって、単語の間隔が不均一だと読みにくいこともあり、WCAG（Web Content Accessibility Guideliness）でも両端揃えは非推奨となっている。
+                        以上のことから、テキストでは両端揃えを使わずに、左揃えを基本とする。
+
+                    </p>
                 </section>
                 
                 <section class="section-mini">
@@ -149,7 +166,7 @@
                         <p class="box-label">ボタンの例（上段：悪い例、下段：良い例）</p>
                         <div class="btn__cont">
                             <a href="" class="btn">wrong-btn</a>
-                            <a href="" class="btn btn--wrong01">wrong-btn</a>
+                            <a href="" class="btn btn--wrong01">ease-wrong-btn</a>
                             <a href="" class="btn btn--wrong02">wrong-btn</a>
                         </div>
                         <div class="btn__cont">
@@ -193,9 +210,14 @@
                     <div class="box">
                         <p class="box-label">例</p>
                         <div class="acco__card">
-                            <p class="acco__ttl">1. 無料トライアルはありますか？</p>
-                            <p class="acco__answer">ありません</p>
-                            <span class="acco__btn"></span>
+                            <p class="acco__ttl">1. 悪い例のアコーディオン</p>
+                            <p class="acco__answer">押せる範囲が狭く、押せるボタンなのかもわかりづらい</p>
+                            <span class="acco__btn-arrow"><i class="fas fa-angle-down"></i></span>
+                        </div>
+                        <div class="acco__card">
+                            <p class="acco__ttl">1.良い例のアコーディオン</p>
+                            <p class="acco__answer">押せる範囲が広く、押せるボタンであることもアローボタンよりわかりやすい。</p>
+                            <span class="acco__btn-plus"></span>
                         </div>
                     </div>
                     <p class="section-p">また、アコーディオンはデスクトップでは極力用いない。画面幅の小さいスマホとは違い、デスクトップでは比較的画面幅に余裕があるので、アコーディオンを初めから展開してもそれほど場所を取らない。むしろ、いちいちボタンを押す手間の方が大きい。
@@ -204,6 +226,27 @@
                 <section class="section-mini">
                     <h3 class="section-hed3">インプットテキスト</h3>
                     <p class="section-p">インプットの入力フォームは、入力すべき言葉の長さに合わせたものにする。その方が、入力すべきものをより直感的にわかりやすくできる。入力フォームは、どの入力フォームも同じ大きさに揃えがちなので注意。</p>
+                    <div class="box">
+                        <div class="input__cont-bad">
+                            <p class="input__cont-ttl">悪い例</p>
+                            <label for="" class="input__label-bad">住所</label>
+                            <input placeholder="例:東京都品川区XXX-XXX" type="text" class="input__form-bad">
+                            <label for="" class="input__label-bad">年齢</label>
+                            <input placeholder="例:27" type="text" class="input__form-bad">
+                            <label for="" class="input__label-bad">名前</label>
+                            <input placeholder="例:山田太郎" type="text" class="input__form-bad">
+                        </div>
+                        <div class="input__cont-good">
+                            <p class="input__cont-ttl">良い例</p>
+                            <label for="" class="input__label-good">住所</label>
+                            <input placeholder="例:東京都品川区XXX-XXX" type="text" class="input__form-good1">
+                            <label for="" class="input__label-good">年齢</label>
+                            <input placeholder="例:27" type="text" class="input__form-good2">
+                            <label for="" class="input__label-good">名前</label>
+                            <input placeholder="例:山田太郎" type="text" class="input__form-good3">
+                        </div>
+                        
+                    </div>
                 </section>
                 <section class="section-mini">
                     <h3 class="section-hed3">重大な警告</h3>
@@ -217,7 +260,7 @@
                 <section class="section-mini">
                     <h3 class="section-hed3">良いアニメーションの使い方</h3>
                     <ol class="section-list">
-                        <li><strong>重要な要素への視線誘導</strong>（動くものに注意が向く習性の利用）:訴求したいポイントや情報などに視線を誘導するためにアニメーション。</li>
+                        <li><strong>重要な要素への視線誘導</strong>（動くものに注意が向く習性の利用）:訴求したいポイントや情報などに視線を誘導するためにアニメーション。ただし、動いだり点滅する要素は、ユーザーの注意を引くが、同時に、ユーザーの気を散らす原因にもなるため、視線誘導の手段としてアニメーションを使用するのは慎重にする必要がある。</li>
                         <li><strong>ユーザーに対するフィードバックを与える</strong>: ボタンのクリック時に軽微な動きを加えることで、操作が成功したことを視覚的に伝える。 ハンバーガーメニューを押すとバツに変わるとか、アコーディオンのアローボタンの変形とか。</li>
                         <li><strong>スムーズなトランジション</strong>:ページやセクション間の移動を自然に見せ、体験を一貫させる。</li>
                     </ol>
@@ -229,6 +272,55 @@
                         <li><strong>情報の遅延</strong>:アニメーションで情報が表示されるまでの時間が遅れると、ユーザーの苛立ちを誘発する場合がある。これもユーザービリティを損ない、離脱率の増加につながる。</li>
                         <li><strong>混乱のリスク</strong>動きが多いことで、どこに注目すべきかが分かりにくくなり、情報伝達が妨げられる可能性がある。</li>
                     </ol>
+                </section>
+                <section class="section-mini">
+                    <h3 class="section-hed3">transition-timing-function</h3>
+                    <table class="section-table">
+                        <thead>
+                            <tr>
+                                <th>イージング</th>
+                                <th>特徴</th>
+                                <th>主な用途</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ease</td>
+                                <td>最初と最後が緩やかで自然な動き（デフォルト）</td>
+                                <td>ボタンホバー、フェードインアウト、基本UI</td>
+                            </tr>
+                            <tr>
+                                <td>linear</td>
+                                <td>一定速度で動く機械的な動き</td>
+                                <td>ローディングバー、スライダーなどの時間を正確に見せるアニメーション向き</td>
+                            </tr>
+                            <tr>
+                                <td>ease-in</td>
+                                <td>ゆっくり開始し、最後は速くなる勢いのある動き</td>
+                                <td>モーダルウィンドウ、スライドイン、カードやリストの出現</td>
+                            </tr>
+                            <tr>
+                                <td>ease-out</td>
+                                <td>最初は速く、最後はゆっくり</td>
+                                <td>要素のフェードアウト、ナビゲーションメニューのアニメーション、クリックした時のフィードバック</td>
+                            </tr>
+                            <tr>
+                                <td>ease-in-out</td>
+                                <td>最初と最後がゆっくり、中間は速い。easeと似てるが、easeより滑らかでリッチな印象</td>
+                                <td>モーダルの開閉、スクロールエフェクト、UIアニメーション全般</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="box">
+                        <p class="box-label">例</p>
+                        <div class="timing__cont">
+                            <a href="" class="btn btn--ease">ease</a>
+                            <a href="" class="btn btn--linear">linear</a>
+                            <a href="" class="btn btn-easein">ease-in</a>
+                            <a href="" class="btn btn-easeout">ease-out</a>
+                            <a href="" class="btn btn-easeinout">ease-in-out</a>
+                        </div>
+                    </div>
                 </section>
                 <section class="section-mini">
                     <h3 class="section-hed3">アニメーションの時間</h3>
@@ -299,9 +391,9 @@
                                 <td>0.3~0.5s</td>
                                 <td>すぐに表示されるべきだが、若干の遅れがあると自然だから。</td>
                             </tr>
-                            
                         </tbody>
                     </table>
+                    
                 </section>
             </section><!-- animation end -->
 
@@ -355,7 +447,7 @@
                 </section>
             </section><!-- tips end -->
 
-        </div>
+        </main>
     </div>
     
 

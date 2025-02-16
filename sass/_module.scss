@@ -2,6 +2,9 @@
   padding: 24px 48px;
   background-color: $neutral-glay;
   margin: 24px;
+  @include sp{
+    padding: 24px;
+  }
 }
 
 .box-label{
@@ -13,37 +16,52 @@
   margin-bottom: 48px;
   padding-bottom: 24px;
   background-color: $neutral-white;
+  @include tab{
+    max-width: 100%;
+  }
 }
 .section-mini{
   margin-bottom: 24px;
 }
 .section-hed2{
   font-size: 24px;
-  padding: 24px;
-  background: $primary-color;
+  padding: 16px 24px;
+  background: $primary-color-grad;
   color: $BaseColor1;
   margin-bottom: 24px;
   line-height: 1;
+  @include sp{
+    line-height: 1.5;
+  }
 }
 .section-hed3{
-  padding: 16px;
+  padding: 16px 8px;
   border-left: 8px solid transparent;
-  border-image: $primary-color;
+  border-bottom: 1px solid transparent;
+  border-image: $primary-color-grad;
   border-image-slice: 1; 
-  margin-bottom: 16px;
+  margin: 0 24px 16px;
   font-size: 20px;
   line-height: 1;
-  margin-left: 24px;
+  @include sp{
+    line-height: 1.5;
+  }
 }
 .section-p{
   font-size: 16px;
   margin-bottom: 16px;
   line-height: 1.75;
   padding: 0 48px;
+  @include sp{
+    padding: 0 24px;
+  }
 }
 .section-list{
   padding: 0 48px 24px;
   margin-left: 16px;
+  @include sp{
+    padding: 0 24px 24px;
+  }
   li{
     margin-bottom: 16px;
     font-size: 16px;
@@ -54,4 +72,13 @@
 .section-table{
   width: 90%;
   margin: 0 auto 24px;
+  border: 1px solid $tertiary-color;
+  td,th{
+    border: 1px solid $tertiary-color;
+    padding: 8px;
+  }
+  thead{
+    background-color: $primary-color-plain;
+    color: $neutral-white;
+  }
 }
