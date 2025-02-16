@@ -311,6 +311,11 @@ select:focus {
   border: 1px solid #cda6ff;
   padding: 8px;
 }
+@media (max-width: 768px) {
+  .section-table td, .section-table th {
+    font-size: 14px;
+  }
+}
 .section-table thead {
   background-color: #a565f8;
   color: #fff;

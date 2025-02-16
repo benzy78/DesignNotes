@@ -78,6 +78,9 @@
   td,th{
     border: 1px solid $tertiary-color;
     padding: 8px;
+    @include sp{
+      font-size: 14px;
+    }
   }
   thead{
     background-color: $primary-color-plain;
