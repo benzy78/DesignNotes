@@ -321,6 +321,11 @@ select:focus {
   color: #fff;
 }
 
+.marker {
+  background-image: linear-gradient(transparent 60%, #fdf16c 60%);
+  font-weight: bold;
+}
+
 .wrapper {
   position: relative;
 }
@@ -525,7 +530,7 @@ select:focus {
   font-size: 24px;
   line-height: 1;
   color: #fff;
-  background: #cda6ff;
+  background: #a565f8;
 }
 
 .fv__cont-list {

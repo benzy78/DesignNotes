@@ -42,7 +42,9 @@
                     <li><a href="#component">コンポーネント</a></li>
                     <li><a href="#animation">アニメーション</a></li>
                     <li><a href="#interaction">インタラクション</a></li>
+                    <li><a href="#psychology">心理学とデザイン</a></li>
                     <li><a href="#tips">Tips</a></li>
+                    <li><a href="#bibliography">参考文献一覧</a></li>
                 </ul>
             </nav>
         </header>
@@ -62,14 +64,16 @@
                         <li><a href="#component">コンポーネント</a></li>
                         <li><a href="#animation">アニメーション</a></li>
                         <li><a href="#interaction">インタラクション</a></li>
+                        <li><a href="#psychology">心理学とデザイン</a></li>
                         <li><a href="#tips">Tips</a></li>
+                        <li><a href="#bibliography">参考文献一覧</a></li>
                     </ul>
                 </div>
             </section>
             <section class="section" id="color">
                 <h2 class="section-hed2">カラー</h2>
                 <ul class="section-list">
-                    <li>プライマリーカラー：サイト・アプリのブランドイメージを伝える色で、主要なボタンや強調部分、ヘッダーなどに用いる。背景色とのコントラスト比が4.5:1以上を維持できるカラーにする必要がある。なお、プライマリーカラーは複数あっても良い。ブランドイメージやコンセプト、ジャンルからあったものをカラーパレットから選ぶ。<a href="https://design.digital.go.jp/foundations/color/color-palette/">デジタル庁デザインシステム　カラーパレット</a>を参照する。</li>
+                    <li>プライマリーカラー：サイト・アプリのブランドイメージを伝える色で、主要なボタンや強調部分、ヘッダーなどに用いる。背景色とのコントラスト比が4.5:1以上を維持できるカラーにする必要がある（コントラスト比の計算は<a href="https://color.adobe.com/ja/create/color-contrast-analyzer">Adobe Color CC</a>を利用すると簡単にできる）。なお、プライマリーカラーは複数あっても良い。ブランドイメージやコンセプト、ジャンルからあったものをカラーパレットから選ぶ。色の選定にあたって、<a href="https://design.digital.go.jp/foundations/color/color-palette/">デジタル庁デザインシステム　カラーパレット</a>や、<a href="https://color.adobe.com/ja/">Adobe Color CC</a>などを利用すると良い。</li>
                     <li>セカンダリーカラー：プライマリーカラーの補完的な役割をする色。選択肢を提供するボタンや、機能や状態を表すものなどに使用。プライマリーカラーと同じ色相で、明度の高低で決める。背景色とのコントラスト比は3:1以上にする。</li>
                     <li>ターシャリーカラー：セカンダリーカラーと反対の明度で作る。セカンダリーカラーが明るいなら、ターシャリーは暗い色に。逆も同様に。</li>
                     <li>バックグラウンドカラー：基本は白やグレー。他には、同じ色相でプライマリー、セカンダリーのコントラスト比を考えて選定すると良い。</li>
@@ -199,7 +203,7 @@
             <section class="section" id="icon">
                 <h2 class="section-hed2">アイコン</h2>
                 <ul class="section-list">
-                    <li>ハンバーガーメニューなどのアイコンを用いたボタンは、基本的にラベルとセットで使う。アイコンはユーザーによって、予期する意味が異なるので、誤解を生まないようにするためにアイコンを説明するラベルが必要。そもそも、アイコンそのものが単体では何を意味するかわからない場合も多い。</li>
+                    <li>ハンバーガーメニューなどのアイコンを用いたボタンは、基本的にラベルとセットで使う。アイコンはユーザーによって、予期する意味が異なるので、誤解を生まないようにするためにアイコンを説明するラベルが必要。そもそも、アイコンそのものが単体では何を意味するかわからない場合も多い。ただし、アクティブユーザーが多く、アイコンからボタンの意味が明らかとなっているもの等に関しては、アイコンのみの使用も可。</li>
                     <li>一般的に使われている意味とは異なる部分で、アイコンを用いない。例えば、歯車アイコンは設定の意味で使われるのが一般的であるため、ユーザー情報のボタンに歯車アイコンを使わないとか。</li>
                 </ul>
             </section><!-- icon end -->
@@ -416,6 +420,87 @@
                 </section>
             </section><!-- interaction end -->
 
+            <section class="section" id="psychology">
+                <h2 class="section-hed2">心理学とデザイン</h2>
+                <section class="section-mini">
+                    <h3 class="section-hed3">ヒックの法則</h3>
+                    <p class="section-p"><span class="marker">選択肢が増えるほど、人は意思決定に時間がかかる。</span></p>
+                    <p class="section-p">UI/UXへの応用</p>
+                    <ul class="section-list">
+                        <li>メニューの選択を減らすこと。</li>
+                        <li>重要な情報を優先的に表示するなど。</li>
+                    </ul>
+                </section>
+                <section class="section-mini">
+                    <h3 class="section-hed3">ミラーの法則</h3>
+                    <p class="section-p"><span class="marker">人間の短期記憶の容量は「7+-2」この情報までしか保持できない。</span></p>
+                    <p class="section-p">UI/UXへの応用</p>
+                    <ul class="section-list">
+                        <li>情報を7個以下のグループに分ける。</li>
+                        <li>長いフォームはステップごとに分ける。</li>
+                        <li>アイコンやメニューは適切な数に抑える。</li>
+                    </ul>
+                </section>
+                <section class="section-mini">
+                    <h3 class="section-hed3">ヤコブの法則</h3>
+                    <p class="section-p"><span class="marker">ユーザーは他のサイトと同じような動作を期待する</span></p>
+                    <p class="section-p">UI/UXへの応用</p>
+                    <ul class="section-list">
+                        <li>UIの標準ルールに従う（例：ハンバーガーメニュ、検索バーなど）</li>
+                        <li>不要な独自デザインを避ける</li>
+                        <li>アイコンを他の一般的なサイトと別の意味で用いない（地球マークを地図にしたり、歯車を編集ボタンにしたりしないなど）</li>
+                    </ul>
+                </section>
+                <section class="section-mini">
+                    <h3 class="section-hed3">シリアルポジション効果</h3>
+                    <p class="section-p"><span class="marker">人は最初と最後の情報を覚えやすい</span></p>
+                    <p class="section-p">UI/UXへの応用</p>
+                    <ul class="section-list">
+                        <li>重要なコンテンツをページの冒頭と末尾に配置</li>
+                        <li>ナビゲーションメニューでは最も重要な項目を最初と最後に置く</li>
+                    </ul>
+                </section>
+                <section class="section-mini">
+                    <h3 class="section-hed3">プロスペクト理論</h3>
+                    <p class="section-p"><span class="marker">人は利益を得る喜びより、損失を避ける心理の方がはるかに強い</span></p>
+                    <p class="section-p">UI/UXへの応用</p>
+                    <ul class="section-list">
+                        <li>割引や期間限定キャンペーンを提示</li>
+                        <li>「今買わないと損！」と感じさせるUI</li>
+                        <li>返品保証やリスク軽減策を強調</li>
+                    </ul>
+                </section>
+                <section class="section-mini">
+                    <h3 class="section-hed3">ドハティ闘値</h3>
+                    <p class="section-p"><span class="marker">0.4秒以内にフィードバックを返すと、ユーザーの操作がスムーズに感じる</span></p>
+                    <p class="section-p">UI/UXへの応用</p>
+                    <ul class="section-list">
+                        <li>ローディンアニメーションを短くする</li>
+                        <li>ボタンを押した瞬間に視覚的フィードバックを出す</li>
+                    </ul>
+                </section>
+                <section class="section-mini">
+                    <h3 class="section-hed3">フォールス・コンセンサス効果</h3>
+                    <p class="section-p"><span class="marker">デザイナーや開発者は「自分の考えが一般ユーザーにも通じる」と思いがち</span></p>
+                    <p class="section-p">UI/UXへの応用</p>
+                    <ul class="section-list">
+                        <li>ユーザーテストを重視する</li>
+                        <li>デザインをチーム内だけでなく、実際のユーザーに試してもらう</li>
+                        <li>ユーザーペルソナを作成し、客観的に分析する</li>
+                    </ul>
+                </section>
+                <section class="section-mini">
+                    <h3 class="section-hed3">美的ユーザービリティ</h3>
+                    <p class="section-p"><span class="marker">見た目が美しいデザインは、使いやすいを認識されやすい</span></p>
+                    <p class="section-p">UI/UXへの応用</p>
+                    <ul class="section-list">
+                        <li>美しいタイポグラフィ、適切な配色、整ったレイアウト</li>
+                        <li>高品質な画像や視覚効果を取り入れる</li>
+                        <li>余白を適切に活用し、洗練された印象を与える</li>
+                    </ul>
+                </section>
+            </section><!-- psychology end -->
+
             <section class="section" id="tips">
                 <h2 class="section-hed2">Tips</h2>
                 <ul class="section-list">
@@ -465,6 +550,18 @@
                     </p>
                 </section>
             </section><!-- tips end -->
+
+            <section class="section" id="bibliography">
+                <h2 class="section-hed2">参考文献</h2>
+                <ul class="section-list">
+                    <li>Apple「ヒューマンインターフェースガイドライン」<a href="https://developer.apple.com/jp/design/human-interface-guidelines">（https://developer.apple.com/jp/design/human-interface-guidelines）</a>2024/10/17閲覧</li>
+                    <li>Google「Material Design」<a href="https://m3.material.io">(https://m3.material.io)</a>2024/10/11閲覧</li>
+                    <li>IBM「Carbon Design System」<a href="https://carbondesignsystem.com">(https://carbondesignsystem.com)</a>2025/01/21閲覧</li>
+                    <li>デジタル庁「デザインシステム」<a href="https://www.digital.go.jp/policies/servicedesign/designsystem">(https://www.digital.go.jp/policies/servicedesign/designsystem)</a>2025/01/17閲覧</li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </section>
 
         </main>
     </div>
