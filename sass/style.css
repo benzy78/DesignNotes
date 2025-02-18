@@ -365,7 +365,7 @@ select:focus {
 
 .header__logo {
   font-size: 20px;
-  margin-bottom: 48px;
+  margin-bottom: 24px;
   padding: 0 24px;
 }
 @media (max-width: 992px) {
@@ -530,14 +530,12 @@ select:focus {
   font-size: 24px;
   line-height: 1;
   color: #fff;
-  background: #a565f8;
+  background: linear-gradient(135deg, #a565f8 0%, #39abff 100%);
 }
 
 .fv__cont-list {
-  padding: 48px;
   display: flex;
   flex-wrap: wrap;
-  gap: 2%;
 }
 @media (max-width: 768px) {
   .fv__cont-list {
@@ -545,9 +543,8 @@ select:focus {
   }
 }
 .fv__cont-list li {
-  width: 32%;
-  margin-bottom: 16px;
-  list-style-type: disc;
+  width: 33.3%;
+  list-style-type: none;
 }
 @media (max-width: 768px) {
   .fv__cont-list li {
@@ -556,6 +553,17 @@ select:focus {
 }
 .fv__cont-list li a {
   color: #5109ad;
+  text-decoration: none;
+  padding: 16px;
+  display: block;
+  text-align: center;
+  color: #343A40;
+  border: 1px solid #a565f8;
+  transition: all 0.3s ease;
+}
+.fv__cont-list li a:hover {
+  background-color: #cda6ff;
+  color: #fff;
 }
 
 .acco__card {

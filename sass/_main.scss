@@ -31,7 +31,7 @@
 }
 .header__logo{
   font-size: 20px;
-  margin-bottom: 48px;
+  margin-bottom: 24px;
   padding: 0 24px;
   @include tab{
     margin-bottom: 0;
@@ -187,25 +187,33 @@
   font-size: 24px;
   line-height: 1;
   color: $neutral-white;
-  background: $primary-color-plain;
+  background: $primary-color-grad;
 }
 .fv__cont-list{
-  padding: 48px;
   display: flex;
   flex-wrap: wrap;
-  gap: 2%;
   @include sp{
     padding: 24px 48px;
   }
   li{
-    width: 32%;
-    margin-bottom: 16px;
-    list-style-type:disc;
+    width: 33.3%;
+    list-style-type:none;
     @include sp{
       width: 100%;
     }
     a{
       color: $secondary-color;
+      text-decoration: none;
+      padding: 16px;
+      display: block;
+      text-align: center;
+      color: $neutral-black;
+      border: 1px solid $primary-color-plain;
+      transition: all 0.3s ease;
+      &:hover{
+        background-color: $tertiary-color;
+        color: $neutral-white;
+      }
     }
   }
 }
