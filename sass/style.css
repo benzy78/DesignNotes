@@ -48,6 +48,10 @@ article, aside, footer, header, nav, section, main {
   display: block;
 }
 
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+}
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -253,7 +257,8 @@ select:focus {
 }
 @media (max-width: 768px) {
   .section-hed2 {
-    line-height: 1.5;
+    line-height: 1;
+    font-size: 20px;
   }
 }
 
@@ -286,6 +291,10 @@ select:focus {
     padding: 0 24px;
   }
 }
+.section-p a {
+  color: #a565f8;
+  text-decoration: underline;
+}
 
 .section-list {
   padding: 0 48px 24px;
@@ -300,6 +309,10 @@ select:focus {
   margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.75;
+}
+.section-list li a {
+  color: #a565f8;
+  text-decoration: underline;
 }
 
 .section-table {
@@ -363,13 +376,16 @@ select:focus {
   }
 }
 
-.header__logo {
+.header__logo a {
   font-size: 20px;
   margin-bottom: 24px;
   padding: 0 24px;
+  display: block;
+  color: #fff;
+  text-decoration: none;
 }
 @media (max-width: 992px) {
-  .header__logo {
+  .header__logo a {
     margin-bottom: 0;
     padding: 0;
   }
@@ -539,7 +555,7 @@ select:focus {
 }
 @media (max-width: 768px) {
   .fv__cont-list {
-    padding: 24px 48px;
+    padding: 0;
   }
 }
 .fv__cont-list li {
@@ -548,7 +564,7 @@ select:focus {
 }
 @media (max-width: 768px) {
   .fv__cont-list li {
-    width: 100%;
+    width: 50%;
   }
 }
 .fv__cont-list li a {
@@ -560,6 +576,11 @@ select:focus {
   color: #343A40;
   border: 1px solid #a565f8;
   transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+  .fv__cont-list li a {
+    padding: 8px 16px;
+  }
 }
 .fv__cont-list li a:hover {
   background-color: #cda6ff;
@@ -880,4 +901,18 @@ select:focus {
 
 .btn--easeinout {
   transition: all 0.5s ease-in-out;
+}
+
+.bibli-list li a {
+  word-wrap: break-word; /* 長い単語やURLを途中で折り返す */
+  overflow-wrap: break-word;
+  display: block;
+  max-width: 100%; /* 親要素の幅を超えないようにする */
+  color: #343A40;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.bibli-list li a:hover {
+  color: #a565f8;
+  text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */

@@ -24,7 +24,7 @@
 <body>
     <div class="layout">
         <header class="header">
-            <h1 class="header__logo">My Design Guidelines</h1>
+            <h1 class="header__logo"><a href="#firstview">My Design Guidelines</a></h1>
             <nav class="header__nav">
                 <button class="menu-toggle" aria-label="Toggle navigation">
                     <span class="menu-icon"></span>
@@ -49,7 +49,7 @@
             </nav>
         </header>
         <main class="maincontents">
-            <section class="firstview">
+            <section class="firstview" id="firstview">
                 <h2 class="fv__ttl">My Design Guidelines</h2>
                 <p class="fv__caption">これはデザインの知見とガイドラインをまとめたものです。</p>
                 <div class="fv__contents">
@@ -449,6 +449,7 @@
                         <li>UIの標準ルールに従う（例：ハンバーガーメニュ、検索バーなど）</li>
                         <li>不要な独自デザインを避ける</li>
                         <li>アイコンを他の一般的なサイトと別の意味で用いない（地球マークを地図にしたり、歯車を編集ボタンにしたりしないなど）</li>
+                        <li>リデザインを行う場合は、移行期間を設けたり、気に入らなければ前のバージョンに戻せるなどの用意が必要。リデザインで大きく顧客を失う事例もある（スナップチャットとか）。</li>
                     </ul>
                 </section>
                 <section class="section-mini">
@@ -554,12 +555,11 @@
 
             <section class="section" id="bibliography">
                 <h2 class="section-hed2">参考文献</h2>
-                <ul class="section-list">
-                    <li>Apple「ヒューマンインターフェースガイドライン」<a href="https://developer.apple.com/jp/design/human-interface-guidelines">（https://developer.apple.com/jp/design/human-interface-guidelines）</a> 2024/10/17閲覧</li>
-                    <li>Google「Material Design」<a href="https://m3.material.io">(https://m3.material.io)</a> 2024/10/11閲覧</li>
-                    <li>IBM「Carbon Design System」<a href="https://carbondesignsystem.com">(https://carbondesignsystem.com)</a> 2025/01/21閲覧</li>
-                    <li>デジタル庁「デザインシステム」<a href="https://www.digital.go.jp/policies/servicedesign/designsystem">(https://www.digital.go.jp/policies/servicedesign/designsystem)</a> 2025/01/17閲覧</li>
-                    
+                <ul class="section-list bibli-list">
+                    <li><a href="https://developer.apple.com/jp/design/human-interface-guidelines">Apple「ヒューマンインターフェースガイドライン」（https://developer.apple.com/jp/design/human-interface-guidelines） 2024/10/17閲覧</a></li>
+                    <li><a href="https://m3.material.io">Google「Material Design」(https://m3.material.io) 2024/10/11閲覧</a></li>
+                    <li><a href="https://carbondesignsystem.com">IBM「Carbon Design System」(https://carbondesignsystem.com)2025/01/21閲覧</a></li>
+                    <li><a href="https://www.digital.go.jp/policies/servicedesign/designsystem">デジタル庁「デザインシステム」(https://www.digital.go.jp/policies/servicedesign/designsystem)2025/01/17閲覧</a></li>
                 </ul>
             </section>
 

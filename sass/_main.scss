@@ -30,12 +30,17 @@
   }
 }
 .header__logo{
-  font-size: 20px;
-  margin-bottom: 24px;
-  padding: 0 24px;
-  @include tab{
-    margin-bottom: 0;
-    padding: 0;
+  a{
+    font-size: 20px;
+    margin-bottom: 24px;
+    padding: 0 24px;
+    display: block;
+    color: $neutral-white;
+    text-decoration: none;
+    @include tab{
+      margin-bottom: 0;
+      padding: 0;
+    }
   }
 }
 .header__nav-links{
@@ -193,13 +198,13 @@
   display: flex;
   flex-wrap: wrap;
   @include sp{
-    padding: 24px 48px;
+    padding: 0;
   }
   li{
     width: 33.3%;
     list-style-type:none;
     @include sp{
-      width: 100%;
+      width: 50%;
     }
     a{
       color: $secondary-color;
@@ -210,6 +215,9 @@
       color: $neutral-black;
       border: 1px solid $primary-color-plain;
       transition: all 0.3s ease;
+      @include sp{
+        padding: 8px 16px;
+      }
       &:hover{
         background-color: $tertiary-color;
         color: $neutral-white;
@@ -507,4 +515,23 @@
 }
 .btn--easeinout{
   transition: all 0.5s ease-in-out;
+}
+
+
+.bibli-list{
+  li{
+    a{
+      word-wrap: break-word; /* 長い単語やURLを途中で折り返す */
+      overflow-wrap: break-word;
+      display: block;
+      max-width: 100%; /* 親要素の幅を超えないようにする */
+      color: $neutral-black;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      &:hover{
+        color: $primary-color-plain;
+        text-decoration: underline;
+      }
+    }
+  }
 }
