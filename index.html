@@ -43,6 +43,7 @@
                     <li><a href="#animation">アニメーション</a></li>
                     <li><a href="#interaction">インタラクション</a></li>
                     <li><a href="#psychology">心理学とデザイン</a></li>
+                    <li><a href="#validation">バリデーション</a></li>
                     <li><a href="#tips">Tips</a></li>
                     <li><a href="#bibliography">参考文献一覧</a></li>
                 </ul>
@@ -65,6 +66,7 @@
                         <li><a href="#animation">アニメーション</a></li>
                         <li><a href="#interaction">インタラクション</a></li>
                         <li><a href="#psychology">心理学とデザイン</a></li>
+                        <li><a href="#validation">バリデーション</a></li>
                         <li><a href="#tips">Tips</a></li>
                         <li><a href="#bibliography">参考文献一覧</a></li>
                     </ul>
@@ -502,6 +504,26 @@
                     </ul>
                 </section>
             </section><!-- psychology end -->
+
+            <section class="section" id="validation">
+                <h2 class="section-hed2">バリデーション関連</h2>
+                <section class="section-mini">
+                    <h3 class="section-hed3">ログイン画面の時のバリデーションエラーの内容</h3>
+                    <p class="section-p">
+                        メールアドレスとパスワードでログインするタイプのログイン画面において、
+                        メールアドレスかパスワードのいずれかを間違えてログインに失敗した場合、
+                        エラーメッセージには、必ず「メールアドレスかパスワードのいずれかが間違っています」と、<span class="marker">どちらが間違っているかわからないような表記にする。</span>
+                        「このメールアドレスは登録されていません」や「パスワードが間違っています」のような、<span class="marker">どちらが間違っているかをわかるような表記は避ける。</span>
+                    </p>
+                    <p class="section-p">
+                        理由は、ブルートフォース攻撃（総当たり攻撃）を防ぐため。
+                        「このメールアドレスは登録されていません」とあると、攻撃者が「このメールアドレスは存在しない」と判断できる。
+                        また、「パスワードが間違っています」とあると、「このメールアドレスは存在するけどパスワードが違う」と分かる。
+                        以上より、不正ログイン対策のため、、エラーメッセージには、メールアドレスかパスワードどちらが間違っているのか明記しないことが重要となる。
+                    </p>
+                </section>
+            </section>
+            <!-- validation end -->
 
             <section class="section" id="tips">
                 <h2 class="section-hed2">Tips</h2>
