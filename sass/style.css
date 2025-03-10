@@ -477,7 +477,7 @@ select:focus {
     top: 0;
     width: 100%;
     left: 0;
-    padding: 104px 24px 24px;
+    padding: 104px 0 24px;
     text-align: center;
     transition: all 0.3s ease-in-out;
     overflow-y: auto;
@@ -915,4 +915,8 @@ select:focus {
 .bibli-list li a:hover {
   color: #a565f8;
   text-decoration: underline;
+}
+
+.header__nav-links li a.current {
+  background-color: #5109ad;
 }/*# sourceMappingURL=style.css.map */

@@ -132,7 +132,7 @@
       top: 0;
       width: 100%;
       left: 0;
-      padding: 104px 24px 24px;
+      padding: 104px 0 24px;
       text-align: center;
       transition: all 0.3s ease-in-out;
       overflow-y: auto;
@@ -534,4 +534,9 @@
       }
     }
   }
+}
+
+// 現在地を示すアニメーション
+.header__nav-links li a.current {
+  background-color:$secondary-color;
 }

@@ -44,3 +44,32 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+// ナビゲーションに現在地を示す実装
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll(".section");
+  const navLinks = document.querySelectorAll(".header__nav-links a");
+
+  // IntersectionObserverの作成
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        console.log(`監視中: ${entry.target.id}, isIntersecting: ${entry.isIntersecting}`); // デバッグ
+
+        if (entry.isIntersecting) {
+          navLinks.forEach((link) => {
+            if (link.getAttribute("href").slice(1) === entry.target.id) {
+              link.classList.add("current");
+            } else {
+              link.classList.remove("current");
+            }
+          });
+        }
+      });
+    },
+    { rootMargin: "0% 0px -10% 0px", threshold: 0.1 } // 調整
+  );
+
+  // すべてのセクションを監視対象にする
+  sections.forEach((section) => observer.observe(section));
+});
