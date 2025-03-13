@@ -531,10 +531,28 @@
                 <h2 class="section-hed2">Figma</h2>
                 <section class="section-mini">
                     <h3 class="section-hed3">オートレイアウトの利用</h3>
-                    <p class="section-p">基本的には、<span class="marker">すべてのフレームでオートレイアウトを利用する。</span>理由は、デザインの変更容易性の向上や、実装との親和性の向上。
-                        また、オートレイアウトを使用する際は、「線」を「レイアウトに含まれる」に変更すると、実装との親和性がとれる（実装でも基本box-sizing:boder-box;を使うから）。</p>
+                    <p class="section-p">基本的には、<span class="marker">すべてのフレームでオートレイアウトを利用する。</span>
+                        理由は、①開発時の実装と構造を一致しやすくため、②コンポーネントの再利用性を高めるため、③レスポンシブ対応のしやすさ、
+                        ④デザインの変更容易性の向上、⑤要素の整列、間隔の統一（手動配置だと微妙にズレや見落としが発生する）。
+                        また、オートレイアウトを使用する際は、オートレイアウトの詳細設定から「線」を「レイアウトに含まれる」に変更すると、実装との親和性がとれる（実装でも基本box-sizing:boder-box;を使うから）。</p>
+                </section>
+                <section class="section-mini">
+                    <h3 class="section-hed3">コンテンツを内包とコンテンツに合わせて拡大</h3>
+                    <p class="section-p">
+                        SP表示のボタンや2カラムレイアウトなど、画面幅に合わせて幅を変動させたい場合は、オートレイアウトを使用し、
+                        親要素に「コンテンツを内包」と子要素に「コンテンツに合わせて拡大」、最大幅の指定を利用する。
+                        そうすることで、実装で<span class="code">max-width:固定値;  width:100%;</span>を指定したのと同じ表現ができる。
+                    </p>
+                </section>
+                <section class="section-mini">
+                    <h3 class="section-hed3">レイヤー構造はHTMLの構造に沿って作る</h3>
+                    <p class="section-p">
+                        <span class="marker">figma上でのレイヤー構造は、HTMLの構造に沿って作る。</span>
+                        オートレイアウトを使用する場合は、HTMLのように構造化してレイヤーを作らないと、親子関係を保てなかったり、レスポンシブ対応が難しくなる。
+                    </p>
                 </section>
             </section>
+            <!-- figma -->
 
             <section class="section" id="tips">
                 <h2 class="section-hed2">Tips</h2>

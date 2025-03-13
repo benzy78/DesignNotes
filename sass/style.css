@@ -339,6 +339,11 @@ select:focus {
   font-weight: bold;
 }
 
+.code {
+  background-color: #e0e0e0;
+  padding: 0 4px;
+}
+
 .wrapper {
   position: relative;
 }
