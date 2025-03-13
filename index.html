@@ -41,9 +41,9 @@
                     <li><a href="#icon">アイコン</a></li>
                     <li><a href="#component">コンポーネント</a></li>
                     <li><a href="#animation">アニメーション</a></li>
-                    <li><a href="#interaction">UX</a></li>
+                    <li><a href="#ux">UX</a></li>
                     <li><a href="#psychology">心理学とデザイン</a></li>
-                    <li><a href="#validation">バリデーション</a></li>
+                    <li><a href="#validation">バリデーション関連</a></li>
                     <li><a href="#figma">Figma</a></li>
                     <li><a href="#tips">Tips</a></li>
                     <li><a href="#bibliography">参考文献一覧</a></li>
@@ -65,9 +65,9 @@
                         <li><a href="#icon">アイコン</a></li>
                         <li><a href="#component">コンポーネント</a></li>
                         <li><a href="#animation">アニメーション</a></li>
-                        <li><a href="#interaction">UX</a></li>
+                        <li><a href="#ux">UX</a></li>
                         <li><a href="#psychology">心理学とデザイン</a></li>
-                        <li><a href="#validation">バリデーション</a></li>
+                        <li><a href="#validation">バリデーション関連</a></li>
                         <li><a href="#figma">Figma</a></li>
                         <li><a href="#tips">Tips</a></li>
                         <li><a href="#bibliography">参考文献一覧</a></li>
@@ -407,7 +407,7 @@
                 </section>
             </section><!-- animation end -->
 
-            <section class="section" id="interaction">
+            <section class="section" id="ux">
                 <h2 class="section-hed2">UX</h2>
                 <section class="section-mini">
                     <h3 class="section-hed3">親指ゾーンを考慮したUI設計</h3>
@@ -422,7 +422,7 @@
                         <li>主要なボタン（CTAボタンなど）は画面右下に配置。</li>
                     </ul>
                 </section>
-            </section><!-- interaction end -->
+            </section><!-- ux end -->
 
             <section class="section" id="psychology">
                 <h2 class="section-hed2">心理学とデザイン</h2>
@@ -529,18 +529,22 @@
 
             <section class="section" id="figma">
                 <h2 class="section-hed2">Figma</h2>
+                <p class="section-p">
+                    以下、デザインシステムに則ったFigmaの利用方法や機能について記載。
+                </p>
                 <section class="section-mini">
                     <h3 class="section-hed3">オートレイアウトの利用</h3>
                     <p class="section-p">基本的には、<span class="marker">すべてのフレームでオートレイアウトを利用する。</span>
                         理由は、①開発時の実装と構造を一致しやすくため、②コンポーネントの再利用性を高めるため、③レスポンシブ対応のしやすさ、
                         ④デザインの変更容易性の向上、⑤要素の整列、間隔の統一（手動配置だと微妙にズレや見落としが発生する）。
-                        また、オートレイアウトを使用する際は、オートレイアウトの詳細設定から「線」を「レイアウトに含まれる」に変更すると、実装との親和性がとれる（実装でも基本box-sizing:boder-box;を使うから）。</p>
+                    </p>
+                    <p class="section-p">また、オートレイアウトを使用する際は、オートレイアウトの詳細設定から「線」を「レイアウトに含まれる」に変更すると、実装との親和性がとれる（実装でも基本box-sizing:boder-box;を使うから）。</p>
                 </section>
                 <section class="section-mini">
-                    <h3 class="section-hed3">コンテンツを内包とコンテンツに合わせて拡大</h3>
+                    <h3 class="section-hed3">コンテンツを内包とコンテンツに合わせて拡大の利用</h3>
                     <p class="section-p">
                         SP表示のボタンや2カラムレイアウトなど、画面幅に合わせて幅を変動させたい場合は、オートレイアウトを使用し、
-                        親要素に「コンテンツを内包」と子要素に「コンテンツに合わせて拡大」、最大幅の指定を利用する。
+                        <span class="marker">親要素に「コンテンツを内包」と子要素に「コンテンツに合わせて拡大」、最大幅の指定を利用する。</span>
                         そうすることで、実装で<span class="code">max-width:固定値;  width:100%;</span>を指定したのと同じ表現ができる。
                     </p>
                 </section>
@@ -549,6 +553,31 @@
                     <p class="section-p">
                         <span class="marker">figma上でのレイヤー構造は、HTMLの構造に沿って作る。</span>
                         オートレイアウトを使用する場合は、HTMLのように構造化してレイヤーを作らないと、親子関係を保てなかったり、レスポンシブ対応が難しくなる。
+                    </p>
+                </section>
+                <section class="section-mini">
+                    <h3 class="section-hed3">絶対位置の利用</h3>
+                    <p class="section-p">
+                        オートレイアウトを利用している際、オートレイアウトを無視して、コンテンツの右上にアイコンを置きたい等の場合は、「位置」の右にある（2025/03時点でのUI）「オートレイアウトを無視」と「制約」を利用するとよい。
+                        これによって、オートレイアウトを使用しながら、<span class="code">position: absolute;</span>を使用しているのと同じような表現ができる。
+                    </p>
+                    <p class="section-p">＊制約：top, left, bottom, rightの基準点を指定するもの</p>
+                </section>
+                <section class="section-mini">
+                    <h3 class="section-hed3">コンポーネントプロパティ「テキスト」</h3>
+                    <p class="section-p">
+                        コンポーネント内のテキストをプロパティとして管理し、インスタンスごとに簡単に変更できる機能のこと。
+                        これを用いることで、以下の利点がある。
+                        ①インスタンスごとのテキストの変更が容易になる。
+                        ②レイヤーのテキストの命名が統一され、管理が容易になる。
+                        ③フォーマット崩れ、バリアントの肥大化を避けられる。
+                        ④開発者との連携がスムーズになる（変更可能な部分であることの理解、デザインとコードの整合性）。
+                    </p>
+                </section>
+                <section class="section-mini">
+                    <h3 class="section-hed3">バリアント</h3>
+                    <p class="section-p">
+                        
                     </p>
                 </section>
             </section>
