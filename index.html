@@ -86,7 +86,38 @@
                     <li><span class="marker">アクセントカラー</span>:特定の要素（CTAボタンなど）に注意を引きたい色に用いる。ただし、アクセントカラーを利用し過ぎると、デザインの統一感が崩れるし、アクセントカラーは必ずしも使う必要はない。</li>
                     <li><span class="marker">セマンティックカラー</span>:意味や目的を割り当てられたカラー。よく使うのは、サクセス時の緑系、エラー時の赤系など。基本的に、それぞれ、色相を保ち（サクセスなら緑、エラーや重要な警告なら赤）、サイトのイメージに合わせて、彩度や明度を調整する。</li>
                 </ul>
-            </section><!-- color end -->
+                <p class="section-p">＊カラーの弁図みたいなものを作ろう。整理できていない。</p>
+
+                <section class="section-mini">
+                    <h3 class="section-hed3">色の諧調の作成</h3>
+                    <p class="section-p">基本的に、プライマリーカラーやセカンダリーカラーを作成したら、hover時、押下時などの色の諧調を作成する必要がある。
+                        その際に、figmaのプラグインである「Color Shades」や[Color Designer]を用いると便利。
+                        Color Shadesは中心となる色から諧調を広げるプラグインで、Color Designerは起点となる最も明るいor暗い色から諧調を広げるプラグイン。
+                    </p>
+                </section>
+                <section class="section-mini">
+                    <h3 class="section-hed3">コントラスト比</h3>
+                    <p class="section-p">
+                        視覚的なアクセスビリティを向上させるため、テキストと背景のコントラスト比は一定の基準を満たす必要がある。
+                        <a href="https://waic.jp/translations/WCAG21/#contrast-minimum">WCAG(Web Content Accessibility Guidelines)</a>はコントラスト比を以下の基準で定めている。
+                    </p>
+                    <h4 class="section-hed4">AA（最低限の推奨基準）</h4>
+                    <p class="section-p">
+                        ・通常のテキスト　4.5:1以上<br>
+                        ・大きいテキスト（18pt以上または、14ptの太字）　3:1以上<br>
+                        ・UIコンポーネント（ボタン、リンクなど）　3:1以上<br>
+                        *基本的に現在のデバイスやWeb標準（96dpi）では、1pt=1.33pxと換算する。
+                    </p>
+                    <h4 class="section-hed4">AAA（より高いアクセシビリティを求める推奨基準）</h4>
+                    <p class="section-p">
+                        ・通常のテキスト　7:1　以上<br>
+                        ・大きいテキスト（18pt以上または、14ptの太字）　4.5:1　以上<br>
+                        ・UIコンポーネント（ボタン、リンクなど）　特別な要件はないが、7:1以上を推奨するケースもある。
+                    </p>
+                </section>
+            </section>
+            <!-- color end -->
+
             <section class="section" id="font">
                 <h2 class="section-hed2">フォント</h2>
                 <section class="section-mini">
@@ -530,7 +561,7 @@
             <section class="section" id="figma">
                 <h2 class="section-hed2">Figma</h2>
                 <p class="section-p">
-                    以下、デザインの変更容易性、実装との親和性等を考慮したFigmaの利用方法や機能について記載。
+                    以下、デザインの変更容易性や実装との親和性等を考慮した、Figmaの利用方法や機能について記載。
                 </p>
                 <section class="section-mini">
                     <h3 class="section-hed3">オートレイアウトの利用</h3>
@@ -648,10 +679,11 @@
             <section class="section" id="bibliography">
                 <h2 class="section-hed2">参考文献</h2>
                 <ul class="section-list bibli-list">
-                    <li><a href="https://developer.apple.com/jp/design/human-interface-guidelines">Apple「ヒューマンインターフェースガイドライン」（https://developer.apple.com/jp/design/human-interface-guidelines） 2024/10/17閲覧</a></li>
-                    <li><a href="https://m3.material.io">Google「Material Design」(https://m3.material.io) 2024/10/11閲覧</a></li>
-                    <li><a href="https://carbondesignsystem.com">IBM「Carbon Design System」(https://carbondesignsystem.com)2025/01/21閲覧</a></li>
-                    <li><a href="https://www.digital.go.jp/policies/servicedesign/designsystem">デジタル庁「デザインシステム」(https://www.digital.go.jp/policies/servicedesign/designsystem)2025/01/17閲覧</a></li>
+                    <li><a href="https://developer.apple.com/jp/design/human-interface-guidelines">Apple「ヒューマンインターフェースガイドライン」（https://developer.apple.com/jp/design/human-interface-guidelines）</a></li>
+                    <li><a href="https://m3.material.io">Google「Material Design」(https://m3.material.io)</a></li>
+                    <li><a href="https://carbondesignsystem.com">IBM「Carbon Design System」(https://carbondesignsystem.com)</a></li>
+                    <li><a href="https://waic.jp/translations/WCAG21/">Web Content Accessibility Guidelines (WCAG)2.1 (https://waic.jp/translations/WCAG21/)</a></li>
+                    <li><a href="https://www.digital.go.jp/policies/servicedesign/designsystem">デジタル庁「デザインシステム」(https://www.digital.go.jp/policies/servicedesign/designsystem)</a></li>
                 </ul>
             </section>
 
