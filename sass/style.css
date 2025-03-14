@@ -342,6 +342,7 @@ select:focus {
 .code {
   background-color: #e0e0e0;
   padding: 0 4px;
+  margin: 0 4px;
   border-radius: 4px;
 }
 
