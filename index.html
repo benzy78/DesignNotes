@@ -34,7 +34,7 @@
                 </button>
                 <ul class="header__nav-links">
                     <li><a href="#color">カラー</a></li>
-                    <li><a href="#font">フォント</a></li>
+                    <li><a href="#typography">タイポグラフィー</a></li>
                     <li><a href="#layout">レイアウト</a></li>
                     <li><a href="#blank">余白</a></li>
                     <li><a href="#button">ボタン</a></li>
@@ -58,7 +58,7 @@
                     <p class="fv__index-ttl">目次</p>
                     <ul class="fv__cont-list">
                         <li><a href="#color">カラー</a></li>
-                        <li><a href="#font">フォント</a></li>
+                        <li><a href="#typography">タイポグラフィー</a></li>
                         <li><a href="#layout">レイアウト</a></li>
                         <li><a href="#blank">余白</a></li>
                         <li><a href="#button">ボタン</a></li>
@@ -76,9 +76,10 @@
             </section>
             <section class="section" id="color">
                 <h2 class="section-hed2">カラー</h2>
+                <p class="section-p" style="color:red;">＊ここ書き直す必要あり。</p>
                 <ul class="section-list">
-                    <li><span class="marker">プライマリーカラー</span>:サイト・アプリのブランドイメージを伝える色で、主要なボタンや強調部分、ヘッダーなどに用いる。背景色とのコントラスト比が4.5:1以上を維持できるカラーにする必要がある（コントラスト比の計算は<a href="https://color.adobe.com/ja/create/color-contrast-analyzer" target="_blank" rel="noopener noreferrer">Adobe Color CC</a>を利用すると簡単にできる）。なお、プライマリーカラーは複数あっても良い。ブランドイメージやコンセプト、ジャンルからあったものをカラーパレットから選ぶ。色の選定にあたって、<a href="https://design.digital.go.jp/foundations/color/color-palette/" target="_blank" rel="noopener noreferrer">デジタル庁デザインシステム　カラーパレット</a>や、<a href="https://color.adobe.com/ja/" target="_blank" rel="noopener noreferrer">Adobe Color CC</a>などを利用すると良い。</li>
-                    <li><span class="marker">セカンダリーカラー</span>:プライマリーカラーの補完的な役割をする色。選択肢を提供するボタンや、機能や状態を表すものなどに使用。プライマリーカラーと同じ色相で、明度の高低で決める。背景色とのコントラスト比は3:1以上にする。</li>
+                    <li><span class="marker">プライマリーカラー</span>:サイト・アプリのブランドイメージを伝える色で、主要なボタンや強調部分、ヘッダーなどに用いる。色の選定にあたって、<a href="https://design.digital.go.jp/foundations/color/color-palette/" target="_blank" rel="noopener noreferrer">デジタル庁デザインシステム　カラーパレット</a>や、<a href="https://color.adobe.com/ja/" target="_blank" rel="noopener noreferrer">Adobe Color CC</a>などを利用すると良い。なお、プライマリーカラーは複数あっても良い。ブランドイメージやコンセプト、ジャンルからあったものをカラーパレットから選ぶ。</li>
+                    <li><span class="marker">セカンダリーカラー</span>:プライマリーカラーの補完的な役割をする色。選択肢を提供するボタンや、機能や状態を表すものなどに使用。プライマリーカラーと同じ色相で、明度の高低で決める。</li>
                     <li><span class="marker">ターシャリーカラー</span>:セカンダリーカラーと反対の明度で作る。セカンダリーカラーが明るいなら、ターシャリーは暗い色に。逆も同様に。</li>
                     <li><span class="marker">バックグラウンドカラー</span>:基本は白やグレー。他には、同じ色相でプライマリー、セカンダリーのコントラスト比を考えて選定すると良い。</li>
                     <li><span class="marker">ニュートラルカラー</span>：黒やグレー、白色。主にテキストや境界線などに使われる色。コントラスト比を考えて、適当な色を使う。</li>
@@ -91,7 +92,7 @@
                 <section class="section-mini">
                     <h3 class="section-hed3">色の諧調の作成</h3>
                     <p class="section-p">基本的に、プライマリーカラーやセカンダリーカラーを作成したら、hover時、押下時などの色の諧調を作成する必要がある。
-                        その際に、figmaのプラグインである「Color Shades」や[Color Designer]を用いると便利。
+                        その際に、figmaのプラグインである「Color Shades」や「Color Designer」を用いると便利。
                         Color Shadesは中心となる色から諧調を広げるプラグインで、Color Designerは起点となる最も明るいor暗い色から諧調を広げるプラグイン。
                     </p>
                 </section>
@@ -100,6 +101,7 @@
                     <p class="section-p">
                         視覚的なアクセスビリティを向上させるため、テキストと背景のコントラスト比は一定の基準を満たす必要がある。
                         <a href="https://waic.jp/translations/WCAG21/#contrast-minimum">WCAG(Web Content Accessibility Guidelines)</a>はコントラスト比を以下の基準で定めている。
+                        コントラスト比の計算は<a href="https://color.adobe.com/ja/create/color-contrast-analyzer" target="_blank" rel="noopener noreferrer">Adobe Color CC</a>や、figmaのプラグインである「Contrast Grid」を利用すると簡単にできる。
                     </p>
                     <h4 class="section-hed4">AA（最低限の推奨基準）</h4>
                     <p class="section-p">
@@ -114,12 +116,19 @@
                         ・大きいテキスト（18pt以上または、14ptの太字）　4.5:1　以上<br>
                         ・UIコンポーネント（ボタン、リンクなど）　特別な要件はないが、7:1以上を推奨するケースもある。
                     </p>
+                    <section class="section-mini">
+                        <h3 class="section-hed3">ダークモードの設定</h3>
+                        <p class="section-p">
+                            ニュートラルカラーはライトモードの諧調を反転させるのが基本。ただし、黒を使う際は、グレーがかった黒を使うこと。
+                            プライマリーなどに使う有彩色は彩度や明るさを少し上げること。
+                        </p>
+                    </section>
                 </section>
             </section>
             <!-- color end -->
 
-            <section class="section" id="font">
-                <h2 class="section-hed2">フォント</h2>
+            <section class="section" id="typography">
+                <h2 class="section-hed2">タイポグラフィー</h2>
                 <section class="section-mini">
                     <h3 class="section-hed3">フォントサイズ</h3>
                     <ul class="section-list">
@@ -145,10 +154,10 @@
                 </section>
                 
                 <section class="section-mini">
-                    <h3 class="section-hed3">line-height</h3>
+                    <h3 class="section-hed3">line-height（行間）</h3>
                     <ul class="section-list">
-                        <li>基本的には1.5以上ある方が読みやすい。</li>
-                        <li>ただし、見出しなどフォントサイズが大きいもの（目安としては40px以上くらい）は1.3~1.4くらいの方が読みやすい。</li>
+                        <li>基本的には1.5以上が推奨されている。</li>
+                        <li>ただし、見出しなどフォントサイズが大きいもの（目安としては28px以上くらい）は1.3~1.5くらいの方が読みやすい。</li>
                         <li>また、ボタンなどの一行で表示されるようなものは、高さの計算や余白の計算が複雑になるので、line-heightを1にしても良い。</li>
                         <li>加えて、管理者画面など、読みやすさ・使いやすさより、情報量を優先する必要性がある場合は、1.3程度にしてもOK。</li>
                     </ul>
@@ -157,6 +166,14 @@
                         <li><span class="marker">見出し：1.3~1.5</span></li>
                         <li><span class="marker">本文（長文）：1.7~1.75</span></li>
                         <li><span class="marker">ボタン（コンポーネント）：1</span></li>
+                    </ul>
+                </section>
+
+                <section class="section-mini">
+                    <h3 class="section-hed3">letter-spacing(文字間)</h3>
+                    <ul class="section-list">
+                        <li>基本的にフォントサイズの0.12倍以上が推奨されている。（例：16pxなら1.92px以上、20pxなら2.4px以上）</li>
+                        <li>ただし、必要な文字間はフォントによって異なるため、杓子定規になんでも上記の基準を当てはめず、適宜フォントに合わせて適切な文字間を調整することが望ましい。</li>
                     </ul>
                 </section>
                 
