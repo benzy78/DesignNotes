@@ -78,8 +78,9 @@
   }
 }
 .section-list{
-  padding: 0 48px 24px;
+  padding: 0 48px;
   margin-left: 16px;
+  margin-bottom: 24px;
   @include sp{
     padding: 0 24px 24px;
   }
@@ -87,6 +88,9 @@
     margin-bottom: 16px;
     font-size: 16px;
     line-height: 1.75;
+    &:last-child{
+      margin-bottom: 0;
+    }
     a{
       color: $primary-color-plain;
       text-decoration: underline;
@@ -120,4 +124,10 @@
   padding: 0 4px;
   margin: 0 4px;
   border-radius: 4px;
+}
+
+// 注釈：annotationの略
+.anno{
+  font-size: 14px;
+  color: $neutral-glay800;
 }

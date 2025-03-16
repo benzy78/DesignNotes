@@ -25,6 +25,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: #fff;
   overflow-x: hidden;
+  letter-spacing: 0.1em;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -315,8 +316,9 @@ select:focus {
 }
 
 .section-list {
-  padding: 0 48px 24px;
+  padding: 0 48px;
   margin-left: 16px;
+  margin-bottom: 24px;
 }
 @media (max-width: 768px) {
   .section-list {
@@ -327,6 +329,9 @@ select:focus {
   margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.75;
+}
+.section-list li:last-child {
+  margin-bottom: 0;
 }
 .section-list li a {
   color: #a565f8;
@@ -362,6 +367,11 @@ select:focus {
   padding: 0 4px;
   margin: 0 4px;
   border-radius: 4px;
+}
+
+.anno {
+  font-size: 14px;
+  color: #909090;
 }
 
 .wrapper {
