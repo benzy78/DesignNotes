@@ -177,9 +177,20 @@
                 <section class="section-mini">
                     <h3 class="section-hed3">letter-spacing(文字間)</h3>
                     <ul class="section-list">
-                        <li>基本的にフォントサイズの0.12倍以上が推奨されている。（例：16pxなら1.92px以上、20pxなら2.4px以上）</li>
-                        <li>ただし、必要な文字間はフォントによって異なるため、杓子定規になんでも上記の基準を当てはめず、適宜フォントに合わせて適切な文字間を調整することが望ましい。</li>
+                        <li>小さい文字（12〜14px）：0〜0.02em</li>
+                        <li>本文（16〜18px）：0.02〜0.05em</li>
+                        <li>見出し（20px以上）：0.05〜0.1em</li>
+                        <li>ボタン・ナビゲーション：0.05〜0.1em</li>
                     </ul>
+                    <p class="section-p">
+                        文字間隔は上記の値が可読性とデザインのバランスが取れる。ただし、書体によって適切な文字間隔は異なるものなので、
+                        杓子定規に上記の基準に当てはめるのではなく、書体ごとに調整すること。
+                    </p>
+                    <p class="section-p">
+                        また、WCAG2.1の基準では、文字間隔（letter-spacing）をフォントサイズの0.12倍（0.12em）以上にしても、レイアウトが崩れないように設計することを求めている
+                        （よく誤解があるが、これはデフォルトで文字間隔を0.12emにしろという意味ではないことに注意）。参考<a href="https://waic.jp/translations/WCAG21/Understanding/text-spacing.html" target="_blank">「達成基準 1.4.12: テキストの間隔を理解する」</a>
+                    </p>
+                    
                 </section>
                 <section class="section-mini">
                     <h3 class="section-hed3">paragraph spacing（段落間）</h3>
@@ -655,7 +666,7 @@
                 <section class="section-mini">
                     <h3 class="section-hed3">タイポグラフィーはバリアブルではなくスタイルで管理</h3>
                     <p class="section-p">
-                        <span class="marker">現時点（2025/03）では、タイポグラフィーの管理はバリアブルではなく、スタイルで管理した方がメリットが大きい</span>
+                        <span class="marker">現時点（2025/03）では、タイポグラフィーの管理はバリアブルではなく、スタイルで管理した方がメリットが大きい。</span>
                         理由としては、第1に、バリアブルをスタイルに適用すると、行間（line-height）、文字間（letter-spacing）は%ではなくpxで指定されるため、汎用性が低い。
                         第2に、バリアブルでは、書体、太さ、サイズ、行間、文字間を別々で指定する必要があり、一括管理できない。
                         一方で、スタイルでは、それらを一括管理できる。
@@ -715,14 +726,6 @@
                     </p>
                 </section>
 
-                <section class="section-mini">
-                    <h3 class="section-hed3">UIデザインにおいて重要なこと</h3>
-                    <p class="section-p">
-                        美的センス以上に、情報の設計力が重要だと考える。
-                        つまり、デザインの変更容易性や拡張性、開発者との連携なども考慮した、
-                        バリアブルやコンポーネント等の情報をどれだけうまく構造化できるかが重要なのではないだろうか。
-                    </p>
-                </section>
             </section><!-- tips end -->
 
             <section class="section" id="bibliography">
