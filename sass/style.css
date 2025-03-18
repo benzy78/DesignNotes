@@ -53,6 +53,10 @@ a:link, a:visited, a:hover, a:active {
   text-decoration: none;
 }
 
+a:focus {
+  outline: 4px solid #005FCC;
+}
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -863,6 +867,51 @@ select:focus {
     max-width: 100%;
     padding: 16px 8px;
   }
+}
+
+.btn--default {
+  background: none;
+  background-color: #a565f8;
+}
+.btn--default:hover {
+  box-shadow: none;
+  background: none;
+  background-color: #a565f8;
+  transform: translateY(0);
+}
+
+.btn--hover {
+  background: none;
+  background-color: #8951d1;
+}
+.btn--hover:hover {
+  box-shadow: none;
+  background: none;
+  background-color: #8951d1;
+  transform: translateY(0);
+}
+
+.btn--press {
+  background: none;
+  background-color: #6c3da9;
+}
+.btn--press:hover {
+  box-shadow: none;
+  background: none;
+  background-color: #6c3da9;
+  transform: translateY(0);
+}
+
+.btn--focus {
+  background: none;
+  background-color: #a565f8;
+  border: 2px solid #42206e;
+}
+.btn--focus:hover {
+  box-shadow: none;
+  background: none;
+  background-color: #a565f8;
+  transform: translateY(0);
 }
 
 .btn--wrong01 {

@@ -450,6 +450,51 @@
   }
 }
 
+.btn--default{
+  background: none;
+  background-color:#a565f8;
+  &:hover{
+    box-shadow: none;
+    background: none;
+    background-color:#a565f8;
+    transform: translateY(0);
+  }
+}
+
+.btn--hover{
+  background: none;
+  background-color:#8951d1;
+  &:hover{
+    box-shadow: none;
+    background: none;
+    background-color:#8951d1;
+    transform: translateY(0);
+  }
+}
+
+.btn--press{
+  background: none;
+  background-color:#6c3da9;
+  &:hover{
+    box-shadow: none;
+    background: none;
+    background-color:#6c3da9;
+    transform: translateY(0);
+  }
+}
+
+.btn--focus{
+  background: none;
+  background-color:#a565f8;
+  border: 2px solid #42206e;
+  &:hover{
+    box-shadow: none;
+    background: none;
+    background-color:#a565f8;
+    transform: translateY(0);
+  }
+}
+
 .btn--wrong01{
   background: $secondary-color;
   &:hover{
