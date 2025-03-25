@@ -159,13 +159,17 @@
                     <h3 class="section-hed3">line-height（行間）</h3>
                     <p class="section-p">
                         基本的には1.5以上が推奨されている。
-                        ただし、見出しなどフォントサイズが大きいもの（目安としては28px以上くらい）は1.3~1.5くらいの方が読みやすい。
+                        ただし、見出しなどフォントサイズが大きいもの（目安としては40px以上）は1.3~1.5くらいの方が読みやすい。
                         また、ボタンなどの一行で表示されるようなものは、高さの計算や余白の計算が複雑になるので、line-heightを1にしても良い。
-                        <span class="marker">なお、具体的なパーセンテージは各フォントサイズで、テキストボックスの高さが4や8の倍数になるように指定する必要がある。</span>
-                            理由は、グリッドシステムとの整合性が取れることに加え、CSS計算やコンポーネントを統一的に管理しやすくなるから。
+                    </p>
+                    <p class="section-p">
+                        <span class="marker">具体的なline-heightの値は各フォントサイズで、テキストボックスの高さが4や8の倍数になるように指定する必要がある。</span>
+                        <span class="marker">また、line-heightの値は、%ではなく絶対値で指定した方が良い。</span>
+                        理由は、4や8の倍数にすると、グリッドシステムとの整合性が取れることに加え、他の要素との整列や余白設計がしやすくなるため。
+                        また、line-heightの値に絶対値ではなく、%を使用すると小数点が発生し、余白計算が複雑になってしまうため。
                     </p>
                     
-                    <h4 class="section-hed4">line-heightの例</h4>
+                    <h4 class="section-hed4">line-heightの値の例</h4>
                     <table class="section-table">
                         <thead>
                             <tr>
@@ -188,11 +192,11 @@
                             </tr>
                             <tr>
                                 <td>28px</td>
-                                <td>44px(157%)</td>
+                                <td>44px(157.142・・・%)</td>
                             </tr>
                             <tr>
                                 <td>24px</td>
-                                <td>40px(166.6%)</td>
+                                <td>40px(166.666・・・%)</td>
                             </tr>
                             <tr>
                                 <td>20px</td>
@@ -204,11 +208,11 @@
                             </tr>
                             <tr>
                                 <td>14px</td>
-                                <td>24px(171%)</td>
+                                <td>24px(171.428・・・%)</td>
                             </tr>
                             <tr>
                                 <td>12px</td>
-                                <td>20px(166.6%)</td>
+                                <td>20px(166.666・・・%)</td>
                             </tr>
                         </tbody>
                     </table>
@@ -423,7 +427,7 @@
                 <section class="section-mini">
                     <h3 class="section-hed3">押下時のデザインについて</h3>
                     <p class="section-p">
-                        <span class="code">box-shadow</span>と<span class="code">transform: translateY(Xpx);</span>
+                        <span class="code">box-shadow</span>と<span class="code">transform: translateY(Xpx);</span>をhover時より小さくして、沈み込むようなデザインにするのが一般的。
                     </p>
                 </section>
             </section>
