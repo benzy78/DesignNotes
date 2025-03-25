@@ -447,6 +447,11 @@
     transform: translateY(-2px); 
     background: linear-gradient(135deg, #a555e8 0%, #299bef 100%);
   }
+  &:active{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transform: translateY(0px);
+    background: $primary-color-grad; 
+  }
   @include sp{
     max-width: 100%;
     padding: 16px 8px;
@@ -489,7 +494,7 @@
 .btn--focus{
   background: none;
   background-color:#a565f8;
-  border: 2px solid #42206e;
+  outline: 4px solid #005FCC;
   &:hover{
     box-shadow: none;
     background: none;

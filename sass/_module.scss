@@ -75,6 +75,10 @@
   a{
     color: $primary-color-plain;
     text-decoration: underline;
+    transition: all 0.3s ease;
+    &:hover{
+      color: $secondary-color;
+    }
   }
 }
 .section-list{

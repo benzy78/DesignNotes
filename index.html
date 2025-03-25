@@ -413,14 +413,17 @@
                         第1に、Tabキーで全てのインタラクティブ要素にフォーカス可能にする。
                         第2に、Tabでの移動順序は論理的であること。
                         第3に、Tabで移動した時に、フォーカスが視認できる（視認性の高いデザインに）こと。
-                        また、マウスクリックではフォーカスが消えるように、<span class="code">:focus-visible</span>を利用する。
+                    </p>
+                    <p class="section-p">
+                        また、マウスクリックで不要なフォーカスが出ないように、<span class="code">:focus</span>ではなく、<span class="code">:focus-visible</span>を用いた方が良い。
+                        加えて、focusのデザインは視認性が高くなるよう、サイトのテーマカラーに違和感のない目立つ色（青系を使うことが多い）を使用し、<span class="code">outline</span>を用いると良い。
                     </p>
                 </section>
 
                 <section class="section-mini">
                     <h3 class="section-hed3">押下時のデザインについて</h3>
                     <p class="section-p">
-                        
+                        <span class="code">box-shadow</span>と<span class="code">transform: translateY(Xpx);</span>
                     </p>
                 </section>
             </section>

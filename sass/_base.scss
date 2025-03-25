@@ -53,7 +53,10 @@ a:link,a:visited,a:hover,a:active{
   text-decoration: none;
 }
 
-a:focus{
+a{
+	transition: all 0.3s ease;
+}
+a:focus-visible{
 	outline: 4px solid #005FCC;
 
 }

@@ -53,7 +53,11 @@ a:link, a:visited, a:hover, a:active {
   text-decoration: none;
 }
 
-a:focus {
+a {
+  transition: all 0.3s ease;
+}
+
+a:focus-visible {
   outline: 4px solid #005FCC;
 }
 
@@ -317,6 +321,10 @@ select:focus {
 .section-p a {
   color: #a565f8;
   text-decoration: underline;
+  transition: all 0.3s ease;
+}
+.section-p a:hover {
+  color: #5109ad;
 }
 
 .section-list {
@@ -863,6 +871,11 @@ select:focus {
   transform: translateY(-2px);
   background: linear-gradient(135deg, #a555e8 0%, #299bef 100%);
 }
+.btn:active {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transform: translateY(0px);
+  background: linear-gradient(135deg, #a565f8 0%, #39abff 100%);
+}
 @media (max-width: 768px) {
   .btn {
     max-width: 100%;
@@ -906,7 +919,7 @@ select:focus {
 .btn--focus {
   background: none;
   background-color: #a565f8;
-  border: 2px solid #42206e;
+  outline: 4px solid #005FCC;
 }
 .btn--focus:hover {
   box-shadow: none;
