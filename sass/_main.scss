@@ -254,6 +254,9 @@
   top: 16px;
   right: 24px;
   transition: all 0.3s ease;
+  -webkit-transform: translateY(0) rotate(-90deg);
+  -ms-transform: translateY(0) rotate(-90deg);
+  transform: translateY(0) rotate(-90deg);
   i{
     font-size: 48px;
     color: $primary-color-plain;
@@ -261,9 +264,9 @@
   }
 }
 .turn.acco__btn-arrow {
-  -webkit-transform: translateY(0) rotate(90deg);
-  -ms-transform: translateY(0) rotate(90deg);
-  transform: translateY(0) rotate(90deg);
+  -webkit-transform: translateY(0) rotate(0deg);
+  -ms-transform: translateY(0) rotate(0deg);
+  transform: translateY(0) rotate(0deg);
 }
 
 .acco__btn-plus{
