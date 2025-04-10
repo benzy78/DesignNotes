@@ -291,10 +291,7 @@ select:focus {
 
 .section-hed4 {
   padding: 8px;
-  border-left: 8px solid transparent;
-  -o-border-image: linear-gradient(135deg, #a565f8 0%, #39abff 100%);
-     border-image: linear-gradient(135deg, #a565f8 0%, #39abff 100%);
-  border-image-slice: 1;
+  border-left: 8px solid #cda6ff;
   margin-bottom: 8px;
   margin-left: 48px;
   font-size: 16px;
