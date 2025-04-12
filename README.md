@@ -1,3 +1,2 @@
-# My Design Guidelines
-自分のデザインガイドラインをまとめたもの。
+# Design Notes
 https://benzy78.github.io/MyDesignGuidelines/
