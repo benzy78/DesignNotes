@@ -4,8 +4,7 @@
   margin-bottom: 16px;
   border-radius: 8px;
   @include sp{
-    padding: 24px 16px;
-    margin: 24px 16px;
+    padding: 16px;
   }
 }
 
@@ -24,7 +23,7 @@
     max-width: 100%;
   }
   @include sp{
-    padding: 20px;
+    padding: 16px;
   }
 }
 
@@ -37,7 +36,7 @@
   padding: 24px;
   margin-bottom: 24px;
   @include sp{
-    padding: 20px;
+    padding: 16px;
   }
 }
 .section-hed2{

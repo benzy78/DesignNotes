@@ -231,8 +231,7 @@ select:focus {
 }
 @media (max-width: 768px) {
   .box {
-    padding: 24px 16px;
-    margin: 24px 16px;
+    padding: 16px;
   }
 }
 
@@ -256,7 +255,7 @@ select:focus {
 }
 @media (max-width: 768px) {
   .section {
-    padding: 20px;
+    padding: 16px;
   }
 }
 
@@ -272,7 +271,7 @@ select:focus {
 }
 @media (max-width: 768px) {
   .section-mini {
-    padding: 20px;
+    padding: 16px;
   }
 }
 
@@ -586,7 +585,7 @@ select:focus {
 }
 @media (max-width: 768px) {
   .maincontents {
-    padding: 80px 20px 48px;
+    padding: 80px 16px 48px;
   }
 }
 
