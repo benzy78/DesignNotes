@@ -1,7 +1,8 @@
 .box{
-  padding: 24px 48px;
-  background-color: $neutral-glay;
-  margin: 24px;
+  padding: 24px;
+  background-color: $BgSubtle;
+  margin-bottom: 16px;
+  border-radius: 8px;
   @include sp{
     padding: 24px 16px;
     margin: 24px 16px;
@@ -12,81 +13,100 @@
   margin-bottom: 24px;
 }
 .section{
-  max-width: 80%;
+  max-width: 864px;
   width: 100%;
-  margin-bottom: 48px;
-  padding-bottom: 24px;
-  background-color: $neutral-white;
+  margin: 0 auto 48px;
+  padding: 32px 48px;
+  background-color: $BgDefault;
+  border-radius: 12px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.05);
   @include tab{
     max-width: 100%;
   }
+  @include sp{
+    padding: 20px;
+  }
+}
+
+.block{
+  margin-bottom: 32px;
 }
 .section-mini{
+  border: 1px solid $BorderDefault;
+  border-radius: 12px;
+  padding: 24px;
   margin-bottom: 24px;
+  @include sp{
+    padding: 20px;
+  }
 }
 .section-hed2{
-  font-size: 24px;
-  padding: 16px 24px;
-  background: $primary-color-grad;
-  color: $BaseColor1;
+  font-size: 48px;
+  line-height: 1.5;
+  color: $TextPrimarySubtle;
   margin-bottom: 24px;
-  line-height: 1;
+  @include tab{
+    font-size: 36px;
+  }
   @include sp{
-    line-height: 1;
-    font-size: 20px;
+    font-size: 28px;
   }
 }
 .section-hed3{
-  padding: 16px 8px;
-  border-left: 8px solid transparent;
-  border-bottom: 1px solid transparent;
-  border-image: $primary-color-grad;
-  border-image-slice: 1; 
-  margin: 0 24px 16px;
-  font-size: 20px;
-  line-height: 1;
-  @include sp{
-    line-height: 1.5;
-    padding: 8px;
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  color: $TextPrimaryHeading;
+  @include tab{
+    font-size: 20px;
+  }
+
+  .icon--h3{
+    margin-right: 8px;
+    vertical-align: middle;
+    // height: 1em;
   }
 }
 .section-hed4{
-  padding: 8px;
-  border-left: 8px solid $tertiary-color;
-  // border-image: $tertiary-color;
-  // border-image-slice: 1; 
   margin-bottom: 8px;
-  margin-left: 48px;
   font-size: 16px;
-  line-height: 1;
-  @include sp{
-    line-height: 1.5;
-    padding: 8px;
+  color: $TextPrimaryHeading;
+  line-height: 1.5;
+
+  .icon--h4{
+    margin-right: 8px;
+    vertical-align: middle;
+    // height: 1em;
   }
 }
 .section-p{
   font-size: 16px;
   margin-bottom: 16px;
   line-height: 1.75;
-  padding: 0 48px;
-  @include sp{
-    padding: 0 24px;
-  }
+  color: $TextDefault;
+
   a{
-    color: $primary-color-plain;
+    color: $TextPrimarySubtle;
     text-decoration: underline;
     transition: all 0.3s ease;
     &:hover{
-      color: $secondary-color;
+      color: $TextPrimaryDefault;
     }
   }
 }
+
+.section-shade{
+  background-color: $BgSubtle;
+  padding: 24px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
 .section-list{
-  padding: 0 48px;
   margin-left: 16px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   @include sp{
-    padding: 0 24px 24px;
+    
   }
   li{
     margin-bottom: 16px;
@@ -103,23 +123,23 @@
 }
 
 .section-table{
-  width: 90%;
-  margin: 0 auto 24px;
-  border: 1px solid $tertiary-color;
+  width: 100%;
+  margin: 0 auto 16px;
+  border: 1px solid $BorderPrimary;
   td,th{
-    border: 1px solid $tertiary-color;
+    border: 1px solid $BorderPrimary;
     padding: 8px;
     @include sp{
       font-size: 14px;
     }
   }
   thead{
-    background-color: $primary-color-plain;
-    color: $neutral-white;
+    background-color: $BgPrimaryAccent;
+    color: $TextInverse;
   }
 }
 .marker{
-  background-image: linear-gradient(transparent 60%, #fdf16c  60%);
+  background-image: linear-gradient(transparent 60%, $Marker 60%);
   font-weight: bold;
 }
 

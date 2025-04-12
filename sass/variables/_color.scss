@@ -1,10 +1,38 @@
 // 色の定義
 
-$primary-color-grad: linear-gradient(135deg, #a565f8 0%, #39abff 100%);
-$primary-color-plain:#a565f8;
-$secondary-color:#5109ad;
-$tertiary-color:#cda6ff;
-$bgc-purple:#f1eafa;
+
+
+
+// Border
+$BorderDefault:#d6d6d6;
+$BorderPrimary:#c4b8ff;
+$BorderAccent:#5e5e5e;
+// BackGround
+$BgDefault:#fff;
+$BgSubtle:#f0f0f0;
+$BgPrimary:#f5f5fc;
+$BgPrimaryAccent:#a695ff;
+$BgPrimaryDeep:#6b4eff;
+$BgHover:#f0edff;
+$BgTag:#e5ddff;
+$Marker:#e5ddff;
+$Icon:#6b4eff;
+// Text
+$TextDefault:#313131;
+$TextMuted:#7b7b7b;
+$TextInverse:#fff;
+$TextPrimaryDefault:#6b4eff;
+$TextPrimarySubtle:#8971ff;
+$TextPrimaryAccent:#2e1f7c;
+$TextPrimaryHeading:#1a1051;
+
+
+// 以下消す
+$primary-color-grad: linear-gradient(135deg, #6f23d0 0%, #10bae9 100%);
+$primary-color-plain:#6f23d0;
+$secondary-color:#43157d;
+$tertiary-color:#a97be3;
+$bgc-purple:#f1e9fa;
 
 
 $primary100:#f6f0fe;

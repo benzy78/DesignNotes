@@ -24,7 +24,7 @@
 <body>
     <div class="layout">
         <header class="header">
-            <h1 class="header__logo"><a href="#firstview">My Design Guidelines</a></h1>
+            <h1 class="header__logo"><a href="#firstview"><img src="./images/Index--icon.svg" alt="アイコン" class="index--icon"> 目次</a></h1>
             <nav class="header__nav">
                 <button class="menu-toggle" aria-label="Toggle navigation">
                     <span class="menu-icon"></span>
@@ -34,7 +34,7 @@
                 </button>
                 <ul class="header__nav-links">
                     <li><a href="#color">カラー</a></li>
-                    <li><a href="#typography">タイポグラフィー</a></li>
+                    <li><a href="#typography">タイポグラフィ</a></li>
                     <li><a href="#layout">レイアウト</a></li>
                     <li><a href="#blank">余白</a></li>
                     <li><a href="#button">ボタン</a></li>
@@ -44,7 +44,7 @@
                     <li><a href="#animation">アニメーション</a></li>
                     <li><a href="#ux">UX</a></li>
                     <li><a href="#psychology">心理学とデザイン</a></li>
-                    <li><a href="#validation">バリデーション関連</a></li>
+                    <li><a href="#validation">バリデーション</a></li>
                     <li><a href="#figma">Figma</a></li>
                     <li><a href="#tips">Tips</a></li>
                     <li><a href="#bibliography">参考文献一覧</a></li>
@@ -53,65 +53,65 @@
         </header>
         <main class="maincontents">
             <section class="firstview" id="firstview">
-                <h2 class="fv__ttl">My Design Guidelines</h2>
-                <div class="fv__contents">
-                    <p class="fv__index-ttl">目次</p>
-                    <ul class="fv__cont-list">
-                        <li><a href="#color">カラー</a></li>
-                        <li><a href="#typography">タイポグラフィー</a></li>
-                        <li><a href="#layout">レイアウト</a></li>
-                        <li><a href="#blank">余白</a></li>
-                        <li><a href="#button">ボタン</a></li>
-                        <li><a href="#icon">アイコン</a></li>
-                        <li><a href="#component">コンポーネント</a></li>
-                        <li><a href="#accessibility">アクセシビリティ</a></li>
-                        <li><a href="#animation">アニメーション</a></li>
-                        <li><a href="#ux">UX</a></li>
-                        <li><a href="#psychology">心理学とデザイン</a></li>
-                        <li><a href="#validation">バリデーション関連</a></li>
-                        <li><a href="#figma">Figma</a></li>
-                        <li><a href="#tips">Tips</a></li>
-                        <li><a href="#bibliography">参考文献一覧</a></li>
-                    </ul>
-                </div>
+                <h2 class="fv__ttl"><img src="./images/Title--icon.svg" alt="アイコン" class="ttl--icon"> Design Notes</h2>
+                <p class="fv__subttl">
+                    UIやUXの設計について、自分なりに整理してきた考えや気づきをまとめたメモです。<br>
+                    実務や検証の中で何度も立ち止まって考えたこと、忘れたくない視点などを記載しています。
+                </p>
             </section>
             <section class="section" id="color">
-                <h2 class="section-hed2">カラー</h2>
-                
+                <h2 class="section-hed2">Color</h2>
                 <section class="section-mini">
-                    <h3 class="section-hed3">カラーの分類</h3>
-                    <h4 class="section-hed4">プリミティブカラー</h4>
-                    <p class="section-p">
-                        プリミティブカラーとは、デザインに使う基本的な色のパレットのこと。
-                        ブランドカラーやグレースケールなどの「色相」ごとに、明るさ（Lightness）や彩度（Saturation）のバリエーションを持たせた色群。<br>
-                         例：<br>
-                        gray-50, gray-100, ..., gray-900 <br>
-                        blue-100, blue-200, ..., blue-900<br>
-                        red-50, red-100, ..., red-900<br>
-                        これらはUI上の意味とはまだ結びついていない、単なる色の“原材料”。
-                    </p>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">カラーの分類</h3>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt="アイコン">プリミティブカラー</h4>
+                        <p class="section-p">
+                            プリミティブカラーとは、デザインに使う基本的な色のパレットのこと。
+                            ブランドカラーやグレースケールなどの「色相」ごとに、明るさ（Lightness）や彩度（Saturation）のバリエーションを持たせた色群。<br>
+                        </p>
+                        <div class="section-shade">
+                            <p class="section-p">
+                                例：<br>
+                                gray-50, gray-100, ..., gray-900 <br>
+                                blue-100, blue-200, ..., blue-900<br>
+                                red-50, red-100, ..., red-900<br>
+                                これらはUI上の意味とはまだ結びついていない、単なる色の“原材料”。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt="アイコン">テーマカラー</h4>
+                        <p class="section-p">
+                            テーマカラーとは、プリミティブカラーを元に、UI全体のトーンやテーマ性（Light / Darkなど）を定義するカラーセット。
+                            たとえば、「primary」や「surface」、「background」など、アプリ全体のルールとして使う色の役割を与えるカラー。<br>
+                        </p>
+                        <div class="section-shade">
+                            例：<br>
+                            primary = blue-600（ライトテーマでは）<br>
+                            primary = blue-300（ダークテーマでは）<br>
+                            surface = gray-100<br>
+                            border = gray-300<br>
+                        </div>
+                        <p class="section-p">
+                            これにより、「このアプリのプライマリカラーはこれ」といった形で、コンポーネント設計やデザインに一貫性を持たせることができる。
+                            なお、Figmaでは、バリアブルを用いて、プリミティブカラーのコレクションを作成し、プリミティブカラーのエイリアスを用いて、テーマカラーのバリアブルを作るのが良い。
+                        </p>
+                    </div>
 
-                    <h4 class="section-hed4">テーマカラー</h4>
-                    <p class="section-p">
-                        テーマカラーとは、プリミティブカラーを元に、UI全体のトーンやテーマ性（Light / Darkなど）を定義するカラーセット。
-                        たとえば、「primary」や「surface」、「background」など、アプリ全体のルールとして使う色の役割を与えるカラー。<br>
-                        例：<br>
-                        primary = blue-600（ライトテーマでは）<br>
-                        primary = blue-300（ダークテーマでは）<br>
-                        surface = gray-100<br>
-                        border = gray-300<br>
-                        これにより、「このアプリのプライマリカラーはこれ」といった形で、コンポーネント設計やデザインに一貫性を持たせることができる。
-                        なお、Figmaでは、バリアブルを用いて、プリミティブカラーのトークンを作成し、プリミティブカラーのエイリアスを用いて、テーマカラーのバリアブルを作るのが良い。
-                    </p>
 
-                    <h4 class="section-hed4">セマンティックカラー</h4>
+                    <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt="アイコン">セマンティックカラー</h4>
                     <p class="section-p">
                         セマンティックカラーとは、色そのものではなく、「使う意味・用途」に基づいて定義された色のこと。
                         たとえば「この色は赤」ではなく、「この色はエラー用」、「この色はボタンの背景色」といった意味（semantic）に基づく色を指す。<br>
+                    </p>
+                    <div class="section-shade">
                         具体例<br>
                         セマンティック名 実際の色（エイリアス）<br>
                         Text/Primary Theme.Neutral900 <br>
-                        Background/Danger Danger600 <br>
+                        Background/Danger Danger600 
+                    </div>
+                    <p class="section-p">
                         このように、セマンティックカラーを用いると、UIの意味ごとに色を管理できることや、テーマ変更やブランド変更がしやすくなること、
                         デザイナー・エンジニア間のやりとりがスムーズになる（「エラー色って何色？」じゃなく「dangerでいい？」で通じる）という利点がある。
                         なお、Figmaでは、テーマカラーと同様に、テーマカラーのエイリアスを用いて、セマンティックカラーのバリアブルを作るのが良い。
@@ -119,7 +119,7 @@
                 </section>
 
                 <section class="section-mini">
-                    <h3 class="section-hed3">色の諧調の作成</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">色の諧調の作成</h3>
                     <p class="section-p">
                         色の諧調を用意するのは、UIにおける「階層感・状態・優先度・視認性」を表現するため。
                         例えば、プライマリーボタンを作成したら、hover時、押下時、フォーカス時など状態の違うUIを作成する必要がある。
@@ -128,40 +128,36 @@
                     </p>
                 </section>
                 <section class="section-mini">
-                    <h3 class="section-hed3">コントラスト比</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">コントラスト比</h3>
                     <p class="section-p">
                         視覚的なアクセシビリティを向上させるため、テキストと背景のコントラスト比は一定の基準を満たす必要がある。
                         <a href="https://waic.jp/translations/WCAG21/#contrast-minimum">WCAG(Web Content Accessibility Guidelines)</a>はコントラスト比を以下の基準で定めている。
                         コントラスト比の計算は<a href="https://color.adobe.com/ja/create/color-contrast-analyzer" target="_blank" rel="noopener noreferrer">Adobe Color CC</a>や、figmaのプラグインである「Contrast Grid」を利用すると簡単にできる。
                     </p>
-                    <h4 class="section-hed4">AA（最低限の推奨基準）</h4>
-                    <p class="section-p">
-                        ・通常のテキスト　4.5:1以上<br>
-                        ・大きいテキスト（18pt以上または、14ptの太字）　3:1以上<br>
-                        ・UIコンポーネント（ボタン、リンクなど）　3:1以上<br>
-                        *基本的に現在のデバイスやWeb標準（96dpi）では、1pt=1.33pxと換算する。
-                    </p>
-                    <h4 class="section-hed4">AAA（より高いアクセシビリティを求める推奨基準）</h4>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt="アイコン">AA（最低限の推奨基準）</h4>
+                        <p class="section-p">
+                            ・通常のテキスト　4.5:1以上<br>
+                            ・大きいテキスト（18pt以上または、14ptの太字）　3:1以上<br>
+                            ・UIコンポーネント（ボタン、リンクなど）　3:1以上<br>
+                            *基本的に現在のデバイスやWeb標準（96dpi）では、1pt=1.33pxと換算する。
+                        </p>
+                    </div>
+                    <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt="アイコン">AAA（より高いアクセシビリティを求める推奨基準）</h4>
                     <p class="section-p">
                         ・通常のテキスト　7:1　以上<br>
                         ・大きいテキスト（18pt以上または、14ptの太字）　4.5:1　以上<br>
                         ・UIコンポーネント（ボタン、リンクなど）　特別な要件はないが、7:1以上を推奨するケースもある。
                     </p>
-                    <section class="section-mini">
-                        <h3 class="section-hed3">ダークモードの設定</h3>
-                        <p class="section-p">
-                            ニュートラルカラーはライトモードの諧調を反転させるのが基本。ただし、黒を使う際は、グレーがかった黒を使うこと。
-                            プライマリーなどに使う有彩色は彩度や明るさを少し上げること。
-                        </p>
-                    </section>
+                    
                 </section>
             </section>
             <!-- color end -->
 
             <section class="section" id="typography">
-                <h2 class="section-hed2">タイポグラフィー</h2>
+                <h2 class="section-hed2">Typography</h2>
                 <section class="section-mini">
-                    <h3 class="section-hed3">フォントサイズ</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">フォントサイズ</h3>
                     <ul class="section-list">
                         <li>見出しなどのインパクトが必要な要素：48~64px</li>
                         <li>本文は16~24px。基本的に長文は16pxの方が読みやすいし、画面幅も取りすぎないから良い。長文で文字がデカいと、一画面あたりの情報量が減るからユーザービリティが落ちる。</li>
@@ -174,7 +170,7 @@
                 </section>
 
                 <section class="section-mini">
-                    <h3 class="section-hed3">両端揃えを使わない</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">両端揃えを使わない</h3>
                     <p class="section-p">
                         両端揃えを使うと、不自然な空白が生まれてしまい、単語の区切りが認識しづらくなることで、可読性が低下する。
                         また、画面幅に応じて、単語のスペースが変わるため、レスポンシブデザインとの相性も悪い。
@@ -185,20 +181,23 @@
                 </section>
                 
                 <section class="section-mini">
-                    <h3 class="section-hed3">line-height（行間）</h3>
-                    <p class="section-p">
-                        基本的には1.5以上が推奨されている。
-                        ただし、見出しなどフォントサイズが大きいもの（目安としては40px以上）は1.3~1.5くらいの方が読みやすい。
-                        また、ボタンなどの一行で表示されるようなものは、高さの計算や余白の計算が複雑になるので、line-heightを1にしても良い。
-                    </p>
-                    <p class="section-p">
-                        <span class="marker">具体的なline-heightの値は各フォントサイズで、テキストボックスの高さが4か8の倍数になるように指定する必要がある。</span>
-                        <span class="marker">また、line-heightの値は、%ではなく絶対値で指定した方が良い。</span>
-                        理由は、4や8の倍数にすると、グリッドシステムとの整合性が取れることに加え、他の要素との整列や余白設計がしやすくなるため。
-                        また、line-heightの値に絶対値ではなく、%を使用すると小数点が発生し、余白計算が複雑になってしまうため。
-                    </p>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">line-height（行間）</h3>
+                    <div class="block">
+                        <p class="section-p">
+                            基本的には1.5以上が推奨されている。
+                            ただし、見出しなどフォントサイズが大きいもの（目安としては40px以上）は1.3~1.5くらいの方が読みやすい。
+                            また、ボタンなどの一行で表示されるようなものは、高さの計算や余白の計算が複雑になるので、line-heightを1にしても良い。
+                        </p>
+                        <p class="section-p">
+                            <span class="marker">具体的なline-heightの値は各フォントサイズで、テキストボックスの高さが4か8の倍数になるように指定する必要がある。</span>
+                            <span class="marker">また、line-heightの値は、%ではなく絶対値で指定した方が良い。</span>
+                            理由は、4や8の倍数にすると、グリッドシステムとの整合性が取れることに加え、他の要素との整列や余白設計がしやすくなるため。
+                            また、line-heightの値に絶対値ではなく、%を使用すると小数点が発生し、余白計算が複雑になってしまうため。
+                        </p>
+                    </div>
                     
-                    <h4 class="section-hed4">line-heightの値の例</h4>
+                    
+                    <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt="アイコン">line-heightの値の例</h4>
                     <table class="section-table">
                         <thead>
                             <tr>
@@ -249,7 +248,7 @@
                 </section>
 
                 <section class="section-mini">
-                    <h3 class="section-hed3">letter-spacing(文字間)</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">letter-spacing(文字間)</h3>
                     <ul class="section-list">
                         <li>小さい文字（12〜14px）：0〜0.02em</li>
                         <li>本文（16〜18px）：0.02〜0.05em</li>
@@ -267,7 +266,7 @@
                     
                 </section>
                 <section class="section-mini">
-                    <h3 class="section-hed3">paragraph spacing（段落間）</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">paragraph spacing（段落間）</h3>
                     <p class="section-p">
                         段落の間隔はフォントサイズの2倍以上が推奨されている。
                     </p>
@@ -289,7 +288,7 @@
             </section><!-- font end -->
 
             <section class="section" id="layout">
-                <h2 class="section-hed2">レイアウト</h2>
+                <h2 class="section-hed2">Layout</h2>
                 <ul class="section-list">
                     <li>基本的にリキッドレイアウトを採用。画面幅に合わせて流動的に変動させる。そのため、widthの指定は基本的に固定値をとらずに、max-width:X%;とwidth:100%;のように％で指定する。</li>
                     <li>ブレイクポイントはスマホで768px, タブレットで992pxとする。</li>
@@ -297,24 +296,26 @@
             </section><!-- layout end -->
 
             <section class="section" id="blank">
-                <h2 class="section-hed2">余白</h2>
+                <h2 class="section-hed2">Margin/Padding</h2>
                 <ul class="section-list">
                     <li>基本8の倍数で余白を取る。8で難しい時は、4の倍数で余白を取る。</li>
-                    <li>一貫性：同じ要素の組み合わせには同じ余白を取る。</li>
-                    <li>情報構造：関連性のあるものの余白は他より小さく取る。</li>
-                    <li>操作性：タップ領域間は最低でも16px離すなど、使いやすさ、読みやすさを確保する。</li>
+                    <li><span class="marker">一貫性</span>：同じ要素の組み合わせには同じ余白を取る。</li>
+                    <li><span class="marker">情報構造</span>：関連性のあるものの余白は他より小さく取る。</li>
+                    <li><span class="marker">操作性</span>：タップ領域間は最低でも16px離すなど、使いやすさ、読みやすさを確保する。</li>
                 </ul>
             </section><!-- blank end -->
 
             <section class="section" id="button">
-                <h2 class="section-hed2">ボタン</h2>
-                <ul class="section-list">
-                    <li><span class="marker">押せる範囲（タップエリア）を44px×44px以上に。</span>ただし、ボタンを44px×44pxにすると見栄えが悪い等の場合、ボタンの見かけ上の大きさは24px〜32px程度にし、<span class="marker">44px×44pxの透明のボックスをボタンの背景に入れることで、タップエリアを44px×44pxにする。</span></li>
-                    <!-- <li>基本的に、ボタンの幅はwidth100%, max-width, textalign centerで指定し、<span class="marker">文字数によってボタンの幅が変わらないようにする。</span>同じ役割のボタン（例えばプライマリーボタン）の大きさが、ボタンによって異なると、ボタンの重要性や役割に対する認識を誤認させる恐れがあることに加え、統一感もなくなってしまう。</li> -->
-                    <li>ボタンが並ぶ場合、最低でも16px、できれば24px以上離す。特にタブレット・スマホで誤操作を避けるために重要。</li>
-                </ul>
+                <h2 class="section-hed2">Button</h2>
+                <div class="block">
+                    <ul class="section-list">
+                        <li><span class="marker">押せる範囲（タップエリア）を44px×44px以上に。</span>ただし、ボタンを44px×44pxにすると見栄えが悪い等の場合、ボタンの見かけ上の大きさは24px〜32px程度にし、<span class="marker">44px×44pxの透明のボックスをボタンの背景に入れることで、タップエリアを44px×44pxにする。</span></li>
+                        <li>ボタンが並ぶ場合、最低でも16px、できれば24px以上離す。特にタブレット・スマホで誤操作を避けるために重要。</li>
+                    </ul>
+                </div>
+                
                 <section class="section-mini">
-                    <h3 class="section-hed3">ステートの作成</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">ステートの作成</h3>
                     <p class="section-p">
                         ボタンを作ったら、必ずhover時、押下時、フォーカス時のデザインも作成する。仕様によっては、無効状態等のデザインも作る。
                         ボタンのデザインは、デフォルトの階調の中から明度・彩度を調整したものを使うことが多い。
@@ -331,7 +332,7 @@
                     </div>
                 </section>
                 <section class="section-mini">
-                    <h3 class="section-hed3">プライマリーボタンとセカンダリーボタンの色に関する注意事項。</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">ボタンの色に関する注意</h3>
                     <p class="section-p">
                         セカンダリーボタン、ターシャリーボタンは、プライマリーボタンより濃い色のものは使わない。
                         プライマリーボタンより濃い色を使うと、ユーザーがボタンの重要度を誤認する恐れがあるから。
@@ -339,21 +340,21 @@
                         セカンダリーボタンを、bgcをセカンダリーカラー、フォントを白にしてしまうと、ユーザーにとっては、プライマリーボタンとセカンダリーボタンのどちらが重要度の高いボタンなのかわかりづらい。 -->
                     </p>
                     <div class="box">
-                        <p class="box-label">ボタンの例（上段：悪い例、下段：良い例）</p>
+                        <p class="box-label">ボタンの例</p>
                         <div class="btn__cont">
-                            <a href="" class="btn">wrong-btn</a>
-                            <a href="" class="btn btn--wrong01">wrong-btn</a>
-                            <a href="" class="btn btn--wrong02">wrong-btn</a>
+                            <a href="" class="btn">悪い例</a>
+                            <a href="" class="btn btn--wrong01">悪い例</a>
+                            <a href="" class="btn btn--wrong02">悪い例</a>
                         </div>
                         <div class="btn__cont">
-                            <a href="" class="btn">good-btn</a>
-                            <a href="" class="btn btn--good01">good-btn</a>
-                            <a href="" class="btn--good02">good-btn</a>
+                            <a href="" class="btn">良い例</a>
+                            <a href="" class="btn btn--good01">良い例</a>
+                            <a href="" class="btn--good02">良い例</a>
                         </div>
                     </div>
                 </section>
                 <section class="section-mini">
-                    <h3 class="section-hed3">hover時のアニメーション</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">hover時のアニメーション</h3>
                     <p class="section-p">
                         プライマリーボタンをセカンダリーボタンの色に反転させるのはやめた方がいい（そうしてるサイト多いけど）。
                         プライマリー、セカンダリーは重要度を決める役割なのだから、ホバー時に反転させるのは適切なアニメーションではない。
@@ -371,29 +372,29 @@
             </section><!-- button end  -->
 
             <section class="section" id="icon">
-                <h2 class="section-hed2">アイコン</h2>
+                <h2 class="section-hed2">Icon</h2>
                 <section class="section-mini">
-                    <h3 class="section-hed3">意味が直感的に伝わるか</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">意味が直感的に伝わるか</h3>
                     <p class="section-p">
                         見ただけでなんの機能か伝わることが最優先。
                         抽象的すぎるアイコンを使わない。意味が伝わらないアイコンは、テキストラベルを付与して使用する。
                     </p>
                 </section>
                 <section class="section-mini">
-                    <h3 class="section-hed3">一貫したスタイルを保つ</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">一貫したスタイルを保つ</h3>
                     <p class="section-p">
                         太さ、角の丸み、線の長さを統一する。バラバラだとUI全体がチグハグに見える。
                         また、Iconセットは一種類に統一する（例：Lucide、Material Icons、Heroiconsなど）。
                     </p>
                 </section>
                 <section class="section-mini">
-                    <h3 class="section-hed3">タップ領域</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">タップ領域</h3>
                     <p class="section-p">
                         ボタンと同様に44px＊44px以上で、アイコン間を16px以上離す。
                     </p>
                 </section>
                 <section class="section-mini">
-                    <h3 class="section-hed3">意味の重複・混乱を避ける</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">意味の重複・混乱を避ける</h3>
                     <p class="section-p">
                         「同じアイコンなのに違う意味で使ってる」とか、「似た機能に違うアイコン」があると混乱のもととなる。
                         例えば、同じ「＋」アイコンが「新規作成」と「追加」両方の意味で使われているのはNG。
@@ -401,7 +402,7 @@
                     </p>
                 </section>
                 <section class="section-mini">
-                    <h3 class="section-hed3">アニメーション・フィードバック</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">アニメーション・フィードバック</h3>
                     <p class="section-p">
                         状態変化を動きで補足するのもUXとして効果的。
                         例えば、「いいね」ボタン → ハートがバウンドするなど、「保存済み」アイコンがトグルで変化するなど。
@@ -411,42 +412,52 @@
             </section><!-- icon end -->
 
             <section class="section" id="component">
-                <h2 class="section-hed2">コンポーネント</h2>
+                <h2 class="section-hed2">Component</h2>
                 <section class="section-mini">
-                    <h3 class="section-hed3">アコーディオン</h3>
-                    <h4 class="section-hed4">開閉の気づきと分かりやすさ</h4>
-                    <p class="section-p">
-                        ユーザーが「ここ、開ける場所なんだ」とすぐに分かるデザインになっているか？
-                        トリガー部分に アイコン（▶ / ▼）や「もっと見る」などのテキストを明示。
-                        開閉でアイコンが回転するなど、視覚的なフィードバックがあるとベター。
-                        ヘッダー自体を押せるようにするとUX向上（テキストだけがトリガーだと狭い）。
-                    </p>
-                    <h4 class="section-hed4">適度なアニメーションを入れる</h4>
-                    <p class="section-p">
-                        アニメーションがないと、開いたのかどうか分かりにくい＆チープに見える。
-                        開閉に0.2〜0.3秒程度のトランジションをつけると、自然で心地よい体験に。
-                        一瞬で切り替わると、ユーザーが何が起きたか理解しづらい。
-                    </p>
-                    <h4 class="section-hed4">中身の内容量と妥当性のバランス</h4>
-                    <p class="section-p">
-                        そもそも「アコーディオンにするべき情報か？」は慎重に判断。
-                        開いた中に1文だけしかない → アコーディオンにする意味ない。
-                        頻繁にアクセスされる情報は最初から展開しておく方が良い場合もある。
-                        また、デスクトップでは、画面幅の制約がスマホより少ないので、初めから展開しておくほうが良い。
-                        <br>
-                        やりがち：FAQ全部閉じてる → 検索性が悪くなって UXダウン<br>
-                        良い例：「よくある質問」の中でも一番問い合わせが多い内容は最初から開いておく
-                    </p>
-                    <h4 class="section-hed4">アコーディオンを使いすぎない</h4>
-                    <p class="section-p">
-                        情報を詰め込みすぎると、クリック地獄になる危険性も。
-                        特にスマホでは、開いて閉じてまた開いて…を繰り返すとユーザー疲れする。
-                        「そもそも全部リスト形式で出す方が早い」ってケースもある。
-                    </p>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">アコーディオン</h3>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt="アイコン">開閉の気づきと分かりやすさ</h4>
+                        <p class="section-p">
+                            ユーザーが「ここ、開ける場所なんだ」とすぐに分かるデザインになっているか？
+                            トリガー部分に アイコン（▶ / ▼）や「もっと見る」などのテキストを明示。
+                            開閉でアイコンが回転するなど、視覚的なフィードバックがあるとベター。
+                            ヘッダー自体を押せるようにするとUX向上（テキストだけがトリガーだと狭い）。
+                        </p>
+                    </div>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt="アイコン">適度なアニメーションを入れる</h4>
+                        <p class="section-p">
+                            アニメーションがないと、開いたのかどうか分かりにくい＆チープに見える。
+                            開閉に0.2〜0.3秒程度のトランジションをつけると、自然で心地よい体験に。
+                            一瞬で切り替わると、ユーザーが何が起きたか理解しづらい。
+                        </p>
+                    </div>
+                    
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt="アイコン">中身の内容量と妥当性のバランス</h4>
+                        <p class="section-p">
+                            そもそも「アコーディオンにするべき情報か？」は慎重に判断。
+                            開いた中に1文だけしかない → アコーディオンにする意味ない。
+                            頻繁にアクセスされる情報は最初から展開しておく方が良い場合もある。
+                            また、デスクトップでは、画面幅の制約がスマホより少ないので、初めから展開しておくほうが良い。
+                            <br>
+                            やりがち：FAQ全部閉じてる → 検索性が悪くなって UXダウン<br>
+                            良い例：「よくある質問」の中でも一番問い合わせが多い内容は最初から開いておく
+                        </p>
+                    </div>
+                    
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt="アイコン">アコーディオンを使いすぎない</h4>
+                        <p class="section-p">
+                            情報を詰め込みすぎると、クリック地獄になる危険性も。
+                            特にスマホでは、開いて閉じてまた開いて…を繰り返すとユーザー疲れする。
+                            「そもそも全部リスト形式で出す方が早い」ってケースもある。
+                        </p>
+                    </div>
                 </section>
-                
+
                 <section class="section-mini">
-                    <h3 class="section-hed3">インプットテキスト</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">インプットテキスト</h3>
                     <p class="section-p">
                         インプットの入力フォームは、入力すべき言葉の長さに合わせたものにする。
                         その方が、入力すべきものをより直感的にわかりやすくできる。
@@ -456,7 +467,7 @@
                     </p>
                     <div class="box">
                         <div class="input__cont-bad">
-                            <p class="input__cont-ttl">悪い例</p>
+                            <p class="input__cont-ttl"><img src="./images/arrow.svg" alt="アイコン" class="example-label"> 悪い例</p>
                             <label for="" class="input__label-bad">住所</label>
                             <input placeholder="例:東京都品川区XXX-XXX" type="text" class="input__form-bad">
                             <label for="" class="input__label-bad">年齢</label>
@@ -465,7 +476,7 @@
                             <input placeholder="例:山田太郎" type="text" class="input__form-bad">
                         </div>
                         <div class="input__cont-good">
-                            <p class="input__cont-ttl">良い例</p>
+                            <p class="input__cont-ttl"><img src="./images/arrow.svg" alt="アイコン" class="example-label">良い例</p>
                             <label for="" class="input__label-good">住所</label>
                             <input placeholder="例:東京都品川区XXX-XXX" type="text" class="input__form-good1">
                             <label for="" class="input__label-good">年齢</label>
@@ -477,19 +488,19 @@
                     </div>
                 </section>
                 <section class="section-mini">
-                    <h3 class="section-hed3">重大な警告</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">重大な警告</h3>
                     <p class="section-p">重要な内容の削除などの確認モーダルなどは、セマンティックのエラーを使う。意図せずに注視するような、サイトのカラーとは少し異なる違和感を感じるくらいの色にした方が良い。</p>
                 </section>
             </section><!-- component end -->
 
             <section class="section" id="accessibility">
-                <h2 class="section-hed2">アクセシビリティ</h2>
+                <h2 class="section-hed2">Accessibility</h2>
                 <p class="section-p">
                     本セクションでは、その他（上記で記載したタイポグラフィ、余白等以外）のアクセシビリティのガイドラインを記載。
                 </p>
                 
                 <section class="section-mini">
-                    <h3 class="section-hed3">Focusについて</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">Focusについて</h3>
                     <p class="section-p">
                         WCAGのガイドラインでは、Focusについて、次のような基準を設けている。
                         第1に、Tabキーで全てのインタラクティブ要素にフォーカス可能にする。
@@ -503,7 +514,7 @@
                 </section>
 
                 <section class="section-mini">
-                    <h3 class="section-hed3">押下時のデザインについて</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">押下時のデザインについて</h3>
                     <p class="section-p">
                         <span class="code">box-shadow</span>と<span class="code">transform: translateY(Xpx);</span>をhover時より小さくして、沈み込むようなデザインにするのが一般的。
                     </p>
@@ -512,10 +523,10 @@
             <!-- accessibility end -->
 
             <section class="section" id="animation">
-                <h2 class="section-hed2">アニメーションについて</h2>
+                <h2 class="section-hed2">Animation</h2>
                 <p class="section-p">アニメーションは、「サイトの華やかさ」ではなく、「使いやすさを高めるため」に設計することが重要。</p>
                 <section class="section-mini">
-                    <h3 class="section-hed3">良いアニメーションの使い方</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">良いアニメーションの使い方</h3>
                     <ol class="section-list">
                         <li><span class="marker">重要な要素への視線誘導</span>（動くものに注意が向く習性の利用）:訴求したいポイントや情報などに視線を誘導するためにアニメーション。ただし、動いだり点滅する要素は、ユーザーの注意を引くが、同時に、ユーザーの気を散らす原因にもなるため、視線誘導の手段としてアニメーションを使用するのは慎重にする必要がある。</li>
                         <li><span class="marker">ユーザーに対するフィードバックを与える</span>: ボタンのクリック時に軽微な動きを加えることで、操作が成功したことを視覚的に伝える。 ハンバーガーメニューを押すとバツに変わるとか、アコーディオンのアローボタンの変形とか。</li>
@@ -523,7 +534,7 @@
                     </ol>
                 </section>
                 <section class="section-mini">
-                    <h3 class="section-hed3">悪いアニメーションの使い方</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">悪いアニメーションの使い方</h3>
                     <ol class="section-list">
                         <li><span class="marker">目的や意味のないアニメーション</span>：目的がなく、ただサイトを賑やかな感じや華やかな感じににしたいだけのアニメーションは、ユーザーの目が疲れるし、集中力を損い、離脱率の増加を招く。</li>
                         <li><span class="marker">情報の遅延</span>:アニメーションで情報が表示されるまでの時間が遅れると、ユーザーの苛立ちを誘発する場合がある。これもユーザービリティを損ない、離脱率の増加につながる。</li>
@@ -531,43 +542,46 @@
                     </ol>
                 </section>
                 <section class="section-mini">
-                    <h3 class="section-hed3">transition-timing-function</h3>
-                    <table class="section-table">
-                        <thead>
-                            <tr>
-                                <th>イージング</th>
-                                <th>特徴</th>
-                                <th>主な用途</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>ease</td>
-                                <td>最初と最後が緩やかで自然な動き（デフォルト）</td>
-                                <td>ボタンホバー、フェードインアウト、基本UI</td>
-                            </tr>
-                            <tr>
-                                <td>linear</td>
-                                <td>一定速度で動く機械的な動き</td>
-                                <td>ローディングバー、スライダーなどの時間を正確に見せるアニメーション向き</td>
-                            </tr>
-                            <tr>
-                                <td>ease-in</td>
-                                <td>ゆっくり開始し、最後は速くなる勢いのある動き</td>
-                                <td>モーダルウィンドウ、スライドイン、カードやリストの出現</td>
-                            </tr>
-                            <tr>
-                                <td>ease-out</td>
-                                <td>最初は速く、最後はゆっくり</td>
-                                <td>要素のフェードアウト、ナビゲーションメニューのアニメーション、クリックした時のフィードバック</td>
-                            </tr>
-                            <tr>
-                                <td>ease-in-out</td>
-                                <td>最初と最後がゆっくり、中間は速い。easeと似てるが、easeより滑らかでリッチな印象</td>
-                                <td>モーダルの開閉、スクロールエフェクト、UIアニメーション全般</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">transition-timing-function</h3>
+                    <div class="block">
+                        <table class="section-table">
+                            <thead>
+                                <tr>
+                                    <th>イージング</th>
+                                    <th>特徴</th>
+                                    <th>主な用途</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ease</td>
+                                    <td>最初と最後が緩やかで自然な動き（デフォルト）</td>
+                                    <td>ボタンホバー、フェードインアウト、基本UI</td>
+                                </tr>
+                                <tr>
+                                    <td>linear</td>
+                                    <td>一定速度で動く機械的な動き</td>
+                                    <td>ローディングバー、スライダーなどの時間を正確に見せるアニメーション向き</td>
+                                </tr>
+                                <tr>
+                                    <td>ease-in</td>
+                                    <td>ゆっくり開始し、最後は速くなる勢いのある動き</td>
+                                    <td>モーダルウィンドウ、スライドイン、カードやリストの出現</td>
+                                </tr>
+                                <tr>
+                                    <td>ease-out</td>
+                                    <td>最初は速く、最後はゆっくり</td>
+                                    <td>要素のフェードアウト、ナビゲーションメニューのアニメーション、クリックした時のフィードバック</td>
+                                </tr>
+                                <tr>
+                                    <td>ease-in-out</td>
+                                    <td>最初と最後がゆっくり、中間は速い。easeと似てるが、easeより滑らかでリッチな印象</td>
+                                    <td>モーダルの開閉、スクロールエフェクト、UIアニメーション全般</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
                     <div class="box">
                         <p class="box-label">例</p>
                         <div class="timing__cont">
@@ -580,7 +594,7 @@
                     </div>
                 </section>
                 <section class="section-mini">
-                    <h3 class="section-hed3">アニメーションの時間</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">アニメーションの時間</h3>
                     <p class="section-p">1. 一般的なhoverエフェクト</p>
                     <table class="section-table">
                         <thead>
@@ -657,24 +671,27 @@
             <section class="section" id="ux">
                 <h2 class="section-hed2">UX</h2>
                 <section class="section-mini">
-                    <h3 class="section-hed3">親指ゾーンを考慮したUI設計</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">親指ゾーンを考慮したUI設計</h3>
                     <p class="section-p">
                         親指ゾーン（Thumb Zone）とは、スマホを片手で持った時に親指が届きやすい範囲のこと。
                         近年、スマホは大きくなってきており、大きくなるにつれて、画面上部に親指が届かないケースが増えている。
                         こうした背景から、親指ゾーンを考慮した、片手操作のしやすいUI設計が重要となっている。
                     </p>
-                    <p class="section-p">親指ゾーンを意識したUI設計の例</p>
-                    <ul class="section-list">
-                        <li>ナビゲーションバーは画面上部ではなく、画面下に配置。</li>
-                        <li>主要なボタン（CTAボタンなど）は画面右下に配置。</li>
-                    </ul>
+                    <div class="section-shade">
+                        <p class="section-p">親指ゾーンを意識したUI設計の例</p>
+                        <ul class="section-list">
+                            <li>ナビゲーションバーは画面上部ではなく、画面下に配置。</li>
+                            <li>主要なボタン（CTAボタンなど）は画面右下に配置。</li>
+                        </ul>
+                    </div>
+                    
                 </section>
             </section><!-- ux end -->
 
             <section class="section" id="psychology">
                 <h2 class="section-hed2">心理学とデザイン</h2>
                 <section class="section-mini">
-                    <h3 class="section-hed3">ヒックの法則</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">ヒックの法則</h3>
                     <p class="section-p"><span class="marker">選択肢が増えるほど、人は意思決定に時間がかかる。</span></p>
                     <p class="section-p">UI/UXへの応用</p>
                     <ul class="section-list">
@@ -683,7 +700,7 @@
                     </ul>
                 </section>
                 <section class="section-mini">
-                    <h3 class="section-hed3">ミラーの法則</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">ミラーの法則</h3>
                     <p class="section-p"><span class="marker">人間の短期記憶の容量は「7(±2)」個の情報までしか保持できない。</span></p>
                     <p class="section-p">UI/UXへの応用</p>
                     <ul class="section-list">
@@ -693,7 +710,7 @@
                     </ul>
                 </section>
                 <section class="section-mini">
-                    <h3 class="section-hed3">ヤコブの法則</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">ヤコブの法則</h3>
                     <p class="section-p"><span class="marker">ユーザーは他のサイトと同じような動作を期待する</span></p>
                     <p class="section-p">UI/UXへの応用</p>
                     <ul class="section-list">
@@ -704,7 +721,7 @@
                     </ul>
                 </section>
                 <section class="section-mini">
-                    <h3 class="section-hed3">シリアルポジション効果</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">シリアルポジション効果</h3>
                     <p class="section-p"><span class="marker">人は最初と最後の情報を覚えやすい</span></p>
                     <p class="section-p">UI/UXへの応用</p>
                     <ul class="section-list">
@@ -713,7 +730,7 @@
                     </ul>
                 </section>
                 <section class="section-mini">
-                    <h3 class="section-hed3">プロスペクト理論</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">プロスペクト理論</h3>
                     <p class="section-p"><span class="marker">人は利益を得る喜びより、損失を避ける心理の方がはるかに強い</span></p>
                     <p class="section-p">UI/UXへの応用</p>
                     <ul class="section-list">
@@ -723,7 +740,7 @@
                     </ul>
                 </section>
                 <section class="section-mini">
-                    <h3 class="section-hed3">ドハティ闘値</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">ドハティ闘値</h3>
                     <p class="section-p"><span class="marker">0.4秒以内にフィードバックを返すと、ユーザーの操作がスムーズに感じる</span></p>
                     <p class="section-p">UI/UXへの応用</p>
                     <ul class="section-list">
@@ -733,7 +750,7 @@
                     </ul>
                 </section>
                 <section class="section-mini">
-                    <h3 class="section-hed3">フォールス・コンセンサス効果</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">フォールス・コンセンサス効果</h3>
                     <p class="section-p"><span class="marker">デザイナーや開発者は「自分の考えが一般ユーザーにも通じる」と思いがち</span></p>
                     <p class="section-p">UI/UXへの応用</p>
                     <ul class="section-list">
@@ -743,7 +760,7 @@
                     </ul>
                 </section>
                 <section class="section-mini">
-                    <h3 class="section-hed3">美的ユーザービリティ</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">美的ユーザービリティ</h3>
                     <p class="section-p"><span class="marker">見た目が美しいデザインは、使いやすいと認識されやすい</span></p>
                     <p class="section-p">UI/UXへの応用</p>
                     <ul class="section-list">
@@ -757,7 +774,7 @@
             <section class="section" id="validation">
                 <h2 class="section-hed2">バリデーション関連</h2>
                 <section class="section-mini">
-                    <h3 class="section-hed3">ログイン画面の時のバリデーションエラーの内容</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">ログイン画面の時のバリデーションエラーの内容</h3>
                     <p class="section-p">
                         メールアドレスとパスワードでログインするタイプのログイン画面において、
                         メールアドレスかパスワードのいずれかを間違えてログインに失敗した場合、
@@ -779,11 +796,9 @@
                 <p class="section-p">
                     以下、デザインの変更容易性や実装との親和性等を考慮した、Figmaの利用方法や機能について記載。
                 </p>
-                <ul class="section-list">
-                    <li>テキストも役割に応じたレイヤー名をつける。あとで一括管理が楽になる。</li>
-                </ul>
+                
                 <section class="section-mini">
-                    <h3 class="section-hed3">オートレイアウトの利用</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">オートレイアウトの利用</h3>
                     <p class="section-p">基本的には、<span class="marker">すべてのフレームでオートレイアウトを利用する。</span>
                         理由は、①開発時の実装と構造を一致しやすくため、②コンポーネントの再利用性を高めるため、③レスポンシブ対応のしやすさ、
                         ④デザインの変更容易性の向上、⑤要素の整列、間隔の統一（手動配置だと微妙にズレや見落としが発生する）。
@@ -791,7 +806,7 @@
                     <p class="section-p">また、オートレイアウトを使用する際は、オートレイアウトの詳細設定から「線」を「レイアウトに含まれる」に変更すると、実装との親和性がとれる（実装でも基本<span class="code">box-sizing:boder-box;</span>を使うから）。</p>
                 </section>
                 <section class="section-mini">
-                    <h3 class="section-hed3">コンテンツを内包とコンテンツに合わせて拡大の利用</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">コンテンツを内包とコンテンツに合わせて拡大の利用</h3>
                     <p class="section-p">
                         SP表示のボタンや2カラムレイアウトなど、画面幅に合わせて幅を変動させたい場合は、オートレイアウトを使用し、
                         <span class="marker">親要素に「コンテンツを内包」と子要素に「コンテンツに合わせて拡大」、最大幅の指定を利用する。</span>
@@ -799,14 +814,14 @@
                     </p>
                 </section>
                 <section class="section-mini">
-                    <h3 class="section-hed3">レイヤー構造はHTMLの構造に沿って作る</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">レイヤー構造はHTMLの構造に沿って作る</h3>
                     <p class="section-p">
                         <span class="marker">figma上でのレイヤー構造は、HTMLの構造に沿って作る。</span>
                         オートレイアウトを使用する場合は、HTMLのように構造化してレイヤーを作らないと、親子関係を保てなかったり、レスポンシブ対応が難しくなる。
                     </p>
                 </section>
                 <section class="section-mini">
-                    <h3 class="section-hed3">絶対位置の利用</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">絶対位置の利用</h3>
                     <p class="section-p">
                         オートレイアウトを利用している際、オートレイアウトを無視して、コンテンツの右上にアイコンを置きたい等の場合は、「位置」の右にある（2025/03時点でのUI）「オートレイアウトを無視」と「制約」を利用するとよい。
                         これによって、オートレイアウトを使用しながら、<span class="code">position: absolute;</span>を使用しているのと同じような表現ができる。
@@ -814,7 +829,7 @@
                     <p class="section-p">＊制約：top, left, bottom, rightの基準点を指定するもの</p>
                 </section>
                 <section class="section-mini">
-                    <h3 class="section-hed3">コンポーネントプロパティ「テキスト」</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">コンポーネントプロパティ「テキスト」</h3>
                     <p class="section-p">
                         コンポーネント内のテキストをプロパティとして管理し、インスタンスごとに簡単に変更できる機能のこと。
                         これを用いることで、以下の利点がある。
@@ -825,16 +840,9 @@
                     </p>
                     <p class="section-p">コンポーネントにネストされたインスタンスを利用している場合は、コンポーネントのプロパティで「ネストされたインスタンス」を選択することで、ネストされたインスタンスのプロパティも使用可能となる。</p>
                 </section>
-                <!-- <section class="section-mini">
-                    <h3 class="section-hed3">バリアントかプロパティの切り替えか</h3>
-                    <p class="section-p">
-                        チェックボックスのオン・オフの切り替え等の単純な状態変更は、バリアントではなく、別々のコンポーネントで作って、プロパティの切り替え（可視性やブール値）で対応する。
-                        そのほうが、バリアント増やさずに済み、コンポーネント管理が楽になることに加え、レイヤーの可視性を切り替えるだけなのでシンプル。
-                    </p>
-                    <p class="section-p">意外とバリアント使ってても変わらないかも？むしろ同じようなものはバリアントで管理した方が管理しやすい気がする。</p>
-                </section> -->
+                
                 <section class="section-mini">
-                    <h3 class="section-hed3">「スタイル」ではなく「バリアブル」の利用</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">「スタイル」ではなく「バリアブル」の利用</h3>
                     <p class="section-p">
                         <span class="marker">基本的に、色やサイズ、間隔、数値などはスタイルではなくバリアブルで管理する。</span>
                         バリアブルの方が、スタイルより多くの種類を統一的に管理でき、CSS変数やデザイントークンに近い形でデザインできる。
@@ -844,7 +852,7 @@
                 </section>
 
                 <section class="section-mini">
-                    <h3 class="section-hed3">figma上でのタイポグラフィーの管理</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">figma上でのタイポグラフィーの管理</h3>
                     <p class="section-p">
                         バリアブルとスタイルを併用していくのが現時点ではベターなのではないかと考えられる。
                         バリアブルでタイポグラフィーを管理すれば、デザインシステムの整理にはメリットがあるが、いくつかの問題もある。
@@ -867,7 +875,7 @@
                     <li><span class="marker">実機での確認の重要性</span>：デザインツール上でのデザインと、実際に実機で確認するデザインには印象に差がある。特によくあるのは、コントラストの印象と余白、文字サイズ。デザインツール上では、デカく作りがち。基本的に、各パーツごとに、何pxだったら、どのくらいの大きさの印象なのか頭に入れておくこと。また、スマホ版のデザインを作るときは、プロトタイプ機能で実機のスマートフォンで表示を確認しながら作ること。</li>
                 </ul>
                 <section class="section-mini">
-                    <h3 class="section-hed3">戻るボタンは極力使わない</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">戻るボタンは極力使わない</h3>
                     <p class="section-p">
                         <span class="marker">近年のUIトレンドとして、単純な「戻るボタン」は減っている。</span>
                         代わりにバツボタンや、スワイプジェスチャー、パンくずリストやタブ、ページごとに完了や閉じるのアクションなどが使われている。
@@ -876,7 +884,7 @@
                     </p>
                 </section>
                 <section class="section-mini">
-                    <h3 class="section-hed3">黒で#000は極力使わない</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">黒で#000は極力使わない</h3>
                     <p class="section-p">
                         黒で#000を使うと、背景色の白やグレーとのコントラストが強すぎて、目が疲れてしまう。
                         また、紙面上の黒インクは完全な黒ではなく、周囲の光の反射で少しグレーに見える。一方で、デジタルデータの黒（#000）は光を完全に吸収する黒なので、不自然に映る。
@@ -897,13 +905,13 @@
                     </div>
                 </section>
                 <section class="section-mini">
-                    <h3 class="section-hed3">明朝体・セリフ体でboldは使わない</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">明朝体・セリフ体でboldは使わない</h3>
                     <p class="section-p">
                         太くしたいなら、weight500（semibold）まで。明朝やセリフ体は、横線が細く、縦線が太いという特性があり、太さのコントラストが美しさの要因となっているから、boldにするとその美しさが損なわれてしまう。
                     </p>
                 </section>
                 <section class="section-mini">
-                    <h3 class="section-hed3">インタラクションコストについて</h3>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">インタラクションコストについて</h3>
                     <p class="section-p">インタラクションコストとは、ユーザーが目的を達成するために必要な労力を指す概念。
                         主に、認知的コスト、物理的コスト、時間的コストに分類することができる。
                         <span class="marker">認知的コストとは、ユーザーが考える必要のある負担のこと。</span>例えば、「このボタンを押したらどうなるのかわからない」、「どこをクリックしたらいい？」といったもの。

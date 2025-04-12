@@ -4,7 +4,7 @@
 }
 .layout{
   display: grid;
-  grid-template-columns: 20% 1fr;
+  grid-template-columns: 280px 1fr;
   height: 100vh;
   @include tab{
     grid-template-columns: 1fr; /* 1列レイアウト */
@@ -13,20 +13,23 @@
   }
 }
 .header{
-  background: $primary-color-grad;
-  color: $BaseColor1;
+  background: $BgDefault;
+  color: $TextPrimaryAccent;
   height: 100vh;
   width: 100%;
-  padding: 24px 0;
+  padding: 24px;
   position: sticky;
   top: 0;
   overflow-y: auto;
   z-index: 101;
+  box-shadow: 2px 0 4px 0 rgba(0,0,0,0.1);
   @include tab{
     position: fixed; /* `sticky` を解除 */
-    height: auto; /* 高さを自動調整 */
+    height: 76px; /* 高さを自動調整 */
     padding: 24px;
     overflow-y: initial;
+    box-shadow: none;
+    background-color:$BgPrimary;
   }
 }
 .header__logo{
@@ -35,11 +38,18 @@
     margin-bottom: 24px;
     padding: 0 24px;
     display: block;
-    color: $neutral-white;
+    color: $TextPrimaryDefault;
     text-decoration: none;
     @include tab{
       margin-bottom: 0;
       padding: 0;
+      display: none;
+    }
+    .index--icon{
+      margin-right: 8px;
+      width: 32px;
+      height: 32px;
+      vertical-align: middle;
     }
   }
 }
@@ -50,14 +60,20 @@
   li{
     list-style: none;
     border-top: 1px solid $neutral-white;
+    margin-bottom: 16px;
     a{
       color: $neutral-white;
       text-decoration: none;
-      padding: 16px 24px;
+      color: $TextPrimaryAccent;
+      padding: 16px;
       display: block;
-      transition: all 0.3s ease;
+      border-radius: 8px;
+      transition: all 0.3s ease-in-out;
+      line-height: 1;
+      font-weight: bold;
       &:hover{
-        background: $tertiary-color;
+        background: $BgHover;
+        padding-left: 24px;
       }
     }
   }
@@ -82,7 +98,7 @@
 }
 
 .menu-icon {
-  background-color: $neutral-white;
+  background-color: $Icon;
   height: 3px;
   width: 100%;
   border-radius: 5px;
@@ -90,7 +106,7 @@
 }
 .menu-label{
     font-size: 14px;
-    color: $neutral-white;
+    color: $Icon;
     padding: 0 7px;
     transition: all 0.3s ease-in-out 0s;
   }
@@ -125,26 +141,32 @@
   }
   .header__nav-links{
     @include tab{
-      display: block;
       position: absolute;
       height: 100vh;
-      background: $primary-color-grad;
+      background: $BgPrimaryAccent;
       top: 0;
       width: 100%;
       left: 0;
-      padding: 104px 0 24px;
+      padding: 104px 24px 24px;
       text-align: center;
       transition: all 0.3s ease-in-out;
       overflow-y: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
     }
   }
     li{
+      border: none;
+      margin-bottom: 0;
       a{
         @include tab{
+          width: 100%;
           display: block;
           padding: 24px;
-          border-bottom: 1px solid $neutral-white;
-          color: $neutral-white;
+          border: 1px solid #fff;
+          color: $TextInverse;
+          border-radius: 8px;
         }
       }
     }
@@ -155,13 +177,17 @@
   overflow-y: auto;
   width: 100%;
   margin: 0 auto;
-  background-color: $neutral-glay;
+  background-color: $BgPrimary;
   @include tab{
     padding: 96px 24px 48px;
   }
+  @include sp{
+    padding: 80px 20px 48px;
+  }
 }
 .firstview{
-  max-width: 80%;
+  max-width: 864px;
+  margin: 0 auto 48px;
   @include tab{
     padding: 0;
     margin-bottom: 48px;
@@ -170,17 +196,24 @@
 }
 .fv__ttl{
   font-size: 48px;
-  margin-bottom: 24px;
+  margin-bottom: 8px;
+  color: $TextPrimaryDefault;
   @include tab{
     font-size: 32px;
   }
   @include sp{
     font-size: 24px;
   }
+
+  .ttl--icon{
+    vertical-align: middle;
+  }
 }
-.fv__caption{
-  font-size: 20px;
+.fv__subttl{
+  font-size: 16px;
   margin-bottom: 24px;
+  color: $TextMuted;
+  line-height: 1.75;
 }
 
 .fv__contents{
@@ -193,6 +226,9 @@
   line-height: 1;
   color: $neutral-white;
   background: $primary-color-grad;
+  @include sp{
+    font-size: 20px;
+  }
 }
 .fv__cont-list{
   display: flex;
@@ -351,10 +387,16 @@
 }
 
 .input__cont-ttl{
-  color: $primary-color-plain;
-  margin-left: -24px;
+  color: $TextPrimaryDefault;
+  margin-right: -24px;
+
   @include sp{
     margin-left: -16px;
+  }
+  .example-label{
+    vertical-align: middle;
+    width: 32px;
+    height: 32px;
   }
 }
 
@@ -435,7 +477,7 @@
   text-align: center;
   font-size: 16px;
   padding: 20px 8px;
-  background:$primary-color-grad;
+  background:#6b4eff;
   color: $neutral-white;
   border-radius: 100px;
   font-weight: 500;
@@ -445,7 +487,7 @@
   &:hover{
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transform: translateY(-2px); 
-    background: linear-gradient(135deg, #a555e8 0%, #299bef 100%);
+    background-color: #573ed3;
   }
   &:active{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -460,73 +502,75 @@
 
 .btn--default{
   background: none;
-  background-color:#a565f8;
+  background-color:#6b4eff;
   &:hover{
     box-shadow: none;
     background: none;
-    background-color:#a565f8;
+    background-color:#6b4eff;
     transform: translateY(0);
   }
 }
 
 .btn--hover{
   background: none;
-  background-color:#8951d1;
+  background-color:#573ed3;
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.1);
   &:hover{
     box-shadow: none;
     background: none;
-    background-color:#8951d1;
+    background-color:#573ed3;
     transform: translateY(0);
   }
 }
 
 .btn--press{
   background: none;
-  background-color:#6c3da9;
+  background-color:#432fa8;
   &:hover{
     box-shadow: none;
     background: none;
-    background-color:#6c3da9;
+    background-color:#432fa8;
     transform: translateY(0);
   }
 }
 
 .btn--focus{
   background: none;
-  background-color:#a565f8;
+  background-color:#6b4eff;
   outline: 4px solid #005FCC;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
   &:hover{
     box-shadow: none;
     background: none;
-    background-color:#a565f8;
+    background-color:#6b4eff;
     transform: translateY(0);
   }
 }
 
 .btn--wrong01{
-  background: $secondary-color;
+  background: #432fa8;
   &:hover{
-    background: #41019d;
+    background: #432fa8;
   }
 }
 .btn--wrong02{
-  background: $tertiary-color;
+  background: #c4b8ff;
   &:hover{
-    background: #bd96ef;
+    background: #c4b8ff;
   } 
 }
 .btn--good01{
-  background: $neutral-white;
-  border: 1px solid $primary-color-plain;
-  color: $primary-color-plain;
+  background: $BgDefault;
+  border: 1px solid #6b4eff;
+  color: #6b4eff;
   &:hover{
-    border-color: $secondary-color;
-    color: $secondary-color;
-    background: $neutral-white;
+    background: $BgDefault;
+  border: 1px solid #6b4eff;
+  color: #6b4eff;
   }
 }
 .btn--good02{
-  color: $primary-color-plain;
+  color: #6b4eff;
   max-width: 230px;
   width: 100%;
   text-align: center;
@@ -534,7 +578,7 @@
   padding: 20px 8px;
   transition: all 0.3s ease-in-out;
   &:hover{
-    color: $secondary-color;
+    color: #6b4eff;
   }
 }
 
@@ -578,11 +622,11 @@
       overflow-wrap: break-word;
       display: block;
       max-width: 100%; /* 親要素の幅を超えないようにする */
-      color: $neutral-black;
+      color: $TextDefault;
       text-decoration: none;
       transition: all 0.3s ease;
       &:hover{
-        color: $primary-color-plain;
+        color: $TextPrimaryDefault;
         text-decoration: underline;
       }
     }
@@ -591,5 +635,9 @@
 
 // 現在地を示すアニメーション
 .header__nav-links li a.current {
-  background-color: $tertiary-color;
+  background-color: $BgHover;
+  @include tab{
+    background-color: $BgPrimaryDeep;
+    border: 1px solid $BgPrimaryDeep;
+  }
 }
