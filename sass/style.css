@@ -296,7 +296,7 @@ select:focus {
   font-size: 24px;
   line-height: 1.5;
   margin-bottom: 16px;
-  color: #1a1051;
+  color: #313131;
 }
 @media (max-width: 992px) {
   .section-hed3 {
@@ -311,7 +311,7 @@ select:focus {
 .section-hed4 {
   margin-bottom: 8px;
   font-size: 16px;
-  color: #1a1051;
+  color: #313131;
   line-height: 1.5;
 }
 .section-hed4 .icon--h4 {
@@ -323,15 +323,15 @@ select:focus {
   font-size: 16px;
   margin-bottom: 16px;
   line-height: 1.75;
-  color: #313131;
+  color: #404040;
 }
 .section-p a {
-  color: #8971ff;
+  color: #573ED3;
   text-decoration: underline;
   transition: all 0.3s ease;
 }
 .section-p a:hover {
-  color: #6b4eff;
+  color: #432FA8;
 }
 
 .section-shade {
@@ -430,7 +430,7 @@ select:focus {
     padding: 24px;
     overflow-y: initial;
     box-shadow: none;
-    background-color: #f5f5fc;
+    background-color: #f5f3fc;
   }
 }
 
@@ -526,24 +526,24 @@ select:focus {
     transform: translateY(0) rotate(225deg);
     position: absolute;
     top: 10px;
-    background-color: #fff;
+    background-color: #2e1f7c;
   }
   .active .menu-toggle .menu-icon:nth-child(2) {
     transform: translateY(0) rotate(-225deg);
-    background-color: #fff;
+    background-color: #2e1f7c;
   }
   .active .menu-toggle .menu-icon:nth-child(3) {
     display: none;
   }
 }
 .active .menu-toggle .menu-label {
-  color: #fff;
+  color: #2e1f7c;
 }
 @media (max-width: 992px) {
   .active .header__nav-links {
     position: absolute;
     height: 100vh;
-    background: #a695ff;
+    background: #fff;
     top: 0;
     width: 100%;
     left: 0;
@@ -556,6 +556,12 @@ select:focus {
     gap: 24px;
   }
 }
+@media (max-width: 768px) {
+  .active .header__nav-links {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+  }
+}
 .active li {
   border: none;
   margin-bottom: 0;
@@ -564,10 +570,10 @@ select:focus {
   .active li a {
     width: 100%;
     display: block;
-    padding: 24px;
-    border: 1px solid #fff;
-    color: #fff;
+    padding: 16px;
+    color: #2e1f7c;
     border-radius: 8px;
+    background-color: #f0edff;
   }
 }
 
@@ -576,7 +582,7 @@ select:focus {
   overflow-y: auto;
   width: 100%;
   margin: 0 auto;
-  background-color: #f5f5fc;
+  background-color: #f5f3fc;
 }
 @media (max-width: 992px) {
   .maincontents {
@@ -1062,12 +1068,12 @@ select:focus {
   overflow-wrap: break-word;
   display: block;
   max-width: 100%; /* 親要素の幅を超えないようにする */
-  color: #313131;
+  color: #404040;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 .bibli-list li a:hover {
-  color: #6b4eff;
+  color: #432FA8;
   text-decoration: underline;
 }
 
@@ -1076,7 +1082,6 @@ select:focus {
 }
 @media (max-width: 992px) {
   .header__nav-links li a.current {
-    background-color: #6b4eff;
-    border: 1px solid #6b4eff;
+    border: 2px solid #2e1f7c;
   }
 }/*# sourceMappingURL=style.css.map */
