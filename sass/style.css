@@ -325,6 +325,11 @@ select:focus {
   line-height: 1.75;
   color: #404040;
 }
+@media (max-width: 768px) {
+  .section-p {
+    font-size: 14px;
+  }
+}
 .section-p a {
   color: #573ED3;
   text-decoration: underline;
@@ -336,9 +341,16 @@ select:focus {
 
 .section-shade {
   background-color: #f0f0f0;
+  color: #404040;
   padding: 24px;
   border-radius: 8px;
   margin-bottom: 16px;
+}
+@media (max-width: 768px) {
+  .section-shade {
+    padding: 16px;
+    font-size: 14px;
+  }
 }
 
 .section-list {
@@ -349,6 +361,11 @@ select:focus {
   margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.75;
+}
+@media (max-width: 768px) {
+  .section-list li {
+    font-size: 14px;
+  }
 }
 .section-list li:last-child {
   margin-bottom: 0;
@@ -632,6 +649,11 @@ select:focus {
   color: #7b7b7b;
   line-height: 1.75;
 }
+@media (max-width: 768px) {
+  .fv__subttl {
+    font-size: 14px;
+  }
+}
 
 .fv__contents {
   background-color: #fff;
@@ -840,6 +862,8 @@ select:focus {
 @media (max-width: 768px) {
   .black__cont {
     flex-wrap: wrap;
+    margin-bottom: 24px;
+    gap: 16px;
   }
 }
 
@@ -852,6 +876,12 @@ select:focus {
   color: #fff;
   text-align: center;
 }
+@media (max-width: 768px) {
+  .black__box--01 {
+    max-width: 100%;
+    padding: 16px;
+  }
+}
 
 .black__box--02 {
   padding: 24px;
@@ -861,6 +891,12 @@ select:focus {
   background-color: #1c1c1c;
   color: #fff;
   text-align: center;
+}
+@media (max-width: 768px) {
+  .black__box--02 {
+    max-width: 100%;
+    padding: 16px;
+  }
 }
 
 .black__box--03 {
@@ -872,6 +908,12 @@ select:focus {
   color: #fff;
   text-align: center;
 }
+@media (max-width: 768px) {
+  .black__box--03 {
+    max-width: 100%;
+    padding: 16px;
+  }
+}
 
 .black__list li {
   padding: 16px;
@@ -879,6 +921,11 @@ select:focus {
   list-style: none;
   margin-bottom: 16px;
   background-color: #fff;
+}
+@media (max-width: 768px) {
+  .black__list li {
+    font-size: 14px;
+  }
 }
 .black__list li:nth-child(1) {
   color: #000;

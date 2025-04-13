@@ -83,6 +83,9 @@
   margin-bottom: 16px;
   line-height: 1.75;
   color: $TextDefault;
+  @include sp{
+    font-size: 14px;
+  }
 
   a{
     color: $TextLink;
@@ -96,9 +99,14 @@
 
 .section-shade{
   background-color: $BgSubtle;
+  color: $TextDefault;
   padding: 24px;
   border-radius: 8px;
   margin-bottom: 16px;
+  @include sp{
+    padding: 16px;
+    font-size: 14px;
+  }
 }
 
 .section-list{
@@ -111,6 +119,9 @@
     margin-bottom: 16px;
     font-size: 16px;
     line-height: 1.75;
+    @include sp{
+      font-size: 14px;
+    }
     &:last-child{
       margin-bottom: 0;
     }

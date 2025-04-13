@@ -218,6 +218,9 @@
   margin-bottom: 24px;
   color: $TextMuted;
   line-height: 1.75;
+  @include sp{
+    font-size: 14px;
+  }
 }
 
 .fv__contents{
@@ -410,6 +413,8 @@
   margin-bottom: 48px;
   @include sp{
     flex-wrap: wrap;
+    margin-bottom: 24px;
+    gap: 16px;
   }
 }
 .black__box--01{
@@ -420,6 +425,10 @@
   background-color: #000;
   color: $neutral-white;
   text-align: center;
+  @include sp{
+   max-width: 100%; 
+   padding: 16px;
+  }
 }
 .black__box--02{
   padding: 24px;
@@ -429,6 +438,10 @@
   background-color: #1c1c1c;
   color: $neutral-white;
   text-align: center;
+  @include sp{
+    max-width: 100%; 
+    padding: 16px;
+   }
 }
 .black__box--03{
   padding: 24px;
@@ -438,6 +451,10 @@
   background-color: #212121;
   color: $neutral-white;
   text-align: center;
+  @include sp{
+    max-width: 100%; 
+    padding: 16px;
+   }
 }
 .black__list{
   li{
@@ -446,6 +463,9 @@
     list-style: none;
     margin-bottom: 16px;
     background-color:$neutral-white;
+    @include sp{
+      font-size: 14px;
+    }
     &:nth-child(1){
       color: #000;
     }
