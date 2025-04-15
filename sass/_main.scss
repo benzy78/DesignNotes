@@ -103,17 +103,29 @@
   width: 100%;
   border-radius: 5px;
   transition: all 0.4s ease-in-out 0s;
+  position: absolute;
+  &:nth-child(1){
+    top: 8px;
+  }
+  &:nth-child(2){
+    top: 20px;
+  }
+  &:nth-child(3){
+    top: 32px;
+  }
 }
 .menu-label{
+  position: absolute;
+  top: 44px;
+  padding: 0 7px;
     font-size: 14px;
     color: $Icon;
-    padding: 0 7px;
     transition: all 0.3s ease-in-out 0s;
   }
 
 .active{
   .menu-toggle{
-    top: 24px;
+    
     .menu-icon{
       @include tab{
         &:nth-child(1){
@@ -121,7 +133,7 @@
           -ms-transform: translateY(0) rotate(225deg);
           transform: translateY(0) rotate(225deg);
           position: absolute;
-          top: 10px;
+          top: 20px;
           background-color: $TextPrimaryAccent;
         }
         &:nth-child(2){
