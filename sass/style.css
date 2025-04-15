@@ -442,8 +442,8 @@ select:focus {
 }
 @media (max-width: 992px) {
   .header {
-    position: fixed; /* `sticky` を解除 */
-    height: 76px; /* 高さを自動調整 */
+    position: fixed;
+    height: 80px;
     padding: 24px;
     overflow-y: initial;
     box-shadow: none;
@@ -510,8 +510,8 @@ select:focus {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 56px;
-    width: 48px;
+    height: 48px;
+    width: 44px;
     padding: 0;
     position: absolute;
     top: 16px;
@@ -532,16 +532,16 @@ select:focus {
   top: 8px;
 }
 .menu-icon:nth-child(2) {
-  top: 20px;
+  top: 16px;
 }
 .menu-icon:nth-child(3) {
-  top: 32px;
+  top: 24px;
 }
 
 .menu-label {
   position: absolute;
-  top: 44px;
-  padding: 0 7px;
+  top: 34px;
+  padding: 0 4px;
   font-size: 14px;
   color: #6b4eff;
   transition: all 0.3s ease-in-out 0s;
@@ -551,7 +551,7 @@ select:focus {
   .active .menu-toggle .menu-icon:nth-child(1) {
     transform: translateY(0) rotate(225deg);
     position: absolute;
-    top: 20px;
+    top: 16px;
     background-color: #2e1f7c;
   }
   .active .menu-toggle .menu-icon:nth-child(2) {

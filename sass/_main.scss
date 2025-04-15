@@ -24,8 +24,8 @@
   z-index: 101;
   box-shadow: 2px 0 4px 0 rgba(0,0,0,0.1);
   @include tab{
-    position: fixed; /* `sticky` を解除 */
-    height: 76px; /* 高さを自動調整 */
+    position: fixed;
+    height: 80px;
     padding: 24px;
     overflow-y: initial;
     box-shadow: none;
@@ -87,8 +87,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 56px;
-    width: 48px;
+    height: 48px;
+    width: 44px;
     padding: 0;
     position: absolute;
     top: 16px;
@@ -108,19 +108,19 @@
     top: 8px;
   }
   &:nth-child(2){
-    top: 20px;
+    top: 16px;
   }
   &:nth-child(3){
-    top: 32px;
+    top: 24px;
   }
 }
 .menu-label{
   position: absolute;
-  top: 44px;
-  padding: 0 7px;
-    font-size: 14px;
-    color: $Icon;
-    transition: all 0.3s ease-in-out 0s;
+  top: 34px;
+  padding: 0 4px;
+  font-size: 14px;
+  color: $Icon;
+  transition: all 0.3s ease-in-out 0s;
   }
 
 .active{
@@ -133,7 +133,7 @@
           -ms-transform: translateY(0) rotate(225deg);
           transform: translateY(0) rotate(225deg);
           position: absolute;
-          top: 20px;
+          top: 16px;
           background-color: $TextPrimaryAccent;
         }
         &:nth-child(2){
