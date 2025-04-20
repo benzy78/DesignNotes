@@ -354,7 +354,7 @@ select:focus {
 }
 
 .section-list {
-  margin-left: 16px;
+  margin-left: 20px;
   margin-bottom: 16px;
 }
 .section-list li {
@@ -409,6 +409,10 @@ select:focus {
 .anno {
   font-size: 14px;
   color: #909090;
+}
+
+.mb32 {
+  margin-bottom: 32px;
 }
 
 .wrapper {

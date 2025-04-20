@@ -110,7 +110,7 @@
 }
 
 .section-list{
-  margin-left: 16px;
+  margin-left: 20px;
   margin-bottom: 16px;
   @include sp{
     
@@ -164,4 +164,8 @@
 .anno{
   font-size: 14px;
   color: $neutral-glay800;
+}
+
+.mb32{
+  margin-bottom: 32px;
 }
