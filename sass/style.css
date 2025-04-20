@@ -1133,6 +1133,12 @@ select:focus {
   text-decoration: underline;
 }
 
+.footer__caption {
+  max-width: 864px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 .header__nav-links li a.current {
   background-color: #f0edff;
 }

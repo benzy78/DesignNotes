@@ -669,6 +669,12 @@
   }
 }
 
+.footer__caption{
+  max-width: 864px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 // 現在地を示すアニメーション
 .header__nav-links li a.current {
   background-color: $BgHover;
