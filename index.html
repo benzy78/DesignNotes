@@ -37,7 +37,7 @@
                     <li><a href="#color">カラー</a></li>
                     <li><a href="#typography">タイポグラフィ</a></li>
                     <li><a href="#layout">レイアウト</a></li>
-                    <li><a href="#blank">余白</a></li>
+                    <li><a href="#blank">余白/角丸</a></li>
                     <li><a href="#button">ボタン</a></li>
                     <li><a href="#icon">アイコン</a></li>
                     <li><a href="#component">コンポーネント</a></li>
@@ -478,13 +478,26 @@
             </section><!-- layout end -->
 
             <section class="section" id="blank">
-                <h2 class="section-hed2">余白</h2>
-                <ul class="section-list">
-                    <li>基本8の倍数で余白を取る。8で難しい時は、4の倍数で余白を取る。</li>
-                    <li><span class="marker">一貫性</span>：同じ要素の組み合わせには同じ余白を取る。</li>
-                    <li><span class="marker">情報構造</span>：関連性のあるものの余白は他より小さく取る。</li>
-                    <li><span class="marker">操作性</span>：タップ領域間は最低でも16px離すなど、使いやすさ、読みやすさを確保する。</li>
-                </ul>
+                <h2 class="section-hed2">余白/角丸</h2>
+                <section class="section-mini">
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">余白</h3>
+                    <ul class="section-list">
+                        <li>基本8の倍数で余白を取る。8で難しい時は、4の倍数で余白を取る。</li>
+                        <li><span class="marker">一貫性</span>：同じ要素の組み合わせには同じ余白を取る。</li>
+                        <li><span class="marker">情報構造</span>：関連性のあるものの余白は他より小さく取る。</li>
+                        <li><span class="marker">操作性</span>：タップ領域間は最低でも16px離すなど、使いやすさ、読みやすさを確保する。</li>
+                    </ul>
+                </section>
+
+                <section class="section-mini">
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">角丸（border-radius）</h3>
+                    <ul class="section-list">
+                        <li>角が丸いと、親しみやすさや優しさ、モダンな印象を与える</li>
+                        <li>基本的には４の倍数で指定し、同じ要素には同じ値を。</li>
+                        <li>要素の外側と内側の両方に角丸がある場合は、内側の角丸は外側より小さくすると自然な印象になる。</li>
+                    </ul>
+                </section>
+                
             </section><!-- blank end -->
 
             <section class="section" id="button">
