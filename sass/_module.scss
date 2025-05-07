@@ -153,6 +153,11 @@
   font-weight: bold;
 }
 
+.accent{
+  font-weight: bold;
+  color: $TextPrimaryDefault;
+}
+
 .code{
   background-color: $neutral-glay500;
   padding: 0 4px;

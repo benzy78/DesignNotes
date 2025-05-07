@@ -372,24 +372,16 @@
 }
 
 .input__cont-bad{
-  margin-left: 24px;
   margin-bottom: 48px;
   display: flex;
   flex-direction: column;
   gap: 8px;
-  @include sp{
-    margin-left: 16px;
-  }
 }
 
 .input__cont-good{
-  margin-left: 24px;
   display: flex;
   flex-direction: column;
   gap: 8px;
-  @include sp{
-    margin-left: 16px;
-  }
 }
 
 .input__form-good1{
@@ -397,11 +389,11 @@
   width: 100%;
 }
 .input__form-good2{
-  max-width: 56px;
+  max-width: 64px;
   width: 100%;
 }
 .input__form-good3{
-  max-width: 230px;
+  max-width: 160px;
   width: 100%;
 }
 
@@ -681,4 +673,443 @@
   @include tab{
     border: 2px solid $TextPrimaryAccent;
   }
+}
+
+
+// UI Component
+// dropdown
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  padding: 10px 16px;
+  background-color: #fff;
+  color: $primary-color-plain;
+  border: 1px solid $primary-color-plain;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 100;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f5f5f5;
+}
+
+.dropdown.open .dropdown-menu {
+  display: block;
+}
+// selectbox
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+select {
+  width: 200px;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  appearance: none; /* 一部のブラウザでカスタマイズ可 */
+  background-color: #fff;
+}
+/* Firefoxなどで矢印を消すには以下を追加（任意） */
+select::-ms-expand {
+  display: none;
+}
+
+// date picker
+#dateInput{
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover{
+    border: 1px solid #363636;
+  }
+}
+
+.datepicker-wrapper {
+  position: relative;
+  max-width: 280px;
+  width: 100%;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.calendar {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  // border: 1px solid #e0e0e0;
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  z-index: 10;
+  min-width: 260px;
+  display: none;
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.calendar-header button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #444;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.calendar-header span {
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+}
+
+.calendar table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 14px;
+  color: #444;
+  border: none;
+}
+
+.calendar th {
+  padding: 8px;
+  font-weight: bold;
+  color: #888;
+  text-align: center;
+  border: none;
+}
+
+.calendar th:nth-child(1) { color: #d55; } /* 日曜 */
+.calendar th:nth-child(7) { color: blue; } /* 土曜 */
+
+.calendar td {
+  padding: 8px;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border: none;
+}
+
+.calendar td:hover {
+  background-color: #f0f0f0;
+}
+
+.calendar .today {
+  background-color: #007bff;
+  color: #fff !important;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+// counter
+.counter {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #fff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.counter button {
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 6px;
+  width: 36px;
+  height: 36px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.counter button:hover {
+  background-color: #e0e0e0;
+}
+.counter input {
+  width: 40px;
+  text-align: center;
+  font-size: 18px;
+  border: none;
+  background-color: transparent;
+  pointer-events: none;
+}
+
+
+// slider
+.slider-single-value{
+  margin-bottom: 24px;
+}
+.price-slider-wrapper {
+  max-width: 260px;
+  border-radius: 8px;
+}
+
+.price-slider-wrapper label {
+  display: block;
+}
+
+.range-slider {
+  position: relative;
+  height: 36px;
+
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    background: transparent;
+    height: 36px;
+    pointer-events: none;
+    border: none;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border: 2px solid #ccc;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: all;
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    height: 20px;
+    width: 20px;
+    border: 2px solid #ccc;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: all;
+  }
+  
+}
+
+.slider-track {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  background: #e0e0e0;
+  border-radius: 2px;
+}
+
+.slider-range {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  background: #999;
+  border-radius: 2px;
+}
+
+
+.price-inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  gap: 8px;
+}
+
+.price-inputs div {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.price-inputs input {
+  width: 80px;
+  padding: 6px 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: right;
+}
+
+.price-inputs span {
+  font-size: 14px;
+}
+
+// toggle btn
+.toggle-group {
+  display: flex;
+  border: 2px solid #6b4eff;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.toggle-button {
+  flex: 1;
+  padding: 10px 20px;
+  background: #ffffff;
+  color: #6b4eff;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.toggle-button svg {
+  width: 16px;
+  height: 16px;
+}
+
+.toggle-button.active {
+  background: #6b4eff;
+  color: #fff;
+}
+
+.toggle-button:first-child {
+  border-right: 1px solid #6b4eff;
+}
+
+// toggle switch
+.switch-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  color: #333;
+}
+
+.ios-switch {
+  width: 64px;
+  height: 32px;
+  background-color: #ccc;
+  border-radius: 9999px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ios-switch::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+  top: 4px;
+  left: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.ios-switch.on {
+  background-color: #6b4eff;
+}
+
+.ios-switch.on::before {
+  transform: translateX(32px);
+}
+
+// status label
+.status-label {
+  display: inline-block;
+  padding: 8px 10px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 9999px;
+  color: #fff;
+  line-height: 1;
+}
+
+.status-success {
+  background-color: #22c55e; /* 緑 */
+}
+
+.status-pending {
+  background-color: #facc15; /* 黄 */
+  color: #333;
+}
+
+.status-cancel {
+  background-color: #ef4444; /* 赤 */
+}
+
+.status-default {
+  background-color: #9ca3af; /* グレー */
+}
+
+.label-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+
+// chip
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  background-color: #e5e7eb;
+  color: #333;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 9999px;
+  margin: 4px;
+  line-height: 1;
+  transition: background-color 0.2s;
+}
+.chip:hover {
+  background-color: #d1d5db;
+}
+.chip .close-btn {
+  margin-left: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #555;
+}
+.chip .close-btn:hover {
+  color: #111;
+}
+.chip-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
 }
