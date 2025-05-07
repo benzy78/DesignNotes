@@ -635,8 +635,6 @@
             </section><!-- icon end -->
 
                 <!--
-                ・ステータスラベルとチップ
-                ・バッジ
                 ・ツールチップ
                 ・モーダルダイアログ
                 ・アラート
@@ -905,6 +903,50 @@
                             <div class="chip">#UX設計 <span class="close-btn">&times;</span></div>
                             <div class="chip">#Figma <span class="close-btn">&times;</span></div>
                         </div>
+                    </div>
+                </section>
+
+                <section class="section-mini">
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">バッジ</h3>
+                    <p class="section-p">
+                        バッジ（Bedge）は、主に小さな円や角丸長方形の中に数字や短いテキストを表示して、
+                        「その要素に関連する情報がある」ことを強調するために使われる。
+                        代表的な用途としては、通知件数や、カート中の商品数、ユーザーのオンライン状態、新着情報など。
+                    </p>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt="アイコン">バッジのメリット</h4>
+                        <ul class="section-list">
+                            <li>一目で情報量が把握できる</li>
+                            <li>アイコンだけではわからない数的な意味・存在を補完</li>
+                            <li>ユーザーへの注意喚起・アクション誘導に繋がる</li>
+                        </ul>
+                    </div>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt="アイコン">バッジの注意点</h4>
+                        <ul class="section-list">
+                            <li>数字の意味が直感的に伝わるか：例）バッジに「5」と表示されたとき、それが「通知数」か「未読数」か曖昧だと混乱する</li>
+                            <li>常に表示すると視覚的ノイズになるため、本当に重要な情報にのみ使用すべき</li>
+                            <li>色の意味と一貫性を持たせる：赤＝未読／エラー、緑＝完了など、他UIと整合性が取れているか確認</li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <p class="box-label">例</p>
+                        <div class="badge-container">
+                            <!-- 通知バッジ -->
+                            <div class="icon-button">
+                              カートに進む
+                              <span class="badge-count">3</span>
+                            </div>
+                          
+                            <!-- NEWバッジ -->
+                            <span class="new-label">NEW</span>
+                          
+                            <!-- オンラインステータスバッジ -->
+                            <div class="avatar-wrapper">
+                              <i class="fas fa-user-circle"></i>
+                              <span class="status-indicator"></span>
+                            </div>
+                          </div>
                     </div>
                 </section>
 
