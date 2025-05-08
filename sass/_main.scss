@@ -1488,3 +1488,112 @@ input[type="text"] {
   font-size: 14px;
   color: #374151;
 }
+
+
+// empty state
+.empty-state {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 40px 32px;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.empty-icon {
+  .far{
+    font-size: 72px;
+    margin: 0 auto 20px;
+    color: $BgPrimaryDeep;
+  }
+}
+
+.empty-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.empty-desc {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.empty-button {
+  padding: 10px 20px;
+  background-color: $BgPrimaryDeep;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.empty-button:hover {
+  background-color: $BgPrimaryAccent;
+}
+
+@media (max-width: 480px) {
+  .empty-state {
+    padding: 32px 20px;
+  }
+}
+
+
+// carousel
+.carousel-container {
+  max-width: 960px;
+  margin: 0 auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding-bottom: 10px;
+  scrollbar-width: thin;
+}
+
+.carousel-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.carousel-card {
+  display: inline-block;
+  width: 280px;
+  height: 180px;
+  margin-right: 16px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  vertical-align: top;
+  transition: transform 0.2s ease;
+}
+
+.carousel-card:hover {
+  transform: translateY(-4px);
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.card-desc {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}

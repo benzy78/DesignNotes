@@ -42,6 +42,7 @@
                     <li><a href="#icon">アイコン</a></li>
                     <li><a href="#component">UIコンポーネント</a></li>
                     <li><a href="#accessibility">アクセシビリティ</a></li>
+                    <li><a href="#usability">ユーザビリティ</a></li>
                     <li><a href="#animation">アニメーション</a></li>
                     <li><a href="#ux">UX</a></li>
                     <li><a href="#psychology">心理学とデザイン</a></li>
@@ -62,6 +63,9 @@
             </section>
             <section class="section" id="process">
                 <h2 class="section-hed2">UI/UX Process</h2>
+                <p class="section-p anno">
+                    UX設計のプロセスは案件タイプ（クライアントワーク、自社開発、SaaSなど）によって多少変わるので注意。
+                </p>
                 <section class="section-mini">
                     <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt=" ">UX設計</h3>
                     
@@ -503,6 +507,17 @@
                     <li>基本的にリキッドレイアウトを採用。画面幅に合わせて流動的に変動させる。そのため、widthの指定は基本的に固定値をとらずに、max-width:X%;とwidth:100%;のように％で指定する。</li>
                     <li>ブレイクポイントはスマホで768px, タブレットで992pxとする。</li>
                 </ul>
+
+                <section class="section-mini">
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">トランケーション（短縮）の活用</h3>
+                    <p class="section-p">
+                        画面幅が小さくなった時、フォントサイズや要素の最大幅の調整以外に、トランケーションを使う手もある。
+                        トランケーションとは、短縮の意味で、たとえば、カードのタイトルを「デザインシステムを作る10のメリ・・・」のように、末尾に省略記号を用いて表現したりすること。
+                        <span class="marker">基本的に、レスポンシブ時の対応としては、詰める（余白の縮小）→縮める（フォントサイズやアイコンサイズ、要素の最大幅の縮小）→短縮（情報の一部をカット）→折りたたむ
+                            の順番で考えると良い。</span>
+                    </p>
+                </section>
+
             </section><!-- layout end -->
 
             <section class="section" id="blank">
@@ -537,6 +552,14 @@
                     </ul>
                 </div>
                 
+                <section class="section-mini">
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">ボタンの文言</h3>
+                    <p class="section-p">
+                        <span class="marker">ボタンの文言は、曖昧で誤解を招くようなものではなく、明確に意味のわかるものにする。</span>
+                        悪い例だと、カートに移動するボタンの文言が「購入する」「注文する」などになっているパターンなど。
+                        こうゆう場合は、ボタンの文言も「カートに移動する」、次のページで「注文を確定する」といった文言にする。
+                    </p>
+                </section>
                 <section class="section-mini">
                     <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">ステートの作成</h3>
                     <p class="section-p">
@@ -1143,7 +1166,64 @@
                               <div class="step-icon">3</div>
                               <div class="step-label">確認・完了</div>
                             </div>
-                        </div>                          
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section-mini">
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">カルーセル</h3>
+                    <p class="section-p">
+                        カルーセル（carousel）とは、WebやアプリのUIにおいて、複数のコンテンツ（画像・カード・バナーなど）を横にスライドして切り替えられるUIコンポーネントのこと。
+                        スライダーとも呼ばれる。
+                        主な用途としては、トップページのバナー表示や、商品ギャラリー、カードリストなど、<span class="marker">情報をコンパクトに見せる手段として使われる。</span>
+                        しかし、下記で詳細を述べるが、カルーセルは意外と使い勝手が悪いため使用例はかなり限定される。カルーセルの採用には慎重に。
+                    </p>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt="アイコン">カルーセルを使っても良い場面</h4>
+                        <ul class="section-list">
+                            <li>スマホで限られたスペースに複数のコンテンツ並べたい時</li>
+                            <li>重要度の均等な情報を複数載せたい時：レビュー一覧や投稿ギャラリーのようなどれが見られても構わないもの</li>
+                            <li>全部を見てもらう前提ではないとき：Netflixのように「パーソナライズされた大量のおすすめ」を提供するケース</li>
+                            <li>サブコンテンツとしての補助表示：メイン情報の妨げにならず、「あると嬉しい」情報のまとめ（例：関連商品など）</li>
+                        </ul>
+                    </div>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt="アイコン">カルーセルを使わない方が良い場面</h4>
+                        <ul class="section-list">
+                            <li>全ての内容を確実に見てほしいとき：見られるのは最初の1〜2枚程度。重要情報の伝達に不向き</li>
+                            <li>PCのヒーローヘッダーとしての利用（特に自動再生）：ユーザーは読み飛ばしがち/動きに気づかないことが多い/読んでる最中に流れる</li>
+                            <li>異なる内容のキャンペーンを詰め込むとき：情報過多・切り替えの負担が大きくなる（「結局何が言いたいの？」になる）</li>
+                            <li>代替手段があるのに、なんとなく採用しているとき：カードグリッド・セクションごとの縦配置などの方が、情報に優先度をつけやすいケースもある</li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <p class="box-label">例</p>
+                        <div class="carousel-container">
+                            <div class="carousel-card">
+                              <div class="card-content">
+                                <div class="card-title">コンテンツA</div>
+                                <div class="card-desc">カルーセル1枚目です。</div>
+                              </div>
+                            </div>
+                            <div class="carousel-card">
+                              <div class="card-content">
+                                <div class="card-title">コンテンツB</div>
+                                <div class="card-desc">追加の説明やリードテキストが入ります。</div>
+                              </div>
+                            </div>
+                            <div class="carousel-card">
+                              <div class="card-content">
+                                <div class="card-title">コンテンツC</div>
+                                <div class="card-desc">カードは横にスクロール可能です。</div>
+                              </div>
+                            </div>
+                            <div class="carousel-card">
+                              <div class="card-content">
+                                <div class="card-title">コンテンツD</div>
+                                <div class="card-desc">4枚目のサンプル。もっと追加も可能。</div>
+                              </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
@@ -1250,7 +1330,12 @@
             <section class="section" id="accessibility">
                 <h2 class="section-hed2">Accessibility</h2>
                 <p class="section-p">
-                    本セクションでは、その他（上記で記載したタイポグラフィ、余白等以外）のアクセシビリティのガイドラインを記載。
+                    アクセシビリティとは、視覚・聴覚・身体的な障害を持つ人を含めた、すべてのユーザーが公平にアクセスし、利用できるようにするための設計上の配慮を指す。
+                    音声読み上げへの対応や、キーボードのみでの操作、色覚に配慮した配色設計などがその代表例。
+                    アクセシビリティは、特定のユーザー層のための配慮ではなく、「誰一人取り残さない」設計思想として、すべての人にとっての使いやすさを保証するものでもある。
+                </p>
+                <p class="section-p anno">
+                    ＊ユーザビリティとの混同に注意
                 </p>
                 
                 <section class="section-mini">
@@ -1267,14 +1352,76 @@
                     </p>
                 </section>
 
+            </section>
+            <!-- accessibility end -->
+
+            <section class="section" id="usability">
+                <h2 class="section-hed2">Usability</h2>
+                <p class="section-p">
+                    Usability（ユーザビリティ）とは、誰もが直感的に操作でき、効率よく目的を達成できるように設計された「使いやすさ」のことを指す。
+                    ユーザーがシステムやサービスを使う際に迷わず操作できるか、余計なストレスを感じずに目的に到達できるかどうかが重要な基準となる。
+                    ラベルやナビゲーションの分かりやすさ、ボタンの配置、エラー表示の明確さなどは、すべてユーザビリティに関わる要素。
+                </p>
+                <p class="section-p anno">
+                    ＊アクセシビリティとの混同に注意
+                </p>
+
+                <section class="section-mini">
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">十分なタップエリアの確保</h3>
+                    <p class="section-p">
+                        <span class="marker">ボタンやテキストリンク、アイコンなど、UI要素の種類に関係なく、タップエリアは44px×44px以上を確保する。</span>
+                        これは、誤タップを防ぎ、押しやすさを保つための最低基準であり、スマートフォンのような小さな画面でも快適な操作性を実現する重要な配慮。
+                        特に、テキストリンクはタップエリアが小さくなりがちなので注意。
+                        タップエリアを確保するためには、line-height や padding を使って見た目を崩さずタップ領域を広げるとよい。
+                    </p>
+                </section>
+
                 <section class="section-mini">
                     <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">押下時のデザインについて</h3>
                     <p class="section-p">
                         <span class="code">box-shadow</span>と<span class="code">transform: translateY(Xpx);</span>をhover時より小さくして、沈み込むようなデザインにするのが一般的。
                     </p>
                 </section>
+
+                <section class="section-mini">
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">エンプティステート</h3>
+                    <p class="section-p">
+                        エンプティステートとは、アプリケーションやWebサービスにおいて、まだ表示するデータが存在しない状態を指す。
+                        たとえば、「お気に入りが登録されていない」「検索結果が0件」「投稿がまだない」など、コンテンツが空のタイミングに表示されるUIのこと。
+                        単に「空であること」を伝えるだけでなく、ユーザーに次の行動を促したり、安心感を与えたりする重要な役割を担う。
+                        <span class="marker">基本的に、エンプティステートは必ず用意するように。</span>
+                    </p>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt=" ">エンプティステートの失敗例</h4>
+                        <p class="section-p">
+                            <span class="marker">エンプティステートでありがちな失敗は、ただ「データがありません」とだけ表示してしまうケース。</span>
+                            それではユーザーは次に何をすればよいのか分からず、離脱につながる可能性がある。
+                            また、文字だけで淡白に伝えてしまうと、空白感が強調されてしまい、体験として寂しい印象を与えてしまう。
+                        </p>
+                    </div>
+                    
+                    <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt=" ">効果的なエンプティステート</h4>
+                    <p class="section-p">
+                        エンプティステートを効果的に設計するためには、いくつかの工夫が必要。
+                        まずは、状態の理由を分かりやすく説明すること。
+                        次に、ユーザーに次の行動を提案すること（例：「＋ボタンで新規作成しましょう」「検索条件を変更して再検索してください」など）。
+                        また、視覚的な要素（イラストやアイコン）を添えることで、空白の印象を和らげ、ブランドのトーンも演出できる。
+                    </p>
+                    <div class="box">
+                        <p class="box-label">例</p>
+                        <div class="empty-state">
+                            <div class="empty-icon"><i class="far fa-user-circle"></i></div>
+                            <div class="empty-title">まだお気に入りがありません</div>
+                            <div class="empty-desc">
+                              気になるアイテムを「♡」アイコンからお気に入りに追加できます。
+                              あとでまとめて見返すことができますよ。
+                            </div>
+                            <button class="empty-button">アイテムを探す</button>
+                        </div>
+                    </div>
+                </section>
             </section>
-            <!-- accessibility end -->
+            <!-- usability end -->
 
             <section class="section" id="animation">
                 <h2 class="section-hed2">Animation</h2>
