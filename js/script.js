@@ -266,3 +266,51 @@ const dropdown = document.getElementById('dropdown');
     console.log('通知設定：', isOn ? 'ON' : 'OFF');
   });
     // toggle btn end
+
+
+    // modal
+    const openBtn = document.querySelector('.open-modal-btn');
+    const overlay = document.getElementById('modalOverlay');
+    const cancelBtn = document.getElementById('cancelBtn');
+  
+    openBtn.addEventListener('click', () => {
+      overlay.classList.add('show');
+    });
+  
+    cancelBtn.addEventListener('click', () => {
+      overlay.classList.remove('show');
+    });
+  
+    // 背景クリックでも閉じる
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        overlay.classList.remove('show');
+      }
+    });
+    // modal end
+
+
+    // Toast
+    function showToast(message, type = 'success') {
+      const container = document.getElementById('toastContainer');
+      const toast = document.createElement('div');
+      toast.className = `toast ${type}`;
+      toast.innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          ${
+            type === 'success' ? '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />' :
+            type === 'error' ? '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />' :
+            '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M12 2a10 10 0 100 20 10 10 0 000-20z" />'
+          }
+        </svg>
+        ${message}
+      `;
+      container.appendChild(toast);
+  
+      // 自動で非表示
+      setTimeout(() => {
+        toast.classList.add('hide');
+        setTimeout(() => container.removeChild(toast), 500);
+      }, 3000);
+    }
+    // Toast end

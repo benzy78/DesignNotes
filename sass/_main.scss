@@ -1156,7 +1156,7 @@ input[type="text"] {
 /* NEWバッジ */
 .new-label {
   display: inline-block;
-  background-color: #3b82f6;
+  background-color: $BgPrimaryDeep;
   color: white;
   font-size: 12px;
   font-weight: 600;
@@ -1184,4 +1184,307 @@ input[type="text"] {
   background-color: #22c55e;
   border: 2px solid white;
   border-radius: 50%;
+}
+
+
+// tooltip
+.tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip-button {
+  color: $Icon;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  i{
+    font-size: 24px;
+  }
+}
+
+.tooltip-box {
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 8px 12px;
+  font-size: 13px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 100;
+}
+
+.tooltip-box::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+.tooltip-wrapper:hover .tooltip-box {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+// modal
+/* ボタン */
+.open-modal-btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: $BgPrimaryDeep;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* オーバーレイ背景 */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* モーダル本体 */
+.modal {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modal h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.modal p {
+  font-size: 14px;
+  margin: 12px 0 20px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modal-buttons button {
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-cancel {
+  background-color: #e5e7eb;
+  color: #333;
+}
+
+.btn-delete {
+  background-color: #ef4444;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.modal-overlay.show {
+  display: flex;
+}
+
+
+// Message Alert
+.alert {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  position: relative;
+  max-width: 500px;
+}
+
+.alert svg {
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.alert.success {
+  background-color: #ecfdf5;
+  color: #047857;
+}
+
+.alert.warning {
+  background-color: #fff7ed;
+  color: #b45309;
+}
+
+.alert.error {
+  background-color: #fef2f2;
+  color: #b91c1c;
+}
+
+.alert .message {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.alert .close-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 16px;
+}
+
+
+// Toast
+.toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  background-color: #ecfdf5;
+  color: #047857;
+  padding: 12px 16px;
+  border-radius: 8px;
+  min-width: 240px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-size: 14px;
+  opacity: 1;
+  transition: opacity 0.5s ease, transform 0.3s ease;
+}
+
+.toast.hide {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.toast.error {
+  background-color: #fef2f2;
+  color: #b91c1c;
+}
+
+.toast.warning {
+  background-color: #fff7ed;
+  color: #b45309;
+}
+
+.toast.success {
+  background-color: #ecfdf5;
+  color: #047857;
+}
+
+.toast svg {
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.show-toast-btn {
+  padding: 10px 20px;
+  background: $BgPrimaryDeep;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+
+// Stepper
+.stepper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex: 1;
+  text-align: center;
+}
+
+.step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  right: -50%;
+  width: 100%;
+  height: 2px;
+  background-color: #d1d5db;
+  z-index: 0;
+}
+
+.step.completed::after {
+  background-color: $BgPrimaryDeep;
+}
+
+.step-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #d1d5db;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.step.completed .step-icon {
+  background-color: $BgPrimaryDeep;
+}
+
+.step.current .step-icon {
+  background-color: $BgPrimaryDeep;
+  box-shadow: 0 0 0 4px rgba(107, 78, 255,0.3);
+}
+
+.step-label {
+  font-size: 14px;
+  color: #374151;
 }

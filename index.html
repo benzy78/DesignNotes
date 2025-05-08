@@ -634,13 +634,6 @@
 
             </section><!-- icon end -->
 
-                <!--
-                ・ツールチップ
-                ・モーダルダイアログ
-                ・アラート
-                ・トースト
-                ・ステッパー
-                 -->
             <section class="section" id="component">
                 <h2 class="section-hed2">UI Component</h2>
                 
@@ -907,6 +900,73 @@
                 </section>
 
                 <section class="section-mini">
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">ツールチップ</h3>
+                    <p class="section-p">
+                        ツールチップ（Tooltip）とは、ユーザーが要素にカーソルを合わせたときに表示される、補足的な情報を示す小さなポップアップUI。
+                        主にボタンやアイコン、略語などの意味や用途を一時的に説明するために使われる。
+                    </p>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt="アイコン">ツールチップの利点</h4>
+                        <ul class="section-list">
+                            <li>情報の補足：UIをシンプルに保ちながら、詳細情報やアイコンの意味などを説明しユーザーの理解を助ける</li>
+                            <li>UIの省スペース化：常時説明を表示せず、必要な時だけ表示する</li>
+                        </ul>
+                    </div>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt="アイコン">ツールチップ使用時の注意点</h4>
+                        <ul class="section-list">
+                            <li>重要情報はいれない：必須情報や操作説明を依存させるとUXを損なうので、補足や詳細情報にのみ用いる</li>
+                            <li>簡潔な内容にする：補足説明が長文になるのはホバー時に表示するツールチップ向きではない。長文で説明する必要がある場合は、ポップオーバーやモーダルを使用する。</li>
+                            <li>スマホやタブレットでは使えない：基本的にはPC中心のUIで用いる。スマホ・タブレットで使用するなら、クリック、タップで表示ができるポップオーバーやモーダルを使用する。</li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <p class="box-label">例</p>
+                        <div class="tooltip-wrapper">
+                            <button class="tooltip-button"><i class="far fa-edit"></i></button>
+                            <div class="tooltip-box">投稿の編集</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section-mini">
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">モーダルダイアログ</h3>
+                    <p class="section-p">
+                        モーダルダイアログ（Modal Dialogue）とは、ユーザーの画面上に最前面で表示され、背景の操作を一時的にブロックするダイアログウィンドウのこと。
+                        主に「確認」「警告」「入力」など、ユーザーの注意を引き、即時の対応を求める用途で使われる。
+                    </p>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt="アイコン">モーダルの利点</h4>
+                        <ul class="section-list">
+                            <li>ユーザーの注意を集中できる：他の要素を操作できないため、重要な意思決定や確認に向いている</li>
+                            <li>入力や確認を一時的に行える：削除確認・フォーム・設定などを画面遷移せずに行える</li>
+                        </ul>
+                    </div>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt="アイコン">モーダル使用時の注意点</h4>
+                        <ul class="section-list">
+                            <li>多用するとUXを損なう：頻繁な表示や重ね表示はユーザーの集中を妨げる</li>
+                            <li>背景ブロックを忘れずに行う：背景の操作ができてしまうと、モーダルの意味がなくなる</li>
+                            <li><span class="marker">ボタンの文言は明確で具体的に</span>：「はい」「いいえ」「OK」「キャンセル」などは何に対しての同意・中止か不明確。「削除する」「保存しない」「編集を破棄」など動作が明確に伝わる文言にする。</li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <p class="box-label">例</p>
+                        <button class="open-modal-btn">削除モーダルを開く</button>
+                        <div class="modal-overlay" id="modalOverlay">
+                        <div class="modal">
+                            <h2>本当に削除しますか？</h2>
+                            <p>この操作は元に戻せません。削除してもよろしいですか？</p>
+                            <div class="modal-buttons">
+                            <button class="btn-cancel" id="cancelBtn">キャンセル</button>
+                            <button class="btn-delete" id="deleteBtn">削除する</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section-mini">
                     <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">バッジ</h3>
                     <p class="section-p">
                         バッジ（Bedge）は、主に小さな円や角丸長方形の中に数字や短いテキストを表示して、
@@ -947,6 +1007,143 @@
                               <span class="status-indicator"></span>
                             </div>
                           </div>
+                    </div>
+                </section>
+
+                <section class="section-mini">
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">メッセージアラート</h3>
+                    <p class="section-p">
+                        メッセージアラートは、画面上に固定表示される通知UIで、ユーザーにエラー・警告・成功などの情報を明示的に伝えるための視認性の高い帯状の要素。
+                        主に画面上部やフォーム直下に表示され、ユーザーが気づきやすい設計になっている。
+                    </p>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt="アイコン">メッセージアラートの利点</h4>
+                        <ul class="section-list">
+                            <li>目立つ位置で確実に伝えられる</li>
+                            <li>内容が残り続けるため、ユーザーが読み返せる</li>
+                            <li>成功・警告・エラーの色分けがしやすい</li>
+                        </ul>
+                    </div>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt="アイコン">メッセージアラートの注意点</h4>
+                        <ul class="section-list">
+                            <li>成功通知には少し強すぎる印象になることがある（過剰に見える）</li>
+                            <li>通知の重要が低いのに、目立ちすぎると逆効果になる</li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <p class="box-label">例</p>
+                        <div class="alert success">
+                            <div class="message">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                              </svg>
+                              保存が完了しました。
+                            </div>
+                            <button class="close-btn" onclick="this.parentElement.style.display='none';">×</button>
+                          </div>
+                          
+                          <div class="alert warning">
+                            <div class="message">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M12 2a10 10 0 100 20 10 10 0 000-20z" />
+                              </svg>
+                              一部の入力項目が未記入です。
+                            </div>
+                            <button class="close-btn" onclick="this.parentElement.style.display='none';">×</button>
+                          </div>
+                          
+                          <div class="alert error">
+                            <div class="message">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                              </svg>
+                              保存に失敗しました。もう一度お試しください。
+                            </div>
+                            <button class="close-btn" onclick="this.parentElement.style.display='none';">×</button>
+                          </div>
+                          
+                    </div>
+                </section>
+
+                <section class="section-mini">
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">トースト</h3>
+                    <p class="section-p">
+                        トーストは、画面の端（多くは右上または下）に一時的に表示される軽量な通知UIで、保存や送信の完了など、操作のフィードバックを邪魔せず伝える目的で使われる。
+                    </p>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt="アイコン">トーストの利点</h4>
+                        <ul class="section-list">
+                            <li>即時で軽快なフィードバックが可能（保存完了など）</li>
+                            <li>ユーザーの操作を妨げずに通知できる</li>
+                            <li>数秒で自動的に消える為操作が不要</li>
+                        </ul>
+                    </div>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt="アイコン">トーストの注意点</h4>
+                        <ul class="section-list">
+                            <li>ユーザーが見逃すリスクがある</li>
+                            <li>情報が残らない為、記録性が低い</li>
+                            <li>複数同時に表示されるとUXが混乱しやすい</li>
+                            <li>UIに重ねて表示されるため、視覚的ノイズや誤タップの原因になることがある</li>
+                        </ul>
+                    </div>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt="アイコン">トーストとメッセージアラートの使い分け</h4>
+                        <ul class="section-list">
+                            <li>トースト：保存成功、送信完了などの軽微な成功通知/軽微かつ操作の流れを邪魔したくない時</li>
+                            <li>メッセージアラート：入力ミス、エラー、必須フィードバックや成功通知だが文脈に強く結び付けたい時</li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <p class="box-label">例</p>
+                        <button class="show-toast-btn" onclick="showToast('保存が完了しました。', 'success')">成功トーストを表示する</button>
+                        <div class="toast-container" id="toastContainer"></div>
+                    </div>
+                </section>
+
+                <section class="section-mini">
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">プログレスステッパー</h3>
+                    <p class="section-p">
+                        複数の工程（ステップ）を視覚的に並べて、現在どのステップにいるかを線や番号・アイコンで示すUIコンポーネント。
+                        ステップインジケーターやマルチステップUIとも呼ばれる。
+                        主な用途は、会員登録や購入フロー、アンケートなどのマルチステップフォーム。
+                    </p>
+                    <p class="section-p anno">
+                        ＊カウンターの「+」「−」ボタンのことをステッパー（数値ステッパーまたは、カウンター型ステッパー）と呼ぶことがあるので混同しないように注意。
+                    </p>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt="アイコン">プログレスステッパーの利点</h4>
+                        <ul class="section-list">
+                            <li>現在位置・全体の進捗が一目でわかり、安心感や予測性を与える：離脱率の低下、心理的な不安の軽減</li>
+                            <li>複雑な情報を段階的に整理できる</li>
+                        </ul>
+                    </div>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt="アイコン">プログレスステッパーの注意点</h4>
+                        <ul class="section-list">
+                            <li>ステップ数は明確で適切に：ステップが多すぎると逆にストレスになる。通常は3~5ステップ程度が適切</li>
+                            <li>ステップ名は簡潔に意味のわかるもの：Step1,Step2などはNG。「基本情報」「配送先」など具体的に示す</li>
+                            <li>戻る、進むの操作を一貫性のある設計に：ステップを飛ばしたり、自由に戻れるかどうかの挙動を明示。戻ったときにデータが消えるとユーザーが混乱・苛立つ原因になる</li>
+                            <li>モバイル対応への配慮：横幅が限られるため、縦並びや進捗バー型への切り替えを検討する。モバイルではステップが折りたたまれているか、プログレスバーだけになることもある</li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <p class="box-label">例</p>
+                        <div class="stepper">
+                            <div class="step completed">
+                              <div class="step-icon">1</div>
+                              <div class="step-label">基本情報</div>
+                            </div>
+                            <div class="step current">
+                              <div class="step-icon">2</div>
+                              <div class="step-label">配送先</div>
+                            </div>
+                            <div class="step">
+                              <div class="step-icon">3</div>
+                              <div class="step-label">確認・完了</div>
+                            </div>
+                        </div>                          
                     </div>
                 </section>
 
@@ -1025,18 +1222,18 @@
                         </div>
                     </div>
                     <div class="block">
-                        <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt="アイコン">プレースホルダー仕様の注意点</h4>
+                        <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt="アイコン">プレースホルダー使用の注意点</h4>
                         <p class="section-p">
                             プレースホルダーには、<span class="marker">入力例を入れ、フォントカラーは入力済みと十分に区別できる色を使用する。</span>以下、プレースホルダー使用の注意点をまとめる。
                         </p>
                         <p class="section-p">
-                            まず、<span class="marker">プレースホルダーをラベルの代替にしない。</span>
+                            <span class="accent">プレースホルダーをラベルの代替にしない。</span> <br>
                             「名前」「メールアドレス」などの入力欄で、ラベルを置かずにプレースホルダーだけに頼る設計はNG。
                             入力中に消えてしまうため、「何を入力すべきか」忘れやすい。
                             また、スクリーンリーダーが読み上げにくくなるなど、アクセシビリティも大幅に低下する。
                         </p>
                         <p class="section-p">
-                            <span class="marker">また、入力ルール、エラーガイドはプレースホルダーに入れない。</span>
+                            <span class="accent">入力ルール、エラーガイドはプレースホルダーに入れない。</span> <br>
                             「8文字以上の英数字、大文字を含む」など、詳細なルールはプレースホルダーに書いても、入力中に消えるので、入力後にチェックできなくなってしまう。
                             したがって、入力ルールやエラーガイドはinputの外に記載する。
                             <span class="marker">同様の理由で、「必須」「任意」をプレースホルダーで伝えるのもNG</span>
