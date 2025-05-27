@@ -219,7 +219,7 @@
     font-weight: bold;
     &:hover{
       background: $BgHover;
-      padding-left: 24px;
+      padding-left: 16px;
     }
     @include tab{
       padding: 0;
