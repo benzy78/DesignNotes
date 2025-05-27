@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Design Notes:UXプロセス詳細</title>
+    <meta name="description" content="UIやUXの設計について、自分なりに整理してきた考えや気づきをまとめたメモ">
+    <meta name="keywords" content="">
+    <!--style css-->
+    <link rel="stylesheet" href="../sass/style.css" media="all">
+    <!--font-awesome-->
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <!--jquery-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <!-- wow -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet"
+        type="text/css" media="all">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="layout layout--lower">
+        <header class="header header--lower">
+            <h1 class="header__logo"><a href="#firstview"><img src="../images/Index--icon.svg" alt="アイコン" class="index--icon"> UXプロセス</a></h1>
+            <nav class="header__nav">
+                <button class="menu-toggle" aria-label="Toggle navigation">
+                    <span class="menu-icon"></span>
+                    <span class="menu-icon"></span>
+                    <span class="menu-icon"></span>
+                    <span class="menu-label">Menu</span>
+                </button>
+                <p class="return-home">
+                  <a href="../index.html">Homeに戻る</a>
+                </p>
+                <ul class="header__nav-links">
+                    <li><a href="#uxprocess-outline">UX設計プロセスの概略</a></li>
+                    <li><a href="#consign">受託案件の場合に考慮すべきUXプロセス</a></li>
+                    <li><a href="#first-hypo">課題認識/仮説立て</a></li>
+                    <li><a href="#target">ターゲット層の設定（暫定的）</a></li>
+                    <li><a href="#premise">前提知識の強化</a></li>
+                    <li><a href="#user-research">ユーザーリサーチ</a></li>
+                    <li><a href="#business-research">競合リサーチ</a></li>
+                    <li><a href="#persona">ペルソナ設計</a></li>
+                    <li><a href="#cj">カスタマージャーニー作成</a></li>
+                    <li><a href="#order">課題整理と課題解決策の設計</a></li>
+                    <li><a href="#condition">要件定義</a></li>
+                    <li><a href="#info-design">情報設計</a></li>
+                    <li><a href="#wire">ワイヤフレーム/プロトタイプ作成</a></li>
+                    <li><a href="#reinspect">検証・フィードバック・再設計</a></li>
+                </ul>
+                
+                
+            </nav>
+            
+        </header>
+        <main class="maincontents">
+            <section class="firstview" id="firstview">
+                <h2 class="fv__ttl"><img src="../images/Title--icon.svg" alt=" " class="ttl--icon"> UX設計プロセスの詳細</h2>
+            </section>
+            <section class="section" id="uxprocess">
+                <h2 class="section-hed2">UX設計プロセス</h2>
+                <section class="section-mini" id="uxprocess-outline">
+                    <h3 class="section-hed3"><img class="icon--h3" src="../images/h3_icon.svg" alt=" ">UX設計プロセスの概略</h3>
+                    <ol class="ol">
+                        <li>課題認識/仮説立て</li>
+                        <li>ターゲット層の設定（暫定的）</li>
+                        <li>前提知識の強化</li>
+                        <li>ユーザーリサーチ（探索型の定性調査）</li>
+                        <li>競合リサーチ</li>
+                        <li>ペルソナ設計</li>
+                        <li>カスタマージャーニー作成</li>
+                        <li>課題整理と課題解決策の設計</li>
+                        <li>要件定義</li>
+                        <li>情報設計</li>
+                        <li>ワイヤフレーム/プロトタイプ作成</li>
+                        <li>検証・フィードバック・再設計</li>
+                    </ol>
+                </section>
+
+                <section class="section-mini" id="consign">
+                    <h3 class="section-hed3"><img class="icon--h3" src="../images/h3_icon.svg" alt=" ">受託案件の場合に考慮すべきUX設計プロセス</h3>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="../images/h4_icon.svg" alt=" ">クライアント企業の事業戦略と背景・目的の理解</h4>
+                        <ul class="section-list">
+                            <li>なぜこのプロジェクトが立ち上がったのか</li>
+                            <li>事業上のKPI、経営課題、競合との戦いとプロジェクトの裏にある事情</li>
+                            <li>現場の担当者と経営層の温度差も要チェック(トップダウンか現場規定かなど)</li>
+                        </ul>
+                    </div>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="../images/h4_icon.svg" alt=" ">ステークホルダー構造の把握</h4>
+                        <ul class="section-list">
+                            <li>社内の誰が意思決定者か？ (決裁権限の所在を明らかに)</li>
+                            <li>現場担当者と経営層で意見が違うことも多いため、誰のUXなのかを意識</li>
+                            <li>承認プロセスも事前に知っておくと提案の仕方が変わる</li>
+                        </ul>
+                    </div>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="../images/h4_icon.svg" alt=" ">ユーザーリサーチの許諾・制約</h4>
+                        <ul class="section-list">
+                            <li>ユーザー設定がクライアント企業側にあることが多い</li>
+                            <li>インタビュー調整、調査対象の制限、個人情報の扱いなどに事前準備が必要</li>
+                            <li>代替手段（社内ユーザー、代理、既存データ活用）も検討</li>
+                        </ul>
+                    </div>
+                    <h4 class="section-hed4"><img class="icon--h4" src="../images/h4_icon.svg" alt=" ">成果物に対する期待値コントロール</h4>
+                    <ul class="section-list">
+                        <li>何をいつまでにどう納品するか明確に</li>
+                        <li>クライアントのふわっとした依頼に対し、設計の意義を言語化、可視化して伝える必要</li>
+                        <li>UIだけでなく、UXプロセスを含めるなら、ペルソナ、カスタマージャーニーユーザ、課題、仮説などを納品範囲に含めるか確認</li>
+                    </ul>
+                </section>
+
+                <section class="section-mini" id="first-hypo">
+                    <h3 class="section-hed3"><img class="icon--h3" src="../images/h3_icon.svg" alt=" ">課題認識・仮説立て/ヒアリング</h3>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="../images/h4_icon.svg" alt=" ">目的</h4>
+                        <ul class="section-list">
+                            <li>プロジェクトの出発点として、「何を解決すべきか」を明らかにするため</li>
+                            <li>クライアントや事業側が持つビジネス課題と背景の整理</li>
+                            <li>ユーザーの問題を最初の仮説レベルで定義し、後続の調査設計の方向性を決めるため</li>
+                            <li>現時点での関係者間の認識のズレをなくす</li>
+                        </ul>
+                    </div>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="../images/h4_icon.svg" alt=" ">内容</h4>
+                        <ul class="section-list">
+                            <li>クライアントや関係者へのヒアリング</li>
+                            <ul class="section-list">
+                                <li>事業目的、ビジネスモデル、KPI</li>
+                                <li>想定しているユーザー像とその課題</li>
+                                <li>既存プロダクト/競合との違い</li>
+                                <li>技術的・組織的制約（期間、予算、体制など）</li>
+                            </ul>
+                            <li>仮説の立案</li>
+                            <ul class="section-list">
+                                <li>ユーザーは〜という状況でXXという課題を感じているのでは？</li>
+                                <li>現状のプロダクトは〜だから使いづらく、XXな改善が必要では？</li>
+                            </ul>
+                            <li>問いの明確化（探索型調査のガイドとなる問い）</li>
+                            <ul class="section-list">
+                                <li>なぜユーザーは〜という行動をとるのか</li>
+                                <li>現在の選択ではなぜ満足していないのか</li>
+                            </ul>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="section-mini" id="target">
+                    <h3 class="section-hed3"><img class="icon--h3" src="../images/h3_icon.svg" alt=" ">ターゲット層の暫定的な設定</h3>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="../images/h4_icon.svg" alt=" ">目的</h4>
+                        <ul class="section-list">
+                            <li>ユーザーリサーチの対象を絞るための仮設定</li>
+                            <li>無差別にリサーチするのではなく、想定すべき主要ユーザー像に焦点を当てる</li>
+                            <li>以後のペルソナ設計やカスタマージャーニーの設計のベースとなる</li>
+                        </ul>
+                    </div>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="../images/h4_icon.svg" alt=" ">内容</h4>
+                        <ul class="section-list">
+                            <li>関係者ヒアリングや既存データをもとに</li>
+                            <ul class="section-list">
+                                <li>年齢層、職業、利用目的、行動パターン、利用シーンなどを整理</li>
+                                <li>ユーザーをセグメント分けし、重要そうな層を優先</li>
+                                <li>リサーチ対象ユーザーの条件を定義（例：毎月1回以上〇〇サービスを使う20代後半の会社員など）</li>
+                            </ul>
+                            <li>この時点では仮説に基づいた設定にし、後で修正前提。より精緻な人物像は、後の調査で深掘り・確定していく。</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="section-mini" id="premise">
+                    <h3 class="section-hed3"><img class="icon--h3" src="../images/h3_icon.svg" alt=" ">前提知識の強化</h3>
+                    <p class="section-p">
+                        UX設計において「設計以前の前提知識」をどれだけ掘り下げるかは、設計の精度や視野を決定づける。
+                        事前に知るべき前提知識は大きく以下の6カテゴリ。
+                    </p>
+                    <p class="section-p">
+                        なお、以降のUX設計プロセスと重複する部分があるが、<span class="marker">前提知識の強化の段階では、業界理解・仮説形成を目的に広く浅くデスクリサーチを中心に行い、詳細な深掘りはその後のフェーズで行うものとする。</span>
+                        以降のプロセスで重複する項目もここで行う理由は、第一に、的外れなペルソナ設計やCJ設計を避けるため（事前知識がないとそれっぽいけどリアルじゃない設計になりがち。）
+                        第二に、仮設ベースで調査設計やヒアリング設計ができる（たとえば、QRオーダーは厨房の確認ミスが多いらしいと知っていれば、ヒアリング時に調理側の確認プロセスも重点項目になる）。
+                        第三に、業界固有のKPIや成功事例を把握できる（例：飲食店なら回転率と平均滞在時間が重要と知っていれば、ユーザー行動とKPIの関係性を設計に練りこめる）。
+                    </p>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="../images/h4_icon.svg" alt=" ">1. 業界知識・ビジネスモデル</h4>
+                        <p class="section-p">
+                            業界特有の制約・収益構造・慣習を知らないと机上の空論になりやすい。調べる項目は以下。
+                        </p>
+                        <ul class="section-list">
+                            <li>業界の構造（例：飲食店→ホール/厨房/管理、本部/フランチャイズの構造など）</li>
+                            <li>商流・収益構造（例：売上・原価・人件費・利益率など）</li>
+                            <li>業界特有の課題（例：人手不足、回転率、衛生管理、発注ロス）</li>
+                            <li>法規制や慣行（例：インボイス制度、食品衛生法 など）</li>
+                        </ul>
+                    </div>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="../images/h4_icon.svg" alt=" ">2. 利用シーン・業務フロー</h4>
+                        <p class="section-p">
+                            UIはコンテキストで成り立つため、どこで・いつ・誰が・どう使うかを把握する必要がある。調べる項目は以下。
+                        </p>
+                        <ul class="section-list">
+                            <li>実際の業務フロー（例：QRコード注文→調理→配膳→会計の流れ）</li>
+                            <li>使用環境（例：片手・厨房の湿気・騒音・時間帯・ピークタイム）</li>
+                            <li>デバイス特性（スマホ/タブレット/PC？）</li>
+                            <li>現場でのボトルネック（例：確認漏れ、フローの重複、動線の悪さ）</li>
+                        </ul>
+                    </div>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="../images/h4_icon.svg" alt=" ">3. ユーザー属性・モチベーション</h4>
+                        <p class="section-p">
+                            ペルソナやジョブを構築する際の土台とするために行う。
+                        </p>
+                        <ul class="section-list">
+                            <li>利用者の属性（年齢、職種、ITリテラシーなど）</li>
+                            <li>ユーザーが達成したいこと（ジョブ理論に基づく動機）</li>
+                            <li>課題感・ペインポイント・諦めていること</li>
+                        </ul>
+                    </div>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="../images/h4_icon.svg" alt=" ">4. ビジネスゴールとKPI</h4>
+                        <p class="section-p">
+                            UX設計を課題解決に留めず、成果創出に昇華させるため。
+                        </p>
+                        <ul class="section-list">
+                            <li>プロダクトが追っているKGI/KPI（注文回数？回転率？人件費削減？）</li>
+                            <li>ユーザー価値と事業価値が交わるポイント</li>
+                            <li>NPS・LTV・CVRなどの改善対象指標</li>
+                        </ul>
+                    </div>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="../images/h4_icon.svg" alt=" ">5. システム制約</h4>
+                        <p class="section-p">
+                            実装負荷や連携要件を把握せずに設計すると、実現できないUIになりがちなため。
+                        </p>
+                        <ul class="section-list">
+                            <li>既存システムとの連携（POS連携・レジ締め処理など）</li>
+                            <li>ネットワーク要件（店内Wi-Fiなど）</li>
+                            <li>ハードウェアの制限（読み取り機・タブレット型番など）</li>
+                        </ul>
+                    </div>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="../images/h4_icon.svg" alt=" ">補足：To CとTo Bの違い</h4>
+                        <table class="section-table">
+                            <thead>
+                                <tr>
+                                    <th>観点</th>
+                                    <th>To C向け</th>
+                                    <th>To B向け（SaaSなど）</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>重視点</td>
+                                    <td>感情・印象・わかりやすさ</td>
+                                    <td>効率性・整合性・正確性</td>
+                                </tr>
+                                <tr>
+                                    <td>設計起点</td>
+                                    <td>ユーザーの生活文脈</td>
+                                    <td>業務プロセス・役割分担</td>
+                                </tr>
+                                <tr>
+                                    <td>特有課題</td>
+                                    <td>離脱率・直感的操作</td>
+                                    <td>アクセス権管理・フローの複雑さ</td>
+                                </tr>
+                                <tr>
+                                    <td>調査軸</td>
+                                    <td>ユーザー体験/行動心理</td>
+                                    <td>業務要件/組織構造/導入障壁</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </section>
+
+                <section class="section-mini" id="user-research">
+                    <h3 class="section-hed3"><img class="icon--h3" src="../images/h3_icon.svg" alt=" ">ユーザーリサーチ（探索型の定性調査）</h3>
+                    <p class="section-p">
+                        設計初期のプロセスにおけるユーザリサーチは、探索型の定性調査が有効。
+                    </p>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="../images/h4_icon.svg" alt=" ">ユーザーリサーチの目的</h4>
+                        <p class="section-p">
+                            設計プロセス初期に探索型の訂正調査を行う目的はいくつかある。
+                            第一に、ユーザの本質的な課題や欲求を発見するため。
+                            これは表面的な要望ではなく、潜在的なニーズや生活、業務文脈を掘り起こす。
+                            第二に、 仮説の立脚点を得るため。ペルソナ、カスタマジャーニー、情報設計などの後の工程のUX設計の根拠を得る。
+                            第三に、 ユーザ視点をチーム全体で共有するため。開発やビジネス型と認識を合わせるための一次情報として活用する。
+                        </p>
+                    </div>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="../images/h4_icon.svg" alt=" ">探索型定性調査の手法</h4>
+                        <ol class="ol">
+                            <li>ユーザーインタビュー：1on1で深掘り。自由回答でユーザーの言葉を引き出す。新しい課題の発見や感情の深掘りに適している。</li>
+                            <li>エスノグラフィー(行動観察)： 実際の行動を現場で観察する手法で、行動と発言のギャップ確認や現場特有の慣習を把握する際に適している。</li>
+                            <li>シャドーイング： ユーザに密着し、業務や操作をリアルタイムで記録する手法。店舗やオフィスなど業務系プロダクトに適している。</li>
+                            <li>ユーザドキュメント分析： ユーザが使っている業務マニュアル、メモ、ホワイトボードなどを収集する手。 アナログな業務フローや工夫の把握をするのに適している。</li>
+                            <li>デプスインタビュー(深層面接)： ユーザの背景、価値観まで掘り下げる手法。製品へのこだわり、心理的障壁の解明に適している。</li>
+                            <li>コンテキストインタビュー： ユーザの作業環境やタイミングでインタビューする手法。実行中の思考プロセスや判断基準の把握に適している。</li>
+                        </ol>
+                    </div>
+                    <h4 class="section-hed4"><img class="icon--h4" src="../images/h4_icon.svg" alt=" ">実施時のポイント</h4>
+                        <ol class="ol">
+                            <li>仮説を持つが押し付けない： 誘導尋問にならないよう、仮説はあるが、柔軟に捨てる姿勢で臨むことが重要</li>
+                            <li>なぜ？を繰り返す： 表層の回答の奥にある行動権利を掘り下げることが重要。 ヒアリングが浅くならないように注意する</li>
+                            <li>行動、感情、判断の3軸で聞く： 例えば、なぜそうしたか、その時どう思ったか、どんな選択肢と迷ったかといったことを深掘りする</li>
+                            <li>中間成果物を即座に可視化共有する： インサイトメモ、インタビューボード、FigJamなどでチーム共有する</li>
+                            <li>情報を鵜呑みにして設計しない： ユーザの発言は課題のヒントであり、解決案ではないと理解する</li>
+                        </ol>
+                </section>
+
+                <section class="section-mini" id="business-research">
+                    <h3 class="section-hed3"><img class="icon--h3" src="../images/h3_icon.svg" alt=" ">競合リサーチ</h3>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="../images/h4_icon.svg" alt=" ">目的</h4>
+                        <ul class="section-list">
+                            <li>市場における立ち位置の把握：類似サービスがどのようなUI/UXを提供しているかを把握し、自プロダクトの差別化要素を検討する</li>
+                            <li>ベストプラクティスの抽出：他社が既に解決しているUI/UX上の課題を学び、設計の参考にする</li>
+                            <li>ユーザーの期待値を知る：競合サービスが標準的なUIとなっている場合、それがユーザーにとっての「当たり前」になる</li>
+                        </ul>
+                    </div>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="../images/h4_icon.svg" alt=" ">調査対象の選定</h4>
+                        <ul class="section-list">
+                            <li>直接競合：同じニーズやターゲットを持つサービス（例：飲食店向け注文アプリ）</li>
+                            <li>間接競合：同じ目的を別アプローチで達成するサービス（例：LINE注文、電話予約など）</li>
+                            <li>参考プロダクト：業界は違っても、UI/UXのアプローチが優れているサービス（例：SlackやNotionなど）</li>
+                        </ul>
+                    </div>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="../images/h4_icon.svg" alt=" ">主な調査手法</h4>
+                        <ul class="section-list">
+                            <li>実際に利用し、操作フロー、フィードバック、UIコンポーネントの挙動などを体験</li>
+                            <li>UIキャプチャ/画面設計の分析：画面の構成、導線、CTA配置、配色などを観察・比較</li>
+                            <li>レビュー分析：App StoreやGoogleレビューなどからUX課題・満足点を抽出</li>
+                            <li>ユーザー視点でのタスクベース評価：「◯◯したいときに、どのように導かれているか」など、特定のユースケースで体験を比較</li>
+                        </ul>
+                    </div>
+                    <div class="block">
+                        <h4 class="section-hed4"><img class="icon--h4" src="../images/h4_icon.svg" alt=" ">分析観点</h4>
+                        <ul class="section-list">
+                            <li>情報設計：ナビゲーションの構造、階層の深さ、情報の並べ方</li>
+                            <li>インタラクション設計：フォーム、入力補助、トグル、フィードバックの設計</li>
+                            <li>ビジュアルデザイン：配色、アイコンの使い方、フォント、視線誘導の工夫</li>
+                            <li>フロー設計：ユーザーが目的を達成するまでのステップの長さと分かりやすさ</li>
+                            <li>エラー処理：入力ミスや通信エラーに対する案内や回復支援のUI</li>
+                            <li>利用開始のしやすさ：オンボーディング、チュートリアル、初期設定の誘導</li>
+                        </ul>
+                        <p class="section-p">
+                            以上の分析から、競合の弱み、強み、差別化ポイントを明確化する。
+                        </p>
+                    </div>
+
+                </section>
+
+                <section class="section-mini" id="persona">
+                  <h3 class="section-hed3"><img class="icon--h3" src="../images/h3_icon.svg" alt=" ">ペルソナ設計</h3>
+                  <div class="block">
+                      <h4 class="section-hed4"><img class="icon--h4" src="../images/h4_icon.svg" alt=" ">目的</h4>
+                      <ul class="section-list">
+                        <li>ユーザー増の具体化：抽象的な「ターゲット層」ではなく、具体的な人物像（仮想ユーザー）を定義することで、関係者間で共通の理解を持つ</li>
+                        <li>UX設計の意思決定の拠り所：「このペルソナならこの導線のほうが使いやすいのでは？」など、設計の際の判断軸や優先順位づけに使う</li>
+                        <li>ユーザーの課題・動機・背景の深掘り：行動や思考の背景にある動機、制約、習慣、価値観を明らかにし、UX改善のヒントを得る</li>
+                        <li>感情的共感の促進：開発・ビジネスサイドの関係者がユーザー視点に立ちやすくするための手段でもある</li>
+                      </ul>
+                  </div>
+                  <div class="block">
+                    <h4 class="section-hed4"><img class="icon--h4" src="../images/h4_icon.svg" alt=" ">内容</h4>
+                    <p class="section-p">
+                      ペルソナの構成要素は以下。
+                      必ずしも全て埋める必要はなく、プロジェクトのフェーズやリソースに応じて柔軟に構成する。
+                    </p>
+                    <ul class="section-list">
+                      <li>名前・年齢・性別</li>
+                      <li>職業・生活環境</li>
+                      <li>デジタルリテラシー</li>
+                      <li>行動パターン</li>
+                      <li>主な課題（Pain）</li>
+                      <li>期待している価値（Gain）</li>
+                      <li>目的・動機・価値観</li>
+                      <li>使用シーン</li>
+                      <li>発言・思考の仮想セリフ</li>
+                    </ul>
+                </div>
+                <div class="block">
+                  <h4 class="section-hed4"><img class="icon--h4" src="../images/h4_icon.svg" alt=" ">情報の収集源</h4>
+                  <ul class="section-list">
+                    <li>ユーザーインタビュー</li>
+                    <li>アンケート結果</li>
+                    <li>既存顧客データ、アクセス解析</li>
+                    <li>カスタマーサポートや営業担当のヒアリング</li>
+                  </ul>
+                </div>
+                <h4 class="section-hed4"><img class="icon--h4" src="../images/h4_icon.svg" alt=" ">注意点</h4>
+                <ul class="section-list">
+                  <li>ステレオタイプ化に注意：ペルソナは「理想ユーザー」ではなく、「実際にいそうな典型的なユーザー像」をベースに構築</li>
+                  <li>一人ではなく複数設計することが多い：主要ユースケースやニーズが大きく異なる場合は複数ペルソナを設け、優先ペルソナ（主対象）を決める</li>
+                  <li>設計のためのツールであり、絶対的な人物像ではない。リサーチに基づいて、更新される前提で設計する。</li>
+                </ul>
+              </section>
+
+              <section class="section-mini" id="cj">
+                <h3 class="section-hed3"><img class="icon--h3" src="../images/h3_icon.svg" alt=" ">カスタマージャーニーの詳細</h3>
+                <p class="section-p">
+                    カスタマージャーニーとは、ユーザーが目的を達成するまでの体験の流れを可視化し、感情の起伏や課題ポイントを把握するための手法。
+                </p>
+                <p class="section-p anno">以下がQRコードオーダアプリのCJ例</p>
+                <table class="section-table">
+                    <thead>
+                        <tr>
+                            <th>フェーズ</th>
+                            <th>行動</th>
+                            <th>感情</th>
+                            <th>タッチポイント</th>
+                            <th>課題・機会</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>来店・着席</td>
+                            <td>席に座る</td>
+                            <td>期待とやや不安</td>
+                            <td>QRコード案内表示</td>
+                            <td>QRコードの案内がわかりづらいと不安に</td>
+                        </tr>
+                        <tr>
+                            <td>QR読み取り</td>
+                            <td>スマホで読み取る</td>
+                            <td>少し戸惑う</td>
+                            <td>QRコードリンク</td>
+                            <td>読み取りミス、アプリのダウンロード要求があると離脱リスクに</td>
+                        </tr>
+                        <tr>
+                            <td>メニュー閲覧</td>
+                            <td>カテゴリからメニューを探す</td>
+                            <td>ワクワクするが、探しにくいとストレス</td>
+                            <td>メニュー画面</td>
+                            <td>カテゴリ分類、検索性、一覧性の良さが重要</td>
+                        </tr>
+                        <tr>
+                            <td>注文確定</td>
+                            <td>商品を選び注文を送信</td>
+                            <td>安心・達成感</td>
+                            <td>注文カート・注文確定ボタン</td>
+                            <td>注文ミスを防ぐ確認やインタラクションが必要</td>
+                        </tr>
+                        <tr>
+                            <td>食事中</td>
+                            <td>待つ/食べる</td>
+                            <td>満足感</td>
+                            <td>注文完了後の待機</td>
+                            <td>状況がわからないと不安。注文がちゃんとされたのか確認できるような画面が必要</td>
+                        </tr>
+                        <tr>
+                            <td>支払い・退店</td>
+                            <td>会計して帰る</td>
+                            <td>スムーズな満足感</td>
+                            <td>会計フロー</td>
+                            <td>モバイル決済誘導があるとさらに便利</td>
+                        </tr>
+                    </tbody>
+                </table>
+              </section>
+
+              <section class="section-mini" id="order">
+                <h3 class="section-hed3"><img class="icon--h3" src="../images/h3_icon.svg" alt=" ">課題整理と課題解決策の設計</h3>
+                <p class="section-p">
+                  「課題整理」は、リサーチをもとに抽出された情報を構造化し、真に解決すべきコア課題を明確化する重要なフェーズ。
+                </p>
+                <div class="block">
+                    <h4 class="section-hed4"><img class="icon--h4" src="../images/h4_icon.svg" alt=" ">目的</h4>
+                    <ul class="section-list">
+                      <li>表層的な「声」や「事象」から、本質的な課題（Core Issue）を見抜く</li>
+                      <li>UX改善のために、課題を体系的・論理的に整理し、設計の方向性を決定する</li>
+                      <li>検討すべき課題の優先順位をつけるためのベースをつくる</li>
+                    </ul>
+                </div>
+                <div class="block">
+                  <h4 class="section-hed4"><img class="icon--h4" src="../images/h4_icon.svg" alt=" ">課題整理の手順</h4>
+                  <ol class="section-list">
+                    <li>情報の収集・抽出</li>
+                      <ul class="section-list">
+                        <li>ユーザーの発言内容・行動・感情などを網羅的にリストアップ</li>
+                        <li>「○○がわかりにくい」「△△の入力に手間取った」など、具体的な困りごとや不満点を抽出</li>
+                      </ul>
+                    <li>解釈・構造化（インサイトの抽出）</li>
+                      <ul class="section-list">
+                        <li>抽出された声を意味ごとにグルーピング（アフィニティダイアグラムなどを用いる）</li>
+                        <li>背景にある本質的な課題（Why）を深掘りして明文化（例：「情報が見つからない」→「情報設計がユーザー視点になっていない」）</li>
+                      </ul>
+                    <li>課題の構造化と分類</li>
+                      <ul class="section-list">
+                        <li>抽象度に応じて階層化（例：大課題→中課題→具体的な改善点）</li>
+                        <li>場合によっては、ユーザーの課題 / ビジネス上の課題 / 技術的制約など、視点ごとに分類</li>
+                      </ul>
+                    <li>課題の優先度づけ</li>
+                      <ul class="section-list">
+                        <li>影響度×実現可能性のマトリクスを使って優先順位を可視化</li>
+                        <li>または、KJ法/4象限分析（重要×緊急）/CJ上での出現頻度などを用いる</li>
+                      </ul>
+                    <li>各課題に対して、解決策を検討する</li>
+                  </ol>
+              </div>
+              </section>
+
+              <section class="section-mini" id="condition">
+                <h3 class="section-hed3"><img class="icon--h3" src="../images/h3_icon.svg" alt=" ">要件定義</h3>
+                <p class="section-p">
+                  ユーザーリサーチや課題整理・解決案の検討を経て、プロダクトが実装すべき機能・仕様・制約条件を言語化・構造化するプロセス。
+                </p>
+                <div class="block">
+                    <h4 class="section-hed4"><img class="icon--h4" src="../images/h4_icon.svg" alt=" ">要件の分類</h4>
+                    <ul class="section-list">
+                      <li>機能要件：実装すべき機能やUI挙動の定義（例：お気に入り登録機能、注文履歴の閲覧など）</li>
+                      <li>非機能要件：性能・セキュリティ・可用性・アクセシビリティなど、体験を支える仕様（例：3秒以内に表示、WCAG AA準拠）</li>
+                      <li>制約条件：技術・予算・期間・社内体制などの外部条件（例：iOSのみで先行リリース、社内API利用必須）</li>
+                    </ul>
+                </div>
+                <div class="block">
+                  <h4 class="section-hed4"><img class="icon--h4" src="../images/h4_icon.svg" alt=" ">要件定義の手順</h4>
+                  <ol class="ol">
+                    <li>プロダクトの前提とスコープの確認</li>
+                    <li>ユーザーストーリーで基本フローを可視化</li>
+                    <li>OOUIで構造と操作を整理</li>
+                    <li>要件リストの構築（機能・非機能・制約）：具体的な要件を記述・分類・優先順位づけ</li>
+                    <li>要件の見直し・スコープ整理：設計・開発・テスト工数のバランスをとりながら、どこまでを初期リリースで対応するかを決定</li>
+                  </ol>
+                </div>
+              </section>
+
+              <section class="section-mini" id="info-design">
+                <h3 class="section-hed3"><img class="icon--h3" src="../images/h3_icon.svg" alt=" ">情報設計</h3>
+                <p class="para">
+                  ユーザーが必要な情報に迷わずたどり着けるように、情報や機能の構造・ラベル・導線を整理・設計する工程。
+                </p>
+                <div class="block">
+                    <h4 class="section-hed4"><img class="icon--h4" src="../images/h4_icon.svg" alt=" ">情報設計の手順</h4>
+                    <ol class="ol">
+                      <li>コンテンツ・機能の一覧作成</li>
+                      <li>情報の分類・構造化</li>
+                      <li>サイトマップ・画面フローの作成</li>
+                      <li>ラベリング：ボタン名などの文言をユーザー視点でわかりやすく設計</li>
+                      <li>ナビゲーション設計（導線とUI構造）：メニュー構成、パンくず、タブ構成など</li>
+                    </ol>
+                </div>
+              </section>
+
+              <section class="section-mini" id="wire">
+                <h3 class="section-hed3"><img class="icon--h3" src="../images/h3_icon.svg" alt=" ">ワイヤフレーム/プロトタイプ作成</h3>
+                <p class="para">
+                  UX設計におけるワイヤーフレーム作成は、情報設計や要件定義をもとに、各画面のレイアウトや要素配置、導線、構造を視覚化する工程。
+                </p>
+                <div class="block">
+                    <h4 class="section-hed4"><img class="icon--h4" src="../images/h4_icon.svg" alt=" ">作成手順</h4>
+                    <ol class="ol">
+                      <li>前提整理：要件定義、情報設計等</li>
+                      <li>画面単位で必要な要素を洗い出す</li>
+                      <li>ラフレイアウトを作成</li>
+                      <li>ユーザーフロー・導線をつなぐ（プロトタイプ）：各ページ間の遷移をつなぐ</li>
+                    </ol>
+                </div>
+              </section>
+
+              <section class="section-mini" id="reinspect">
+                <h3 class="section-hed3"><img class="icon--h3" src="../images/h3_icon.svg" alt=" ">検証・フィードバック・再設計</h3>
+                <p class="para">
+                  単なる「デザインの見た目チェック」ではなく、ユーザーが本当に課題を解決できるか／価値を感じるかを確認するフェーズ。
+                </p>
+                <div class="block">
+                    <h4 class="section-hed4"><img class="icon--h4" src="../images/h4_icon.svg" alt=" ">検証すべきこと</h4>
+                    <ol class="ol">
+                      <li>タスク達成性：ユーザーが意図した操作を迷わず達成できるか</li>
+                      <li>情報構造の妥当性：場所、順番、分類は直感的か</li>
+                      <li>導線・フローの自然さ：遷移や操作がストレスにならないか</li>
+                      <li>提供価値の実感：コア体験が「便利・快適・有益」と感じられるか</li>
+                      <li>不安・誤解の有無：表現や配置に曖昧さや誤解がないか</li>
+                      <li>使用意図とのギャップ：想定ユーザーの利用シーンとマッチしているか</li>
+                    </ol>
+                </div>
+                <p class="para">
+                  上記の内容を検証し、必要があればワイヤフレームなどの再設計を行う。
+                </p>
+                <p class="para">
+                  なお、設計プロセスとしては、コア機能に絞って調査や設計を行い、MVPを作成して徐々にスコープを広げていくという手法をとることもある。
+                  プロジェクトの性質（0→1か拡張期なのか）によって適切な方法を選択する。
+                </p>
+              </section>
+            </section>
+
+            <footer class="footer">
+                <p class="footer__caption">©2025 Yuki Nishimura / Design Notes. All rights reserved.</p>
+            </footer>
+
+        </main>
+    </div>
+    
+
+
+    <!-- script js-->
+    <script>
+
+      // スムーススクロール
+      document.querySelectorAll('.header__nav-links a').forEach(link => {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          const target = document.querySelector(targetId);
+          target.scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+      // end
+
+
+      // ナビゲーションに現在地を示す実装
+      document.addEventListener("DOMContentLoaded", () => {
+        const sectionsMini = document.querySelectorAll(".section-mini");
+        const navLinks = document.querySelectorAll(".header__nav-links a");
+
+        // IntersectionObserverの作成
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              console.log(entry.target.id, entry.isIntersecting, entry.boundingClientRect);
+              // console.log(`監視中: ${entry.target.id}, isIntersecting: ${entry.isIntersecting}`);
+
+              if (entry.isIntersecting) {
+                navLinks.forEach((link) => {
+                  if (link.getAttribute("href").slice(1) === entry.target.id) {
+                    link.classList.add("current");
+                  } else {
+                    link.classList.remove("current");
+                  }
+                });
+              }
+            });
+          },
+          { rootMargin: "0px 0px -60% 0px", threshold: 0 } // 調整
+        );
+
+        // すべてのセクションを監視対象にする
+        sectionsMini.forEach((section) => observer.observe(section));
+      });
+      // ナビゲーションに現在地を示す実装 end
+
+      document.addEventListener("DOMContentLoaded", () => {
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".header__nav");
+      const navItems = document.querySelectorAll(".header__nav-links a"); 
+
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+
+      navItems.forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("active"); // メニューを閉じる
+        });
+      });
+    });
+    </script>
+    <!-- wow -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+</body>
+
+</html>

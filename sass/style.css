@@ -276,7 +276,7 @@ select:focus {
 }
 
 .section-hed2 {
-  font-size: 48px;
+  font-size: 40px;
   line-height: 1.5;
   color: #8971ff;
   margin-bottom: 24px;
@@ -339,6 +339,26 @@ select:focus {
   color: #432FA8;
 }
 
+.para {
+  font-size: 16px;
+  margin-bottom: 16px;
+  line-height: 1.75;
+  color: #404040;
+}
+@media (max-width: 768px) {
+  .para {
+    font-size: 14px;
+  }
+}
+.para a {
+  color: #573ED3;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+.para a:hover {
+  color: #432FA8;
+}
+
 .section-shade {
   background-color: #f0f0f0;
   color: #404040;
@@ -351,6 +371,33 @@ select:focus {
     padding: 16px;
     font-size: 14px;
   }
+}
+
+.ol {
+  margin-left: 32px;
+  margin-bottom: 16px;
+  list-style: decimal-leading-zero;
+}
+.ol li {
+  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 1.75;
+}
+.ol li::marker {
+  color: #573ED3;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .ol li {
+    font-size: 14px;
+  }
+}
+.ol li:last-child {
+  margin-bottom: 0;
+}
+.ol li a {
+  color: #6f23d0;
+  text-decoration: underline;
 }
 
 .section-list {
@@ -411,9 +458,39 @@ select:focus {
   border-radius: 4px;
 }
 
+.return-home {
+  margin-bottom: 16px;
+}
+.return-home a {
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  color: #2e1f7c;
+  padding: 12px;
+  display: block;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  line-height: 1;
+  font-weight: bold;
+}
+.return-home a:hover {
+  background: #f0edff;
+  padding-left: 24px;
+}
+@media (max-width: 992px) {
+  .return-home a {
+    padding: 0;
+    color: #6b4eff;
+  }
+}
+
 .anno {
   font-size: 14px;
   color: #909090;
+}
+
+.mb24 {
+  margin-bottom: 24px;
 }
 
 .mb32 {
@@ -426,7 +503,7 @@ select:focus {
 
 .layout {
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 320px 1fr;
   height: 100vh;
 }
 @media (max-width: 992px) {
@@ -434,6 +511,15 @@ select:focus {
     grid-template-columns: 1fr; /* 1列レイアウト */
     grid-template-rows: auto 1fr; /* サイドバーを上、コンテンツを下に配置 */
     height: auto; /* 高さの制約を解除 */
+  }
+}
+
+.layout--lower {
+  grid-template-columns: 380px 1fr;
+}
+@media (max-width: 992px) {
+  .layout--lower {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -462,7 +548,7 @@ select:focus {
 
 .header__logo a {
   font-size: 20px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   padding: 0 24px;
   display: block;
   color: #6b4eff;
@@ -496,16 +582,18 @@ select:focus {
   color: #fff;
   text-decoration: none;
   color: #2e1f7c;
-  padding: 16px;
+  padding: 12px;
+  font-size: 14px;
   display: block;
   border-radius: 8px;
   transition: all 0.3s ease-in-out;
   line-height: 1;
   font-weight: bold;
+  border: 1px solid #c4b8ff;
 }
 .header__nav-links li a:hover {
   background: #f0edff;
-  padding-left: 24px;
+  padding-left: 20px;
 }
 
 .menu-toggle {
@@ -609,6 +697,22 @@ select:focus {
     color: #2e1f7c;
     border-radius: 8px;
     background-color: #f0edff;
+  }
+}
+
+.header--lower .header__nav-links li a {
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 8px 12px;
+  color: #c4b8ff;
+}
+.header--lower .header__nav-links li a:hover {
+  padding-left: 16px;
+  color: #2e1f7c;
+}
+@media (max-width: 992px) {
+  .header--lower .header__nav-links li a {
+    color: #2e1f7c;
   }
 }
 
@@ -1138,6 +1242,8 @@ select:focus {
 
 .header__nav-links li a.current {
   background-color: #f0edff;
+  color: #2e1f7c;
+  border: 1px solid #2e1f7c;
 }
 @media (max-width: 992px) {
   .header__nav-links li a.current {
@@ -2050,4 +2156,36 @@ input[type=text] {
   font-size: 14px;
   color: #666;
   line-height: 1.5;
+}
+
+.btn--ux {
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  padding: 16px 8px;
+  background: #6b4eff;
+  color: #fff;
+  border-radius: 100px;
+  font-weight: 500;
+  display: block;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  margin: 0 auto;
+}
+.btn--ux:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-1px);
+  background-color: #573ed3;
+}
+.btn--ux:active {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transform: translateY(0px);
+  background: linear-gradient(135deg, #6f23d0 0%, #10bae9 100%);
+}
+@media (max-width: 768px) {
+  .btn--ux {
+    max-width: 100%;
+    padding: 16px 8px;
+  }
 }/*# sourceMappingURL=style.css.map */

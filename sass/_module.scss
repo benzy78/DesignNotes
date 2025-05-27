@@ -40,7 +40,7 @@
   }
 }
 .section-hed2{
-  font-size: 48px;
+  font-size: 40px;
   line-height: 1.5;
   color: $TextPrimarySubtle;
   margin-bottom: 24px;
@@ -86,7 +86,24 @@
   @include sp{
     font-size: 14px;
   }
+  a{
+    color: $TextLink;
+    text-decoration: underline;
+    transition: all 0.3s ease;
+    &:hover{
+      color: $TextLinkHover;
+    }
+  }
+}
 
+.para{
+  font-size: 16px;
+  margin-bottom: 16px;
+  line-height: 1.75;
+  color: $TextDefault;
+  @include sp{
+    font-size: 14px;
+  }
   a{
     color: $TextLink;
     text-decoration: underline;
@@ -109,12 +126,34 @@
   }
 }
 
+.ol{
+  margin-left: 32px;
+  margin-bottom: 16px;
+  list-style: decimal-leading-zero;
+  li{
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 1.75;
+    &::marker{
+      color: $TextLink;
+      font-weight: bold;
+    }
+    @include sp{
+      font-size: 14px;
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+    a{
+      color: $primary-color-plain;
+      text-decoration: underline;
+    }
+  }
+}
+
 .section-list{
   margin-left: 20px;
   margin-bottom: 16px;
-  @include sp{
-    
-  }
   li{
     margin-bottom: 16px;
     font-size: 16px;
@@ -165,10 +204,38 @@
   border-radius: 4px;
 }
 
+.return-home{
+  margin-bottom: 16px;
+  a{
+    font-size: 14px;
+    color: $neutral-white;
+    text-decoration: none;
+    color: $TextPrimaryAccent;
+    padding: 12px;
+    display: block;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    line-height: 1;
+    font-weight: bold;
+    &:hover{
+      background: $BgHover;
+      padding-left: 24px;
+    }
+    @include tab{
+      padding: 0;
+      color:$TextPrimaryDefault;
+    }
+  }
+}
+
 // 注釈：annotationの略
 .anno{
   font-size: 14px;
   color: $neutral-glay800;
+}
+
+.mb24{
+  margin-bottom: 24px;
 }
 
 .mb32{

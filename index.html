@@ -33,7 +33,8 @@
                     <span class="menu-label">Menu</span>
                 </button>
                 <ul class="header__nav-links">
-                    <li><a href="#process">UI/UXプロセス</a></li>
+                    <li><a href="#uxprocess">UX設計プロセス</a></li>
+                    <li><a href="#uiprocess">UI設計プロセス</a></li>
                     <li><a href="#color">カラー</a></li>
                     <li><a href="#typography">タイポグラフィ</a></li>
                     <li><a href="#layout">レイアウト</a></li>
@@ -44,7 +45,6 @@
                     <li><a href="#accessibility">アクセシビリティ</a></li>
                     <li><a href="#usability">ユーザビリティ</a></li>
                     <li><a href="#animation">アニメーション</a></li>
-                    <li><a href="#ux">UX</a></li>
                     <li><a href="#psychology">心理学とデザイン</a></li>
                     <li><a href="#validation">バリデーション</a></li>
                     <li><a href="#figma">Figma</a></li>
@@ -61,217 +61,87 @@
                     実務や検証の中で何度も立ち止まって考えたこと、忘れたくない視点などを記載しています。
                 </p>
             </section>
-            <section class="section" id="process">
-                <h2 class="section-hed2">UI/UX Process</h2>
-                <p class="section-p anno">
-                    UX設計のプロセスは案件タイプ（クライアントワーク、自社開発、SaaSなど）によって多少変わるので注意。
-                </p>
+            <section class="section" id="uxprocess">
+                <h2 class="section-hed2">UX設計プロセス</h2>
                 <section class="section-mini">
-                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt=" ">UX設計</h3>
-                    
-                    <div class="block">
-                        <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt=" ">課題認識・仮説立て</h4>
-                        <p class="section-p">
-                            このような課題があるのでは？と仮説をおき、リサーチの方向性を定める。
-                        </p>
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt=" ">UX設計プロセスの概略</h3>
+                    <ol class="ol mb32">
+                        <li>課題認識/仮説立て</li>
+                        <li>ターゲット層の設定（暫定的）</li>
+                        <li>前提知識の強化</li>
+                        <li>ユーザーリサーチ（探索型の定性調査）</li>
+                        <li>競合リサーチ</li>
+                        <li>ペルソナ設計</li>
+                        <li>カスタマージャーニー作成</li>
+                        <li>課題整理と課題解決策の設計</li>
+                        <li>要件定義</li>
+                        <li>情報設計</li>
+                        <li>ワイヤフレーム/プロトタイプ作成</li>
+                        <li>検証・フィードバック・再設計</li>
+                    </ol>
+                    <div class="btn__cont--ux">
+                        <a href="./html/uxprocess.html" class="btn--ux">UX設計プロセスの詳細を見る</a>
                     </div>
-                    
-                    <div class="block">
-                        <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt=" ">ターゲット層の明確化</h4>
-                        <p class="section-p">
-                            サービスが狙う市場・顧客層を明確化。年齢層や性別、趣味嗜好、ライフスタイルなどを大まかに定める。
-                        </p>
-                    </div>
-                    
-                    <div class="block">
-                        <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt=" ">リサーチ</h4>
-                        <p class="section-p">
-                            仮説検証のため、ユーザーリサーチ、競合リサーチを行う。
-                            ユーザーリサーチでは、ユーザーのPain（困ってること・不便なこと）やGain（実現したいこと）を明確化。
-                            競合リサーチでは、同業他社や似たサービスを調査し、強み・弱み・差別化ポイントを明確化。
-                        </p>
-                    </div>
-                    
-                    <div class="block">
-                        <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt=" ">ペルソナ設計</h4>
-                        <p class="section-p">
-                            リサーチ結果をもとに、ターゲット層の中から代表的なユーザーをペルソナとして設定し、ペルソナの年齢や行動、生活背景、価値観などを具体化することで、課題やペイン/ゲインを掘り下げることが目的。
-                        </p>
-                    </div>
-                    
-                    <div class="block">
-                        <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt=" ">カスタマージャーニー（CJ）作成</h4>
-                        <p class="section-p">
-                            ユーザーの行動・感情の流れを設計し、課題やタッチポイントを明確化。
-                        </p>
-                    </div>
-                    
-                    <div class="block">
-                        <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt=" ">課題整理・要件定義</h4>
-                        <p class="section-p">
-                            これまでの分析を踏まえ、プロダクトで解決すべき課題と要件定義を行う。
-                        </p>
-                    </div>
-                    
-                    <div class="block">
-                        <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt=" ">情報設計（IA）</h4>
-                        <p class="section-p">
-                            必要な情報・機能の整理、それらのグルーピングと階層化、サイトマップ作成（構造の整理）、ユーザーフローの作成
-                        </p>
-                    </div>
-                    
-                    <div class="block">
-                        <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt=" ">ワイヤフレーム・プロトタイプ作成</h4>
-                        <p class="section-p">
-                            情報設計に基づいて、画面レイアウト、ページ遷移の流れを作成。
-                        </p>
-                    </div>
-                    
-                    <div class="block">
-                        <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt=" ">検証</h4>
-                        <p class="section-p">
-                            ヒューリスティック評価、ペルソナ/CJとの整合性、タスク達成検証（スムーズに目的達成できるか）、IAの妥当性、エラーパターン検討。
-                        </p>
-                    </div>
-                    
-                </section>
-                
-                <section class="section-mini">
-                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt=" ">UI設計</h3>
-                    <ul class="section-list mb32">
-                        <li>ビジュアルデザイン：タイポグラフィー、カラー設計、レイアウト、コンポーネント設計、アクセシビリティ</li>
-                        <li>プロトタイピング：インタラクションの再現、フィードバック設計</li>
-                        <li>デザインシステム構築：コンポーネント管理、スタイルガイド、トンマナ、デザイン原則、アクセシビリティガイド等</li>
-                    </ul>
-                </section>
-                
-                <section class="section-mini">
-                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt=" ">カスタマージャーニーの詳細</h3>
-                    <p class="section-p">
-                        カスタマージャーニーとは、ユーザーが目的を達成するまでの体験の流れを可視化し、感情の起伏や課題ポイントを把握するための手法。
-                    </p>
-                    <p class="section-p anno">以下がQRコードオーダアプリのCJ例</p>
-                    
-                    <table class="section-table">
-                        <thead>
-                            <tr>
-                                <th>フェーズ</th>
-                                <th>行動</th>
-                                <th>感情</th>
-                                <th>タッチポイント</th>
-                                <th>課題・機会</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>来店・着席</td>
-                                <td>席に座る</td>
-                                <td>期待とやや不安</td>
-                                <td>QRコード案内表示</td>
-                                <td>QRコードの案内がわかりづらいと不安に</td>
-                            </tr>
-                            <tr>
-                                <td>QR読み取り</td>
-                                <td>スマホで読み取る</td>
-                                <td>少し戸惑う</td>
-                                <td>QRコードリンク</td>
-                                <td>読み取りミス、アプリのダウンロード要求があると離脱リスクに</td>
-                            </tr>
-                            <tr>
-                                <td>メニュー閲覧</td>
-                                <td>カテゴリからメニューを探す</td>
-                                <td>ワクワクするが、探しにくいとストレス</td>
-                                <td>メニュー画面</td>
-                                <td>カテゴリ分類、検索性、一覧性の良さが重要</td>
-                            </tr>
-                            <tr>
-                                <td>注文確定</td>
-                                <td>商品を選び注文を送信</td>
-                                <td>安心・達成感</td>
-                                <td>注文カート・注文確定ボタン</td>
-                                <td>注文ミスを防ぐ確認やインタラクションが必要</td>
-                            </tr>
-                            <tr>
-                                <td>食事中</td>
-                                <td>待つ/食べる</td>
-                                <td>満足感</td>
-                                <td>注文完了後の待機</td>
-                                <td>状況がわからないと不安。注文がちゃんとされたのか確認できるような画面が必要</td>
-                            </tr>
-                            <tr>
-                                <td>支払い・退店</td>
-                                <td>会計して帰る</td>
-                                <td>スムーズな満足感</td>
-                                <td>会計フロー</td>
-                                <td>モバイル決済誘導があるとさらに便利</td>
-                            </tr>
-                        </tbody>
-                    </table>                    
-                </section>
-
-                <section class="section-mini">
-                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt=" ">要件定義の詳細</h3>
-                    <p class="section-p">
-                        要件定義では、機能要件と非機能要件で分けて整理する。
-                        デザイナーの視点だと両者にそれほど大きな違いはないように感じるが、両者には実装面でかかる工数が圧倒的に違うため、
-                        実装面やチーム連携を考えた時、両者を明確に分けて定義することが重要となる。
-                    </p>
-
-                    <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt=" ">機能要件</h4>
-                    <p class="section-p">
-                        機能要件とは、「ユーザーができること」、「システムが提供する機能」のこと。
-                        例えば、QRコードオーダーシステムの場合、「ボタンを押して商品をカートに入れる」、「カートの中身を確認する」、「注文を確定する」、「注文履歴を見る」など、「できること」すべてが機能要件。
-                    </p>
-
-                    <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt=" ">非機能要件</h4>
-                    <p class="section-p">
-                        非機能要件とは、品質・使い心地・運用面のことで、サービスの使いやすさや信頼性を保証するために必要なもの。
-                        例えば、ボタンはタップエリアを十分に確保するとか、ボタン間は十分な余白を確保するなどが非機能要件にあたる。
-                    </p>
-                </section>
-
-                <section class="section-mini">
-                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt=" ">検証の詳細</h3>
-
-                    <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt=" ">ヒューリスティック評価</h4>
-                    <p class="section-p">
-                        ヒューリスティック評価は、専門家の視点からUXを評価する手法。
-                        これは実ユーザーを使わずに、Jakob Nielsenが提唱した10のヒューリスティクス（例：ユーザーの自由度、一貫性と標準、エラーメッセージの明確さなど）などに基づいて、デザイン上の問題を洗い出す。
-                        短時間で実施でき、初期段階のプロトタイプでも有効な手法だが、評価者の経験に依存しやすいため、主観に偏らないよう注意が必要。
-                    </p>
-
-                    <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt=" ">ペルソナ・CJとの整合性チェック</h4>
-                    <p class="section-p">
-                        設計した導線がペルソナの行動・感情の流れに沿っているか確認。また、感情変化を意識した設計になっているか確認。例えば、不安に感じるタイミングで安心要素（説明・インタラクション）が入っているかなど。
-                    </p>
-                    
-                    <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt=" ">タスク達成検証</h4>
-                    <p class="section-p">
-                        例えば、QRコードオーダーアプリの場合、注文完了までスムーズに到達できるか、最小ステップで行けるかどうか。
-                        また、次に進むアクションなど自然なタスク誘導になっているか。
-                    </p>
-
-                    <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt=" ">IA妥当性検証</h4>
-                    <p class="section-p">
-                        情報のグルーピング（似た性質の情報がまとまっているか）・優先順位（知りたい情報が目立つ位置にあるか）、ラベリング（ボタンや見出しの文言がわかりやすいか）が適切かを検証。
-                    </p>
-
-                    <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt=" ">エラーパターン検討</h4>
-                    <p class="section-p">
-                        エラー時、遅延時、注文エラー時の対応シナリオも考慮。
-                    </p>
-
-                    <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt=" ">ユーザーテスト</h4>
-                    <p class="section-p">
-                        ユーザーテストは、実際のまたは想定されるユーザーにプロダクトを操作してもらい、その行動や反応を観察する方法。
-                        たとえば、事前に設定したタスク（例：商品の購入や予約の完了など）をユーザーに実行してもらい、操作の迷い、不満、エラーの発生箇所などを確認。
-                        ユーザーテストの目的は、「意図したとおりにユーザーが行動できるか」「認知負荷がかかっていないか」などを把握し、UIや導線、文言の問題を早期に発見すること。
-                        インタビューを併用することで、ユーザーが何を考えていたかといった心理的な部分も補足できる。
-                    </p>
-
                 </section>
             </section>
-            <!-- ui/ux process end -->
+            <!-- ux process end -->
+
+            <section class="section" id="uiprocess">
+                <h2 class="section-hed2">UI設計プロセス</h2>
+                <section class="section-mini">
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt=" ">UI設計プロセスの概略</h3>
+                    <ol class="ol">
+                        <li>要件整理</li>
+                        <li>ビジュアル設計前の準備：タイポグラフィー、配色、レイアウト、コンポーネント等</li>
+                        <li>ビジュアル設計</li>
+                        <li>インタラクション設計</li>
+                        <li>プロトタイプ作成</li>
+                        <li>プロトタイプをもとにフィードバック ＊主にユーザビリティの観点で</li>
+                        <li>デザインシステムの構築</li>
+                        <li>検証：ユーザビリティ、アクセシビリティチェック</li>
+                    </ol>
+                </section>
+
+                <section class="section-mini">
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt=" ">要件整理</h3>
+                    <ul class="section-list">
+                        <li>各画面の目的、アクション、遷移の確認</li>
+                        <li>各要素のステート</li>
+                        <li>アクセシビリティ、利用シーン、利用端末等の制約を整理</li>
+                        <li>ユーザービリティ等のUIに関わる課題やニーズの確認</li>
+                        <li>命名規則</li>
+                        <li>デザイン原則等の設計方針（この時点では大まかな方向性だけ決め、細かいUIが整ってきたら詳細をつめる）</li>
+                    </ul>
+                </section>
+
+                <section class="section-mini">
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt=" ">ビジュアル設計前の準備</h3>
+                    <ul class="section-list">
+                        <li>タイポグラフィー</li>
+                        <li>配色</li>
+                        <li>アイコン設定（太さや角などの仕様統一）</li>
+                        <li>ロゴ</li>
+                        <li>コンポーネント設計：ワイヤフレームを参考にある程度まとめておく。</li>
+                        <li>バリアブル/ローカルスタイル管理：配色、余白、タイポグラフィー、エレベーション等</li>
+                    </ul>
+                </section>
+
+                <section class="section-mini">
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt=" ">デザインシステムの構築</h3>
+                    <p class="para">
+                        設計全体を通じて得られたスタイル・コンポーネント・設計原則を体系化し、再利用可能なガイドラインとしてまとめるフェーズ。
+                        本フェーズでは、実装チームとの連携やプロダクトの長期的な保守性を見据えて、設計の一貫性・効率性・拡張性を担保するための共通ルールを整備する。
+                        具体的には以下の要素を含む。
+                    </p>
+                    <ul class="section-list">
+                        <li>スタイルガイド：配色、タイポグラフィー、アイコン、余白、エレベーション、角丸などのビジュアル要素のルール</li>
+                        <li>コンポーネントライブラリ：UI上で共通して使用されるボタン、入力欄、カードなどのパーツ群とそのバリエーションをまとめる</li>
+                        <li>命名規則・構成ルール：各コンポーネントの命名ルール、階層構成、バリアントの設計方針</li>
+                        <li>設計原則：アクセシビリティ方針、UI/UX上の判断基準、設計思想の明文化</li>
+                    </ul>
+                </section>
+            </section>
+            <!-- ui process end -->
 
             <section class="section" id="color">
                 <h2 class="section-hed2">Color</h2>
@@ -1190,7 +1060,7 @@
                     <div class="block">
                         <h4 class="section-hed4"><img class="icon--h4" src="./images/h4_icon.svg" alt="アイコン">カルーセルを使わない方が良い場面</h4>
                         <ul class="section-list">
-                            <li>全ての内容を確実に見てほしいとき：見られるのは最初の1〜2枚程度。重要情報の伝達に不向き</li>
+                            <li><span class="marker">全ての内容を確実に見てほしいとき</span>：見られるのは最初の1〜2枚程度。重要情報の伝達に不向き</li>
                             <li>PCのヒーローヘッダーとしての利用（特に自動再生）：ユーザーは読み飛ばしがち/動きに気づかないことが多い/読んでる最中に流れる</li>
                             <li>異なる内容のキャンペーンを詰め込むとき：情報過多・切り替えの負担が大きくなる（「結局何が言いたいの？」になる）</li>
                             <li>代替手段があるのに、なんとなく採用しているとき：カードグリッド・セクションごとの縦配置などの方が、情報に優先度をつけやすいケースもある</li>
@@ -1365,6 +1235,23 @@
                 <p class="section-p anno">
                     ＊アクセシビリティとの混同に注意
                 </p>
+
+                <section class="section-mini">
+                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">親指ゾーンを考慮したUI設計</h3>
+                    <p class="section-p">
+                        親指ゾーン（Thumb Zone）とは、スマホを片手で持った時に親指が届きやすい範囲のこと。
+                        近年、スマホは大きくなってきており、大きくなるにつれて、画面上部に親指が届かないケースが増えている。
+                        こうした背景から、親指ゾーンを考慮した、片手操作のしやすいUI設計が重要となっている。
+                    </p>
+                    <div class="section-shade">
+                        <p class="section-p">親指ゾーンを意識したUI設計の例</p>
+                        <ul class="section-list">
+                            <li>ナビゲーションバーは画面上部ではなく、画面下に配置。</li>
+                            <li>主要なボタン（CTAボタンなど）は画面右下に配置。</li>
+                        </ul>
+                    </div>
+                    
+                </section>
 
                 <section class="section-mini">
                     <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">十分なタップエリアの確保</h3>
@@ -1568,26 +1455,6 @@
                     
                 </section>
             </section><!-- animation end -->
-
-            <section class="section" id="ux">
-                <h2 class="section-hed2">UX</h2>
-                <section class="section-mini">
-                    <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">親指ゾーンを考慮したUI設計</h3>
-                    <p class="section-p">
-                        親指ゾーン（Thumb Zone）とは、スマホを片手で持った時に親指が届きやすい範囲のこと。
-                        近年、スマホは大きくなってきており、大きくなるにつれて、画面上部に親指が届かないケースが増えている。
-                        こうした背景から、親指ゾーンを考慮した、片手操作のしやすいUI設計が重要となっている。
-                    </p>
-                    <div class="section-shade">
-                        <p class="section-p">親指ゾーンを意識したUI設計の例</p>
-                        <ul class="section-list">
-                            <li>ナビゲーションバーは画面上部ではなく、画面下に配置。</li>
-                            <li>主要なボタン（CTAボタンなど）は画面右下に配置。</li>
-                        </ul>
-                    </div>
-                    
-                </section>
-            </section><!-- ux end -->
 
             <section class="section" id="psychology">
                 <h2 class="section-hed2">心理学とデザイン</h2>

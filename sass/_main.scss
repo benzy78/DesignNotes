@@ -4,7 +4,7 @@
 }
 .layout{
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 320px 1fr;
   height: 100vh;
   @include tab{
     grid-template-columns: 1fr; /* 1列レイアウト */
@@ -12,6 +12,14 @@
     height: auto; /* 高さの制約を解除 */
   }
 }
+
+.layout--lower{
+  grid-template-columns: 380px 1fr;
+  @include tab{
+    grid-template-columns: 1fr;
+  }
+}
+
 .header{
   background: $BgDefault;
   color: $TextPrimaryAccent;
@@ -35,7 +43,7 @@
 .header__logo{
   a{
     font-size: 20px;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     padding: 0 24px;
     display: block;
     color: $TextPrimaryDefault;
@@ -65,15 +73,17 @@
       color: $neutral-white;
       text-decoration: none;
       color: $TextPrimaryAccent;
-      padding: 16px;
+      padding: 12px;
+      font-size: 14px;
       display: block;
       border-radius: 8px;
       transition: all 0.3s ease-in-out;
       line-height: 1;
       font-weight: bold;
+      border: 1px solid $BorderPrimary;
       &:hover{
         background: $BgHover;
-        padding-left: 24px;
+        padding-left: 20px;
       }
     }
   }
@@ -187,6 +197,29 @@
       }
     }
   }
+
+  .header--lower{
+    .header__nav-links{
+      li{
+        // margin-bottom: 8px;
+        a{
+          font-size: 14px;
+          line-height: 1.5;
+          padding: 8px 12px;
+          color:#c4b8ff;
+          &:hover{
+            padding-left: 16px;
+            color: $TextPrimaryAccent;
+          }
+          @include tab{
+            color: $TextPrimaryAccent;
+          }
+        }
+      }
+    }
+  }
+
+
 
 .maincontents{
   padding: 48px;
@@ -670,6 +703,8 @@
 // 現在地を示すアニメーション
 .header__nav-links li a.current {
   background-color: $BgHover;
+  color: $TextPrimaryAccent;
+  border: 1px solid $BorderPrimaryAccent;
   @include tab{
     border: 2px solid $TextPrimaryAccent;
   }
@@ -1596,4 +1631,34 @@ input[type="text"] {
   font-size: 14px;
   color: #666;
   line-height: 1.5;
+}
+
+.btn--ux{
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  padding: 16px 8px;
+  background:#6b4eff;
+  color: $neutral-white;
+  border-radius: 100px;
+  font-weight: 500;
+  display: block;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  margin: 0 auto;
+  &:hover{
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-1px); 
+    background-color: #573ed3;
+  }
+  &:active{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transform: translateY(0px);
+    background: $primary-color-grad; 
+  }
+  @include sp{
+    max-width: 100%;
+    padding: 16px 8px;
+  } 
 }

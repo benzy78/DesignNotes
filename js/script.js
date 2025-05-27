@@ -76,6 +76,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 // ナビゲーションに現在地を示す実装 end
 
+
+
 // dropdown
 const dropdown = document.getElementById('dropdown');
   const button = document.getElementById('dropdownButton');
@@ -314,3 +316,4 @@ const dropdown = document.getElementById('dropdown');
       }, 3000);
     }
     // Toast end
+
