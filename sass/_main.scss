@@ -22,7 +22,7 @@
 
 .header{
   background: $BgDefault;
-  color: $TextPrimaryAccent;
+  color: $PrimaryHigher;
   height: 100vh;
   width: 100%;
   padding: 24px;
@@ -30,23 +30,22 @@
   top: 0;
   overflow-y: auto;
   z-index: 101;
-  box-shadow: 2px 0 4px 0 rgba(0,0,0,0.1);
+  box-shadow: 2px 0 4px 0 rgba(0,0,0,0.04);
   @include tab{
     position: fixed;
     height: 80px;
     padding: 24px;
     overflow-y: initial;
     box-shadow: none;
-    background-color:$BgPrimary;
+    background-color:$BgPurple;
   }
 }
 .header__logo{
   a{
-    font-size: 20px;
+    font-size: 16px;
     margin-bottom: 16px;
-    padding: 0 24px;
     display: block;
-    color: $TextPrimaryDefault;
+    color: $TextDefault;
     text-decoration: none;
     @include tab{
       margin-bottom: 0;
@@ -68,26 +67,41 @@
   li{
     list-style: none;
     border-top: 1px solid $neutral-white;
-    margin-bottom: 16px;
+    margin-bottom: 4px;
     a{
-      color: $neutral-white;
       text-decoration: none;
-      color: $TextPrimaryAccent;
+      color: $TextDefault;
       padding: 12px;
       font-size: 14px;
       display: block;
-      border-radius: 8px;
+      border-left:4px solid $BorderDefault;
       transition: all 0.3s ease-in-out;
       line-height: 1;
-      font-weight: bold;
-      border: 1px solid $BorderPrimary;
+      // font-weight: bold;
+      // border: 1px solid $PrimaryLow;
       &:hover{
-        background: $BgHover;
-        padding-left: 20px;
+        background: $PrimaryLowest;
+        border-left: 4px solid $PrimaryDefault;
+        // padding-left: 20px;
+        // box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
       }
     }
   }
 }
+
+// 現在地を示すアニメーション
+.header__nav-links li a.current {
+  // color: $PrimaryHigher;
+  background-color: $PrimaryLowest;
+  border-left: 4px solid $PrimaryDefault;
+  // border: 1px solid $PrimaryLow;
+  font-weight: bold;
+  // box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+  @include tab{
+    border: 2px solid $PrimaryHigher;
+  }
+}
+
 .menu-toggle {
   display: none;
   @include tab{
@@ -108,7 +122,7 @@
 }
 
 .menu-icon {
-  background-color: $Icon;
+  background-color: $PrimaryDefault;
   height: 3px;
   width: 100%;
   border-radius: 5px;
@@ -129,7 +143,7 @@
   top: 34px;
   padding: 0 4px;
   font-size: 14px;
-  color: $Icon;
+  color: $PrimaryDefault;
   transition: all 0.3s ease-in-out 0s;
   }
 
@@ -144,13 +158,13 @@
           transform: translateY(0) rotate(225deg);
           position: absolute;
           top: 16px;
-          background-color: $TextPrimaryAccent;
+          background-color: $PrimaryHigher;
         }
         &:nth-child(2){
           -webkit-transform: translateY(0) rotate(-225deg);
           -ms-transform: translateY(0) rotate(-225deg);
           transform: translateY(0) rotate(-225deg);
-          background-color: $TextPrimaryAccent;
+          background-color: $PrimaryHigher;
         }
         &:nth-child(3){
           display: none;
@@ -158,7 +172,7 @@
       }
     }
     .menu-label{
-      color: $TextPrimaryAccent;
+      color: $PrimaryHigher;
     }
   }
   .header__nav-links{
@@ -190,9 +204,10 @@
           width: 100%;
           display: block;
           padding: 16px;
-          color: $TextPrimaryAccent;
+          color: $PrimaryHigher;
           border-radius: 8px;
-          background-color: $BgHover;
+          background-color: $PrimaryLowest;
+          border-left:none ;
         }
       }
     }
@@ -208,11 +223,10 @@
           padding: 8px 12px;
           color:#c4b8ff;
           &:hover{
-            padding-left: 16px;
-            color: $TextPrimaryAccent;
+            color: $PrimaryHigher;
           }
           @include tab{
-            color: $TextPrimaryAccent;
+            color: $PrimaryHigher;
           }
         }
       }
@@ -226,7 +240,7 @@
   overflow-y: auto;
   width: 100%;
   margin: 0 auto;
-  background-color: $BgPrimary;
+  background-color: $BgPurple;
   @include tab{
     padding: 96px 24px 48px;
   }
@@ -246,7 +260,7 @@
 .fv__ttl{
   font-size: 48px;
   margin-bottom: 8px;
-  color: $TextPrimaryDefault;
+  color: $PrimaryDefault;
   @include tab{
     font-size: 32px;
   }
@@ -261,7 +275,7 @@
 .fv__subttl{
   font-size: 16px;
   margin-bottom: 24px;
-  color: $TextMuted;
+  color: $TextSubtle;
   line-height: 1.75;
   @include sp{
     font-size: 14px;
@@ -431,7 +445,7 @@
 }
 
 .input__cont-ttl{
-  color: $TextPrimaryDefault;
+  color: $PrimaryDefault;
   margin-right: -24px;
 
   @include sp{
@@ -687,7 +701,7 @@
       text-decoration: none;
       transition: all 0.3s ease;
       &:hover{
-        color: $TextLinkHover;
+        opacity: 0.7;
         text-decoration: underline;
       }
     }
@@ -700,15 +714,7 @@
   margin: 0 auto;
 }
 
-// 現在地を示すアニメーション
-.header__nav-links li a.current {
-  background-color: $BgHover;
-  color: $TextPrimaryAccent;
-  border: 1px solid $BorderPrimaryAccent;
-  @include tab{
-    border: 2px solid $TextPrimaryAccent;
-  }
-}
+
 
 
 // UI Component
@@ -1191,7 +1197,7 @@ input[type="text"] {
 /* NEWバッジ */
 .new-label {
   display: inline-block;
-  background-color: $BgPrimaryDeep;
+  background-color: $PrimaryHigh;
   color: white;
   font-size: 12px;
   font-weight: 600;
@@ -1230,7 +1236,7 @@ input[type="text"] {
 }
 
 .tooltip-button {
-  color: $Icon;
+  color: $PrimaryDefault;
   border: none;
   padding: 8px 14px;
   border-radius: 6px;
@@ -1280,7 +1286,7 @@ input[type="text"] {
 .open-modal-btn {
   padding: 10px 20px;
   font-size: 14px;
-  background-color: $BgPrimaryDeep;
+  background-color: $PrimaryHigh;
   color: white;
   border: none;
   border-radius: 6px;
@@ -1455,7 +1461,7 @@ input[type="text"] {
 
 .show-toast-btn {
   padding: 10px 20px;
-  background: $BgPrimaryDeep;
+  background: $PrimaryHigh;
   color: white;
   border: none;
   border-radius: 6px;
@@ -1493,7 +1499,7 @@ input[type="text"] {
 }
 
 .step.completed::after {
-  background-color: $BgPrimaryDeep;
+  background-color: $PrimaryHigh;
 }
 
 .step-icon {
@@ -1511,11 +1517,11 @@ input[type="text"] {
 }
 
 .step.completed .step-icon {
-  background-color: $BgPrimaryDeep;
+  background-color: $PrimaryHigh;
 }
 
 .step.current .step-icon {
-  background-color: $BgPrimaryDeep;
+  background-color: $PrimaryHigh;
   box-shadow: 0 0 0 4px rgba(107, 78, 255,0.3);
 }
 
@@ -1539,7 +1545,7 @@ input[type="text"] {
   .far{
     font-size: 72px;
     margin: 0 auto 20px;
-    color: $BgPrimaryDeep;
+    color: $PrimaryHigh;
   }
 }
 
@@ -1559,7 +1565,7 @@ input[type="text"] {
 
 .empty-button {
   padding: 10px 20px;
-  background-color: $BgPrimaryDeep;
+  background-color: $PrimaryHigh;
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -1569,7 +1575,7 @@ input[type="text"] {
 }
 
 .empty-button:hover {
-  background-color: $BgPrimaryAccent;
+  background-color: $PrimaryLow;
 }
 
 @media (max-width: 480px) {

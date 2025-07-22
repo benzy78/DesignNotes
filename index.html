@@ -11,6 +11,13 @@
     <link rel="stylesheet" href="./sass/style.css" media="all">
     <!--font-awesome-->
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <!-- OGP -->
+    <meta property="og:title" content="Design Notes" />
+    <meta property="og:description" content="UIやUXの設計について、自分なりに整理してきた考えや気づきをまとめたメモ" />
+    <meta property="og:image" content="https://benzy78.github.io/DesignNotes/images/OGP_DesignNote.png" />
+    <meta property="og:url" content="https://benzy78.github.io/DesignNotes/index.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Design Notes" />
     <!--jquery-->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
     <!-- wow -->
@@ -24,7 +31,7 @@
 <body>
     <div class="layout">
         <header class="header">
-            <h1 class="header__logo"><a href="#firstview"><img src="./images/Index--icon.svg" alt="アイコン" class="index--icon"> 目次</a></h1>
+            <h2 class="header__logo"><a href="#firstview">目次</a></h2>
             <nav class="header__nav">
                 <button class="menu-toggle" aria-label="Toggle navigation">
                     <span class="menu-icon"></span>
@@ -55,7 +62,7 @@
         </header>
         <main class="maincontents">
             <section class="firstview" id="firstview">
-                <h2 class="fv__ttl"><img src="./images/Title--icon.svg" alt=" " class="ttl--icon"> Design Notes</h2>
+                <h1 class="fv__ttl"><img src="./images/Title--icon.svg" alt=" " class="ttl--icon"> Design Notes</h1>
                 <p class="fv__subttl">
                     UIやUXの設計について、自分なりに整理してきた考えや気づきをまとめたメモです。<br>
                     実務や検証の中で何度も立ち止まって考えたこと、忘れたくない視点などを記載しています。
@@ -417,8 +424,11 @@
                 <h2 class="section-hed2">Button</h2>
                 <div class="block">
                     <ul class="section-list">
-                        <li><span class="marker">押せる範囲（タップエリア）を44px×44px以上に。</span>ただし、ボタンを44px×44pxにすると見栄えが悪い等の場合、ボタンの見かけ上の大きさは24px〜32px程度にし、<span class="marker">44px×44pxの透明のボックスをボタンの背景に入れることで、タップエリアを44px×44pxにする。</span></li>
-                        <li>ボタンが並ぶ場合、最低でも16px、できれば24px以上離す。特にタブレット・スマホで誤操作を避けるために重要。</li>
+                        <li>
+                            <span class="marker">押せる範囲（タップエリア）を44px×44px以上を推奨基準とする。</span>
+                            ただし、ボタンを44px×44pxにすると見栄えが悪い等の場合、ボタンの見かけ上の大きさは24px〜32px程度にし、
+                            <span class="marker">44px×44pxの透明の余白を入れるか、ターゲットエリアを44px×44px以上確保するようにする。</span></li>
+                        <li>ボタンが並ぶ場合、タップエリア間は最低16px以上離す。これは特にタブレット・スマホで誤操作を避けるために重要。</li>
                     </ul>
                 </div>
                 
@@ -433,7 +443,7 @@
                 <section class="section-mini">
                     <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">ステートの作成</h3>
                     <p class="section-p">
-                        ボタンを作ったら、必ずhover時、押下時、フォーカス時のデザインも作成する。仕様によっては、無効状態等のデザインも作る。
+                        ボタンを作ったら、必ずhover時、押下時のデザインも作成する。inputやtextareaの場合はfocus時のデザインも作成する。仕様によっては、無効状態等のデザインも作る。
                         ボタンのデザインは、デフォルトの階調の中から明度・彩度を調整したものを使うことが多い。
                         一般的なのは、hover時はデフォルトより少し暗く、押下時はさらに暗く、フォーカス時は色をそのままで境界線を入れるデザイン。
                     </p>
@@ -506,7 +516,7 @@
                 <section class="section-mini">
                     <h3 class="section-hed3"><img class="icon--h3" src="./images/h3_icon.svg" alt="アイコン">タップ領域</h3>
                     <p class="section-p">
-                        ボタンと同様に44px＊44px以上で、アイコン間を16px以上離す。
+                        ボタンと同様に44px＊44px以上を推奨基準とし、アイコン間を16px以上離す。
                     </p>
                 </section>
                 <section class="section-mini">

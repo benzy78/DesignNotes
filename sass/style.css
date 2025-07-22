@@ -19,7 +19,7 @@ body {
   font-family: "Noto Sans JP", "游明朝体", "Yu Mincho", "Meiryo UI", "Meiryo", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "Noto Sans Japanese", roboto, sans-serif;
   font-size: 16px;
   font-weight: 500;
-  color: #343A40;
+  color: #404040;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -86,9 +86,9 @@ input, textarea {
   border-radius: 8px;
 }
 input:focus, textarea:focus {
+  border: 1px solid #2563eb;
   outline: none;
-  border: 1px solid #343A40;
-  box-shadow: none;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
 textarea {
@@ -278,7 +278,7 @@ select:focus {
 .section-hed2 {
   font-size: 40px;
   line-height: 1.5;
-  color: #8971ff;
+  color: #6b4eff;
   margin-bottom: 24px;
 }
 @media (max-width: 992px) {
@@ -296,7 +296,7 @@ select:focus {
   font-size: 24px;
   line-height: 1.5;
   margin-bottom: 16px;
-  color: #313131;
+  color: #404040;
 }
 @media (max-width: 992px) {
   .section-hed3 {
@@ -311,7 +311,7 @@ select:focus {
 .section-hed4 {
   margin-bottom: 8px;
   font-size: 16px;
-  color: #313131;
+  color: #404040;
   line-height: 1.5;
 }
 .section-hed4 .icon--h4 {
@@ -331,12 +331,12 @@ select:focus {
   }
 }
 .section-p a {
-  color: #573ED3;
+  color: #2563eb;
   text-decoration: underline;
   transition: all 0.3s ease;
 }
 .section-p a:hover {
-  color: #432FA8;
+  opacity: 0.7;
 }
 
 .para {
@@ -351,12 +351,12 @@ select:focus {
   }
 }
 .para a {
-  color: #573ED3;
+  color: #2563eb;
   text-decoration: underline;
   transition: all 0.3s ease;
 }
 .para a:hover {
-  color: #432FA8;
+  opacity: 0.7;
 }
 
 .section-shade {
@@ -384,7 +384,7 @@ select:focus {
   line-height: 1.75;
 }
 .ol li::marker {
-  color: #573ED3;
+  color: #7b7b7b;
   font-weight: bold;
 }
 @media (max-width: 768px) {
@@ -396,7 +396,7 @@ select:focus {
   margin-bottom: 0;
 }
 .ol li a {
-  color: #6f23d0;
+  color: #2563eb;
   text-decoration: underline;
 }
 
@@ -418,17 +418,17 @@ select:focus {
   margin-bottom: 0;
 }
 .section-list li a {
-  color: #6f23d0;
+  color: #2563eb;
   text-decoration: underline;
 }
 
 .section-table {
   width: 100%;
   margin: 0 auto 16px;
-  border: 1px solid #c4b8ff;
+  border: 1px solid #a695ff;
 }
 .section-table td, .section-table th {
-  border: 1px solid #c4b8ff;
+  border: 1px solid #a695ff;
   padding: 8px;
 }
 @media (max-width: 768px) {
@@ -533,7 +533,7 @@ select:focus {
   top: 0;
   overflow-y: auto;
   z-index: 101;
-  box-shadow: 2px 0 4px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 0 4px 0 rgba(0, 0, 0, 0.04);
 }
 @media (max-width: 992px) {
   .header {
@@ -547,11 +547,10 @@ select:focus {
 }
 
 .header__logo a {
-  font-size: 20px;
+  font-size: 16px;
   margin-bottom: 16px;
-  padding: 0 24px;
   display: block;
-  color: #6b4eff;
+  color: #404040;
   text-decoration: none;
 }
 @media (max-width: 992px) {
@@ -576,24 +575,32 @@ select:focus {
 .header__nav-links li {
   list-style: none;
   border-top: 1px solid #fff;
-  margin-bottom: 16px;
+  margin-bottom: 4px;
 }
 .header__nav-links li a {
-  color: #fff;
   text-decoration: none;
-  color: #2e1f7c;
+  color: #404040;
   padding: 12px;
   font-size: 14px;
   display: block;
-  border-radius: 8px;
+  border-left: 4px solid #d6d6d6;
   transition: all 0.3s ease-in-out;
   line-height: 1;
-  font-weight: bold;
-  border: 1px solid #c4b8ff;
 }
 .header__nav-links li a:hover {
   background: #f0edff;
-  padding-left: 20px;
+  border-left: 4px solid #6b4eff;
+}
+
+.header__nav-links li a.current {
+  background-color: #f0edff;
+  border-left: 4px solid #6b4eff;
+  font-weight: bold;
+}
+@media (max-width: 992px) {
+  .header__nav-links li a.current {
+    border: 2px solid #2e1f7c;
+  }
 }
 
 .menu-toggle {
@@ -697,6 +704,7 @@ select:focus {
     color: #2e1f7c;
     border-radius: 8px;
     background-color: #f0edff;
+    border-left: none;
   }
 }
 
@@ -707,7 +715,6 @@ select:focus {
   color: #c4b8ff;
 }
 .header--lower .header__nav-links li a:hover {
-  padding-left: 16px;
   color: #2e1f7c;
 }
 @media (max-width: 992px) {
@@ -1230,7 +1237,7 @@ select:focus {
   transition: all 0.3s ease;
 }
 .bibli-list li a:hover {
-  color: #432FA8;
+  opacity: 0.7;
   text-decoration: underline;
 }
 
@@ -1238,17 +1245,6 @@ select:focus {
   max-width: 864px;
   width: 100%;
   margin: 0 auto;
-}
-
-.header__nav-links li a.current {
-  background-color: #f0edff;
-  color: #2e1f7c;
-  border: 1px solid #2e1f7c;
-}
-@media (max-width: 992px) {
-  .header__nav-links li a.current {
-    border: 2px solid #2e1f7c;
-  }
 }
 
 .dropdown {
@@ -1728,7 +1724,7 @@ input[type=text] {
 /* NEWバッジ */
 .new-label {
   display: inline-block;
-  background-color: #6b4eff;
+  background-color: #573ED3;
   color: white;
   font-size: 12px;
   font-weight: 600;
@@ -1813,7 +1809,7 @@ input[type=text] {
 .open-modal-btn {
   padding: 10px 20px;
   font-size: 14px;
-  background-color: #6b4eff;
+  background-color: #573ED3;
   color: white;
   border: none;
   border-radius: 6px;
@@ -1989,7 +1985,7 @@ input[type=text] {
 
 .show-toast-btn {
   padding: 10px 20px;
-  background: #6b4eff;
+  background: #573ED3;
   color: white;
   border: none;
   border-radius: 6px;
@@ -2025,7 +2021,7 @@ input[type=text] {
 }
 
 .step.completed::after {
-  background-color: #6b4eff;
+  background-color: #573ED3;
 }
 
 .step-icon {
@@ -2043,11 +2039,11 @@ input[type=text] {
 }
 
 .step.completed .step-icon {
-  background-color: #6b4eff;
+  background-color: #573ED3;
 }
 
 .step.current .step-icon {
-  background-color: #6b4eff;
+  background-color: #573ED3;
   box-shadow: 0 0 0 4px rgba(107, 78, 255, 0.3);
 }
 
@@ -2068,7 +2064,7 @@ input[type=text] {
 .empty-icon .far {
   font-size: 72px;
   margin: 0 auto 20px;
-  color: #6b4eff;
+  color: #573ED3;
 }
 
 .empty-title {
@@ -2087,7 +2083,7 @@ input[type=text] {
 
 .empty-button {
   padding: 10px 20px;
-  background-color: #6b4eff;
+  background-color: #573ED3;
   color: #fff;
   border: none;
   border-radius: 8px;

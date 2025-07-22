@@ -19,7 +19,7 @@ body {
 	font-family: $ff-base;
 	font-size: $fz-base;
 	font-weight: $fw-base;
-	color: $neutral-black;
+	color: $TextDefault;
 	line-height: $lh-base;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -58,11 +58,7 @@ a{
 }
 a:focus-visible{
 	outline: 4px solid #005FCC;
-
 }
-
-
-
 
 table {
 	border-collapse: collapse;
@@ -88,12 +84,10 @@ input,textarea {
 	font-family: inherit;
 	font-size: inherit;
 	border-radius: 8px;
-
-
 	&:focus {
+		border: 1px solid $TextLink;
 		outline: none;
-		border: 1px solid $neutral-black;
-		box-shadow: none;
+		box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
 	}
 }
 

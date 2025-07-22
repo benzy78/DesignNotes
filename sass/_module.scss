@@ -42,7 +42,7 @@
 .section-hed2{
   font-size: 40px;
   line-height: 1.5;
-  color: $TextPrimarySubtle;
+  color: $PrimaryDefault;
   margin-bottom: 24px;
   @include tab{
     font-size: 36px;
@@ -55,7 +55,7 @@
   font-size: 24px;
   line-height: 1.5;
   margin-bottom: 16px;
-  color: $TextHeading;
+  color: $TextDefault;
   @include tab{
     font-size: 20px;
   }
@@ -69,7 +69,7 @@
 .section-hed4{
   margin-bottom: 8px;
   font-size: 16px;
-  color: $TextHeading;
+  color: $TextDefault;
   line-height: 1.5;
 
   .icon--h4{
@@ -91,7 +91,7 @@
     text-decoration: underline;
     transition: all 0.3s ease;
     &:hover{
-      color: $TextLinkHover;
+      opacity: 0.7;
     }
   }
 }
@@ -109,7 +109,7 @@
     text-decoration: underline;
     transition: all 0.3s ease;
     &:hover{
-      color: $TextLinkHover;
+      opacity: 0.7;
     }
   }
 }
@@ -135,7 +135,7 @@
     font-size: 16px;
     line-height: 1.75;
     &::marker{
-      color: $TextLink;
+      color: $TextSubtle;
       font-weight: bold;
     }
     @include sp{
@@ -145,7 +145,7 @@
       margin-bottom: 0;
     }
     a{
-      color: $primary-color-plain;
+      color: $TextLink;
       text-decoration: underline;
     }
   }
@@ -165,7 +165,7 @@
       margin-bottom: 0;
     }
     a{
-      color: $primary-color-plain;
+      color: $TextLink;
       text-decoration: underline;
     }
   }
@@ -174,27 +174,27 @@
 .section-table{
   width: 100%;
   margin: 0 auto 16px;
-  border: 1px solid $BorderPrimary;
+  border: 1px solid $PrimaryLow;
   td,th{
-    border: 1px solid $BorderPrimary;
+    border: 1px solid $PrimaryLow;
     padding: 8px;
     @include sp{
       font-size: 14px;
     }
   }
   thead{
-    background-color: $BgPrimaryAccent;
+    background-color: $PrimaryLow;
     color: $TextInverse;
   }
 }
 .marker{
-  background-image: linear-gradient(transparent 60%, $Marker 60%);
+  background-image: linear-gradient(transparent 60%, $PrimaryLower 60%);
   font-weight: bold;
 }
 
 .accent{
   font-weight: bold;
-  color: $TextPrimaryDefault;
+  color: $PrimaryDefault;
 }
 
 .code{
@@ -210,7 +210,7 @@
     font-size: 14px;
     color: $neutral-white;
     text-decoration: none;
-    color: $TextPrimaryAccent;
+    color: $PrimaryHigher;
     padding: 12px;
     display: block;
     border-radius: 8px;
@@ -218,12 +218,12 @@
     line-height: 1;
     font-weight: bold;
     &:hover{
-      background: $BgHover;
+      background: $PrimaryLowest;
       padding-left: 16px;
     }
     @include tab{
       padding: 0;
-      color:$TextPrimaryDefault;
+      color:$PrimaryDefault;
     }
   }
 }
