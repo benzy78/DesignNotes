@@ -480,17 +480,17 @@ select:focus {
   font-size: 14px;
   color: #fff;
   text-decoration: none;
-  color: #2e1f7c;
-  padding: 12px;
-  display: block;
-  border-radius: 8px;
+  color: #404040;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   transition: all 0.3s ease-in-out;
   line-height: 1;
   font-weight: bold;
 }
 .return-home a:hover {
   background: #f0edff;
-  padding-left: 16px;
 }
 @media (max-width: 992px) {
   .return-home a {
@@ -727,15 +727,18 @@ select:focus {
   font-size: 14px;
   line-height: 1.5;
   padding: 8px 12px;
-  color: #c4b8ff;
+  color: #7b7b7b;
 }
 .header--lower .header__nav-links li a:hover {
-  color: #2e1f7c;
+  color: #404040;
 }
 @media (max-width: 992px) {
   .header--lower .header__nav-links li a {
     color: #2e1f7c;
   }
+}
+.header--lower .header__nav-links li .current {
+  color: #404040;
 }
 
 .maincontents {

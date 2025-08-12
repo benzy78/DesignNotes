@@ -94,9 +94,7 @@
   // color: $PrimaryHigher;
   background-color: $PrimaryLowest;
   border-left: 4px solid $PrimaryDefault;
-  // border: 1px solid $PrimaryLow;
   font-weight: bold;
-  // box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
   @include tab{
     border: 2px solid $PrimaryHigher;
   }
@@ -221,13 +219,16 @@
           font-size: 14px;
           line-height: 1.5;
           padding: 8px 12px;
-          color:#c4b8ff;
+          color:$TextSubtle;
           &:hover{
-            color: $PrimaryHigher;
+            color: $TextDefault;
           }
           @include tab{
             color: $PrimaryHigher;
           }
+        }
+        .current{
+          color: $TextDefault;
         }
       }
     }
