@@ -30,7 +30,7 @@
 .block{
   margin-bottom: 32px;
 }
-.section-mini{
+.sub-section{
   border: 1px solid $BorderDefault;
   border-radius: 8px;
   padding: 24px;
@@ -39,6 +39,10 @@
     padding: 16px;
   }
 }
+.sub-topic{
+  margin-bottom: 24px;
+}
+
 .section-hed2{
   font-size: 40px;
   line-height: 1.5;
@@ -77,6 +81,12 @@
     vertical-align: middle;
     // height: 1em;
   }
+}
+.section-hed5{
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: $TextDefault;
+  line-height: 1.5;
 }
 .section-p{
   font-size: 16px;
@@ -155,7 +165,7 @@
   margin-left: 20px;
   margin-bottom: 16px;
   li{
-    margin-bottom: 16px;
+    margin-bottom: 12px;
     font-size: 16px;
     line-height: 1.75;
     @include sp{
@@ -169,6 +179,10 @@
       text-decoration: underline;
     }
   }
+}
+
+.section-h4{
+  margin-bottom: 24px;
 }
 
 .section-table{
@@ -194,7 +208,7 @@
 
 .accent{
   font-weight: bold;
-  color: $PrimaryDefault;
+  color: $TextDefault;
 }
 
 .code{

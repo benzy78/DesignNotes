@@ -4,7 +4,7 @@
 }
 .layout{
   display: grid;
-  grid-template-columns: 320px 1fr;
+  grid-template-columns: 280px 1fr;
   height: 100vh;
   @include tab{
     grid-template-columns: 1fr; /* 1列レイアウト */
@@ -702,6 +702,9 @@
       transition: all 0.3s ease;
       &:hover{
         opacity: 0.7;
+      }
+      .bibli-link{
+        color: $TextLink;
         text-decoration: underline;
       }
     }
@@ -1667,4 +1670,29 @@ input[type="text"] {
     max-width: 100%;
     padding: 16px 8px;
   } 
+}
+
+
+// 外部リンクのルール
+.external-link--good{
+  display: block;
+  text-decoration: underline !important;
+  color: $TextLink;
+  margin-bottom: 24px;
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+  transition: all 0.3s;
+  &:hover{
+    opacity: 0.7;
+  }
+}
+.external-link--bad{
+  display: block;
+  text-decoration: underline !important;
+  color: $TextLink;
+  transition: all 0.3s;
+  &:hover{
+    opacity: 0.7;
+  }
 }
