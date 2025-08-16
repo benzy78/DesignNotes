@@ -395,7 +395,7 @@ select:focus {
   line-height: 1.75;
 }
 .ol li::marker {
-  color: #7b7b7b;
+  color: #6e6e6e;
   font-weight: bold;
 }
 @media (max-width: 768px) {
@@ -727,7 +727,7 @@ select:focus {
   font-size: 14px;
   line-height: 1.5;
   padding: 8px 12px;
-  color: #7b7b7b;
+  color: #6e6e6e;
 }
 .header--lower .header__nav-links li a:hover {
   color: #404040;
@@ -793,7 +793,7 @@ select:focus {
 .fv__subttl {
   font-size: 16px;
   margin-bottom: 24px;
-  color: #7b7b7b;
+  color: #6e6e6e;
   line-height: 1.75;
 }
 @media (max-width: 768px) {
