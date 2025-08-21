@@ -14,6 +14,16 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// navItems.forEach((link) => {
+//   link.addEventListener("click", (e) => {
+//     // すぐ閉じると遷移が潰れるので次のイベントループで閉じる
+//     setTimeout(() => {
+//       navLinks.classList.remove("active");
+//     }, 0);
+//   });
+// });
+
+
 
 $(document).ready(function() {
   $(".acco__btn-plus").on("click", function() {
@@ -34,16 +44,34 @@ $(document).ready(function() {
 });
 
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
+// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+//   anchor.addEventListener("click", function (e) {
+//     e.preventDefault();
     
-    const target = document.querySelector(this.getAttribute("href"));
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
+//     const target = document.querySelector(this.getAttribute("href"));
+//     if (target) {
+//       target.scrollIntoView({ behavior: "smooth", block: "start" });
+//     }
+//   });
+// });
+
+document.querySelectorAll('a[href]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    const href = this.getAttribute("href");
+
+    // href が # から始まる場合だけスムーススクロール
+    if (href && href.startsWith("#")) {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     }
+    // それ以外（../index.html 等）はそのままブラウザ標準動作
   });
 });
+
+
 
 // ナビゲーションに現在地を示す実装
 document.addEventListener("DOMContentLoaded", () => {
@@ -245,12 +273,10 @@ const dropdown = document.getElementById('dropdown');
 
   // toggle-sort btn
   const buttons = document.querySelectorAll('.toggle-button');
-
   buttons.forEach(button => {
     button.addEventListener('click', () => {
-      buttons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-
+      buttons.forEach(btn => btn.classList.remove('active-toggle'));
+      button.classList.add('active-toggle');
       // 任意のロジック（表示切り替えなど）
       console.log('選択ビュー:', button.id);
     });

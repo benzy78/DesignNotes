@@ -17,14 +17,16 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet"
         type="text/css" media="all">
     <!-- google font -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
     <div class="layout layout--lower">
         <header class="header header--lower">
-            <h1 class="header__logo"><a href="#firstview"><img alt="" aria-hidden="true" src="../images/Index--icon.svg" class="index--icon"> UXプロセス</a></h1>
+            <div class="header__logo"><a href="../index.html"><img src="../images/DN_logo.svg" alt="Design Notes" fetchpriority="high" width="266" height="48"></a></div>
             <nav class="header__nav">
                 <button class="menu-toggle" aria-label="Toggle navigation">
                     <span class="menu-icon"></span>
@@ -32,9 +34,7 @@
                     <span class="menu-icon"></span>
                     <span class="menu-label">Menu</span>
                 </button>
-                <p class="return-home">
-                  <a href="../index.html"><img alt="" aria-hidden="true" src="../images/icon_arrow_back.svg">Homeに戻る</a>
-                </p>
+                <a href="../index.html" class="return-home"><img alt="" aria-hidden="true" src="../images/icon_arrow_back.svg">Homeに戻る</a>
                 <ul class="header__nav-links">
                     <li><a href="#uxprocess-outline">UX設計プロセスの概略</a></li>
                     <li><a href="#consign">受託案件の場合に考慮すべきUXプロセス</a></li>
@@ -51,14 +51,12 @@
                     <li><a href="#wire">ワイヤフレーム/プロトタイプ作成</a></li>
                     <li><a href="#reinspect">検証・フィードバック・再設計</a></li>
                 </ul>
-                
-                
             </nav>
-            
         </header>
+
         <main class="maincontents">
             <section class="firstview" id="firstview">
-                <h2 class="fv__ttl"><img alt="" aria-hidden="true" src="../images/icon_title.svg" class="ttl--icon"> UX設計プロセスの詳細</h2>
+                <h1 class="fv__ttl">UX設計プロセスの詳細</h1>
             </section>
             <section class="section" id="uxprocess">
                 <h2 class="section-hed2">UX設計プロセス</h2>

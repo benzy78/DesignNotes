@@ -16,7 +16,7 @@ body {
 }
 
 body {
-  font-family: "Noto Sans JP", "游明朝体", "Yu Mincho", "Meiryo UI", "Meiryo", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "Noto Sans Japanese", roboto, sans-serif;
+  font-family: "Noto Sans JP", "Meiryo UI", "Meiryo", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "Noto Sans Japanese", roboto, sans-serif;
   font-size: 16px;
   font-weight: 500;
   color: #404040;
@@ -292,7 +292,8 @@ select:focus {
 }
 @media (max-width: 768px) {
   .section-hed2 {
-    font-size: 28px;
+    font-size: 24px;
+    margin-bottom: 16px;
   }
 }
 
@@ -395,7 +396,7 @@ select:focus {
   line-height: 1.75;
 }
 .ol li::marker {
-  color: #6e6e6e;
+  color: #6b4eff;
   font-weight: bold;
 }
 @media (max-width: 768px) {
@@ -530,7 +531,7 @@ select:focus {
 }
 
 .layout--lower {
-  grid-template-columns: 380px 1fr;
+  grid-template-columns: 350px 1fr;
 }
 @media (max-width: 992px) {
   .layout--lower {
@@ -554,37 +555,51 @@ select:focus {
   .header {
     position: fixed;
     height: 80px;
-    padding: 24px;
+    padding: 20px;
     overflow-y: initial;
     box-shadow: none;
-    background-color: #f5f3fc;
+    box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.04);
   }
 }
 
 .header__logo a {
-  font-size: 16px;
-  margin-bottom: 16px;
-  display: block;
-  color: #404040;
-  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 24px;
+  transition: all 0.3s ease-in-out;
+}
+.header__logo a:hover {
+  opacity: 0.7;
 }
 @media (max-width: 992px) {
   .header__logo a {
     margin-bottom: 0;
-    padding: 0;
-    display: none;
   }
 }
-.header__logo a .index--icon {
-  margin-right: 8px;
-  width: 32px;
-  height: 32px;
-  vertical-align: middle;
+.header__logo a img {
+  display: block;
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 992px) {
+  .header__logo a img {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 992px) {
+  .header__nav {
+    pointer-events: none;
+  }
 }
 
 @media (max-width: 992px) {
   .header__nav-links {
-    display: none;
+    opacity: 0;
+    transform: translateX(100%);
+    transform-origin: right;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
   }
 }
 .header__nav-links li {
@@ -623,6 +638,7 @@ select:focus {
 }
 @media (max-width: 992px) {
   .menu-toggle {
+    pointer-events: auto;
     background: none;
     border: none;
     cursor: pointer;
@@ -666,14 +682,20 @@ select:focus {
   transition: all 0.3s ease-in-out 0s;
 }
 
+.active {
+  height: 100vh;
+  background-color: #fff;
+  pointer-events: auto;
+}
 @media (max-width: 992px) {
   .active .menu-toggle .menu-icon:nth-child(1) {
     transform: translateY(0) rotate(225deg);
     position: absolute;
-    top: 16px;
+    top: 24px;
     background-color: #2e1f7c;
   }
   .active .menu-toggle .menu-icon:nth-child(2) {
+    top: 24px;
     transform: translateY(0) rotate(-225deg);
     background-color: #2e1f7c;
   }
@@ -682,12 +704,11 @@ select:focus {
   }
 }
 .active .menu-toggle .menu-label {
-  color: #2e1f7c;
+  display: none;
 }
 @media (max-width: 992px) {
   .active .header__nav-links {
     position: absolute;
-    height: 100vh;
     background: #fff;
     top: 0;
     width: 100%;
@@ -697,6 +718,9 @@ select:focus {
     transition: all 0.3s ease-in-out;
     overflow-y: auto;
     display: grid;
+    transform: translateX(0);
+    pointer-events: auto;
+    opacity: 1;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
   }
@@ -713,20 +737,23 @@ select:focus {
 }
 @media (max-width: 992px) {
   .active li a {
-    width: 100%;
-    display: block;
+    text-decoration: none;
+    color: #404040;
     padding: 16px;
-    color: #2e1f7c;
+    font-size: 14px;
+    display: block;
+    border: 2px solid #d6d6d6;
+    transition: all 0.3s ease-in-out;
+    line-height: 1;
+    width: 100%;
     border-radius: 8px;
-    background-color: #f0edff;
-    border-left: none;
   }
 }
 
 .header--lower .header__nav-links li a {
   font-size: 14px;
-  line-height: 1.5;
-  padding: 8px 12px;
+  line-height: 1;
+  padding: 12px;
   color: #6e6e6e;
 }
 .header--lower .header__nav-links li a:hover {
@@ -734,11 +761,54 @@ select:focus {
 }
 @media (max-width: 992px) {
   .header--lower .header__nav-links li a {
-    color: #2e1f7c;
+    color: #404040;
+    padding: 16px 12px;
   }
 }
 .header--lower .header__nav-links li .current {
   color: #404040;
+}
+.header--lower .header__nav-links li .return-home {
+  display: flex;
+  gap: 4px;
+  padding: 8px 12px;
+  align-items: center;
+  border: 1px solid #d6d6d6;
+  color: #404040;
+  margin-top: 16px;
+  pointer-events: auto;
+  position: relative;
+  z-index: 10;
+}
+.header--lower .header__nav-links li .return-home:hover {
+  background-color: #f0f0f0;
+}
+@media (max-width: 992px) {
+  .header--lower .header__nav-links li .return-home {
+    padding: 12px;
+  }
+}
+
+.return-home {
+  display: flex;
+  gap: 4px;
+  font-size: 14px;
+  padding: 8px 12px;
+  align-items: center;
+  border: 1px solid #d6d6d6;
+  color: #404040;
+  pointer-events: auto;
+  position: relative;
+  z-index: 10;
+}
+.return-home:hover {
+  background-color: #f0f0f0;
+}
+@media (max-width: 992px) {
+  .return-home {
+    display: none;
+    padding: 12px;
+  }
 }
 
 .maincontents {
@@ -755,7 +825,7 @@ select:focus {
 }
 @media (max-width: 768px) {
   .maincontents {
-    padding: 80px 16px 48px;
+    padding: 96px 16px 48px;
   }
 }
 
@@ -768,6 +838,11 @@ select:focus {
     padding: 0;
     margin-bottom: 48px;
     max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .firstview {
+    margin-bottom: 24px;
   }
 }
 
@@ -1589,7 +1664,7 @@ input[type=text] {
   height: 16px;
 }
 
-.toggle-button.active {
+.toggle-button.active-toggle {
   background: #6b4eff;
   color: #fff;
 }
@@ -2193,12 +2268,11 @@ input[type=text] {
 .btn--ux:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transform: translateY(-1px);
-  background-color: #573ed3;
+  background-color: #573ED3;
 }
 .btn--ux:active {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   transform: translateY(0px);
-  background: linear-gradient(135deg, #6f23d0 0%, #10bae9 100%);
 }
 @media (max-width: 768px) {
   .btn--ux {

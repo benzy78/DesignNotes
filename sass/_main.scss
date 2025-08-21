@@ -14,7 +14,7 @@
 }
 
 .layout--lower{
-  grid-template-columns: 380px 1fr;
+  grid-template-columns: 350px 1fr;
   @include tab{
     grid-template-columns: 1fr;
   }
@@ -34,35 +34,47 @@
   @include tab{
     position: fixed;
     height: 80px;
-    padding: 24px;
+    padding: 20px;
     overflow-y: initial;
     box-shadow: none;
-    background-color:$BgPurple;
+    box-shadow: 0px 4px 4px 0 rgba(0,0,0,0.04);
   }
 }
 .header__logo{
   a{
-    font-size: 16px;
-    margin-bottom: 16px;
-    display: block;
-    color: $TextDefault;
-    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 24px;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+      opacity: 0.7;
+    }
     @include tab{
       margin-bottom: 0;
-      padding: 0;
-      display: none;
     }
-    .index--icon{
-      margin-right: 8px;
-      width: 32px;
-      height: 32px;
-      vertical-align: middle;
+    img{
+      display: block;
+      max-width: 220px;
+      width: 100%;
+      height: auto;
+      @include tab{
+        max-width: 220px;
+      }
     }
+  }
+}
+.header__nav{
+  @include tab{
+    pointer-events: none;
   }
 }
 .header__nav-links{
   @include tab{
-    display: none;
+    // display: none;
+    opacity: 0;
+    transform:translateX(100%);
+    transform-origin: right;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
   }
   li{
     list-style: none;
@@ -103,6 +115,7 @@
 .menu-toggle {
   display: none;
   @include tab{
+    pointer-events: auto;
     background: none;
     border: none;
     cursor: pointer;
@@ -146,8 +159,10 @@
   }
 
 .active{
+  height: 100vh;
+  background-color: $BgDefault;
+  pointer-events: auto;
   .menu-toggle{
-    
     .menu-icon{
       @include tab{
         &:nth-child(1){
@@ -155,10 +170,11 @@
           -ms-transform: translateY(0) rotate(225deg);
           transform: translateY(0) rotate(225deg);
           position: absolute;
-          top: 16px;
+          top: 24px;
           background-color: $PrimaryHigher;
         }
         &:nth-child(2){
+          top: 24px;
           -webkit-transform: translateY(0) rotate(-225deg);
           -ms-transform: translateY(0) rotate(-225deg);
           transform: translateY(0) rotate(-225deg);
@@ -170,13 +186,14 @@
       }
     }
     .menu-label{
-      color: $PrimaryHigher;
+      // color: $PrimaryHigher;
+      display: none;
     }
   }
   .header__nav-links{
     @include tab{
       position: absolute;
-      height: 100vh;
+      // height: 100vh;
       background: $BgDefault;
       top: 0;
       width: 100%;
@@ -186,6 +203,9 @@
       transition: all 0.3s ease-in-out;
       overflow-y: auto;
       display: grid;
+      transform:translateX(0);
+      pointer-events: auto;
+      opacity: 1;
       grid-template-columns: repeat(2, 1fr);
       gap: 24px;
     }
@@ -199,17 +219,22 @@
       margin-bottom: 0;
       a{
         @include tab{
-          width: 100%;
-          display: block;
+          text-decoration: none;
+          color: $TextDefault;
           padding: 16px;
-          color: $PrimaryHigher;
+          font-size: 14px;
+          display: block;
+          border: 2px solid $BorderDefault;
+          transition: all 0.3s ease-in-out;
+          line-height: 1;
+
+          width: 100%;
           border-radius: 8px;
-          background-color: $PrimaryLowest;
-          border-left:none ;
         }
       }
     }
-  }
+  } 
+// active end
 
   .header--lower{
     .header__nav-links{
@@ -217,23 +242,61 @@
         // margin-bottom: 8px;
         a{
           font-size: 14px;
-          line-height: 1.5;
-          padding: 8px 12px;
+          line-height: 1;
+          padding: 12px;
           color:$TextSubtle;
           &:hover{
             color: $TextDefault;
           }
           @include tab{
-            color: $PrimaryHigher;
+            color: $TextDefault;
+            padding: 16px 12px;
           }
         }
         .current{
           color: $TextDefault;
         }
+        .return-home{
+          display: flex;
+          gap: 4px;
+          padding: 8px 12px;
+          align-items: center;
+          border: 1px solid $BorderDefault;
+          color: $TextDefault;
+          margin-top: 16px;
+          pointer-events: auto;
+          position: relative;
+          z-index: 10;
+          &:hover{
+            background-color: $BgSubtle;
+          }
+          @include tab{
+            padding: 12px;
+          }
+        }
       }
     }
   }
 
+.return-home{
+  display: flex;
+  gap: 4px;
+  font-size: 14px;
+  padding: 8px 12px;
+  align-items: center;
+  border: 1px solid $BorderDefault;
+  color: $TextDefault;
+  pointer-events: auto;
+  position: relative;
+  z-index: 10;
+  &:hover{
+    background-color: $BgSubtle;
+  }
+  @include tab{
+    display: none;
+    padding: 12px;
+  }
+}
 
 
 .maincontents{
@@ -246,7 +309,7 @@
     padding: 96px 24px 48px;
   }
   @include sp{
-    padding: 80px 16px 48px;
+    padding: 96px 16px 48px;
   }
 }
 .firstview{
@@ -256,6 +319,9 @@
     padding: 0;
     margin-bottom: 48px;
     max-width: 100%;
+  }
+  @include sp{
+    margin-bottom: 24px;
   }
 }
 .fv__ttl{
@@ -1043,7 +1109,7 @@ input[type="text"] {
   height: 16px;
 }
 
-.toggle-button.active {
+.toggle-button.active-toggle {
   background: #6b4eff;
   color: #fff;
 }
@@ -1649,7 +1715,7 @@ input[type="text"] {
   text-align: center;
   font-size: 16px;
   padding: 16px 8px;
-  background:#6b4eff;
+  background:$PrimaryDefault;
   color: $neutral-white;
   border-radius: 100px;
   font-weight: 500;
@@ -1660,12 +1726,11 @@ input[type="text"] {
   &:hover{
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transform: translateY(-1px); 
-    background-color: #573ed3;
+    background-color: $PrimaryHigh;
   }
   &:active{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     transform: translateY(0px);
-    background: $primary-color-grad; 
   }
   @include sp{
     max-width: 100%;

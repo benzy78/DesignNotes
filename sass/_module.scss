@@ -52,7 +52,8 @@
     font-size: 36px;
   }
   @include sp{
-    font-size: 28px;
+    font-size: 24px;
+    margin-bottom: 16px;
   }
 }
 .section-hed3{
@@ -145,7 +146,7 @@
     font-size: 16px;
     line-height: 1.75;
     &::marker{
-      color: $TextSubtle;
+      color: $PrimaryDefault;
       font-weight: bold;
     }
     @include sp{
