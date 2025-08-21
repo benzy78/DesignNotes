@@ -561,6 +561,11 @@ select:focus {
     box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.04);
   }
 }
+@media (max-width: 768px) {
+  .header {
+    padding: 16px 16px 16px 8px;
+  }
+}
 
 .header__logo a {
   display: inline-block;
@@ -581,9 +586,9 @@ select:focus {
   width: 100%;
   height: auto;
 }
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .header__logo a img {
-    max-width: 220px;
+    max-width: 200px;
   }
 }
 
@@ -596,10 +601,10 @@ select:focus {
 @media (max-width: 992px) {
   .header__nav-links {
     opacity: 0;
-    transform: translateX(100%);
-    transform-origin: right;
+    transform: scale(0);
+    transform-origin: top right;
     pointer-events: none;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease;
   }
 }
 .header__nav-links li {
@@ -614,7 +619,7 @@ select:focus {
   font-size: 14px;
   display: block;
   border-left: 4px solid #d6d6d6;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
   line-height: 1;
 }
 .header__nav-links li a:hover {
@@ -686,18 +691,17 @@ select:focus {
   height: 100vh;
   background-color: #fff;
   pointer-events: auto;
+  overflow-y: auto;
 }
 @media (max-width: 992px) {
   .active .menu-toggle .menu-icon:nth-child(1) {
     transform: translateY(0) rotate(225deg);
     position: absolute;
     top: 24px;
-    background-color: #2e1f7c;
   }
   .active .menu-toggle .menu-icon:nth-child(2) {
     top: 24px;
     transform: translateY(0) rotate(-225deg);
-    background-color: #2e1f7c;
   }
   .active .menu-toggle .menu-icon:nth-child(3) {
     display: none;
@@ -708,17 +712,20 @@ select:focus {
 }
 @media (max-width: 992px) {
   .active .header__nav-links {
-    position: absolute;
+    position: fixed;
+    height: 100vh;
+    inset: 0 auto 0 0;
     background: #fff;
+    overscroll-behavior: contain;
     top: 0;
     width: 100%;
     left: 0;
     padding: 104px 24px 24px;
     text-align: center;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.4s ease;
     overflow-y: auto;
     display: grid;
-    transform: translateX(0);
+    transform: scale(1);
     pointer-events: auto;
     opacity: 1;
     grid-template-columns: repeat(2, 1fr);
@@ -729,6 +736,8 @@ select:focus {
   .active .header__nav-links {
     grid-template-columns: repeat(1, 1fr);
     gap: 16px;
+    padding-right: 16px;
+    padding-left: 16px;
   }
 }
 .active li {
@@ -739,8 +748,8 @@ select:focus {
   .active li a {
     text-decoration: none;
     color: #404040;
-    padding: 16px;
-    font-size: 14px;
+    padding: 14px;
+    font-size: 16px;
     display: block;
     border: 2px solid #d6d6d6;
     transition: all 0.3s ease-in-out;
@@ -858,7 +867,7 @@ select:focus {
 }
 @media (max-width: 768px) {
   .fv__ttl {
-    font-size: 24px;
+    font-size: 28px;
   }
 }
 .fv__ttl .ttl--icon {

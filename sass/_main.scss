@@ -39,6 +39,9 @@
     box-shadow: none;
     box-shadow: 0px 4px 4px 0 rgba(0,0,0,0.04);
   }
+  @include sp{
+    padding: 16px 16px 16px 8px;
+  }
 }
 .header__logo{
   a{
@@ -56,8 +59,8 @@
       max-width: 220px;
       width: 100%;
       height: auto;
-      @include tab{
-        max-width: 220px;
+      @include sp{
+        max-width: 200px;
       }
     }
   }
@@ -71,10 +74,12 @@
   @include tab{
     // display: none;
     opacity: 0;
-    transform:translateX(100%);
-    transform-origin: right;
+    transform: scale(0);
+    transform-origin: top right;
+    // transform:translateX(100%);
+    // transform-origin: right;
     pointer-events: none;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease;
   }
   li{
     list-style: none;
@@ -87,7 +92,7 @@
       font-size: 14px;
       display: block;
       border-left:4px solid $BorderDefault;
-      transition: all 0.3s ease-in-out;
+      transition: all 0.4s ease-in-out;
       line-height: 1;
       // font-weight: bold;
       // border: 1px solid $PrimaryLow;
@@ -162,6 +167,7 @@
   height: 100vh;
   background-color: $BgDefault;
   pointer-events: auto;
+  overflow-y: auto;
   .menu-toggle{
     .menu-icon{
       @include tab{
@@ -171,14 +177,14 @@
           transform: translateY(0) rotate(225deg);
           position: absolute;
           top: 24px;
-          background-color: $PrimaryHigher;
+          // background-color: $PrimaryHigher;
         }
         &:nth-child(2){
           top: 24px;
           -webkit-transform: translateY(0) rotate(-225deg);
           -ms-transform: translateY(0) rotate(-225deg);
           transform: translateY(0) rotate(-225deg);
-          background-color: $PrimaryHigher;
+          // background-color: $PrimaryHigher;
         }
         &:nth-child(3){
           display: none;
@@ -192,18 +198,21 @@
   }
   .header__nav-links{
     @include tab{
-      position: absolute;
-      // height: 100vh;
+      position: fixed;
+      height: 100vh;
+      inset: 0 auto 0 0;
       background: $BgDefault;
+      overscroll-behavior: contain;
       top: 0;
       width: 100%;
       left: 0;
       padding: 104px 24px 24px;
       text-align: center;
-      transition: all 0.3s ease-in-out;
+      transition: all 0.4s ease;
       overflow-y: auto;
       display: grid;
-      transform:translateX(0);
+      transform: scale(1);
+      // transform:translateX(0);
       pointer-events: auto;
       opacity: 1;
       grid-template-columns: repeat(2, 1fr);
@@ -212,6 +221,8 @@
     @include sp{
       grid-template-columns: repeat(1, 1fr);
       gap: 16px;
+      padding-right: 16px;
+      padding-left: 16px;
     }
   }
     li{
@@ -221,8 +232,8 @@
         @include tab{
           text-decoration: none;
           color: $TextDefault;
-          padding: 16px;
-          font-size: 14px;
+          padding: 14px;
+          font-size: 16px;
           display: block;
           border: 2px solid $BorderDefault;
           transition: all 0.3s ease-in-out;
@@ -332,7 +343,7 @@
     font-size: 32px;
   }
   @include sp{
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .ttl--icon{
