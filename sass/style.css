@@ -570,10 +570,17 @@ select:focus {
 .header__logo a {
   display: inline-block;
   margin-bottom: 24px;
-  transition: all 0.3s ease-in-out;
+  transition: opacity 0.3s ease;
 }
-.header__logo a:hover {
-  opacity: 0.7;
+@media (hover: hover) and (pointer: fine) {
+  .header__logo a:hover {
+    opacity: 0.7;
+  }
+}
+@media (hover: none) {
+  .header__logo a:active {
+    opacity: 0.7;
+  }
 }
 @media (max-width: 992px) {
   .header__logo a {
@@ -582,7 +589,7 @@ select:focus {
 }
 .header__logo a img {
   display: block;
-  max-width: 220px;
+  max-width: 200px;
   width: 100%;
   height: auto;
 }
