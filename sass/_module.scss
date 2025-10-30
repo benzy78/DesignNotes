@@ -17,8 +17,8 @@
   margin: 0 auto 48px;
   padding: 32px 48px;
   background-color: $BgDefault;
-  border-radius: 12px;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 24px;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.08);
   @include tab{
     max-width: 100%;
   }
@@ -32,7 +32,7 @@
 }
 .sub-section{
   border: 1px solid $BorderDefault;
-  border-radius: 8px;
+  border-radius: 16px;
   padding: 24px;
   margin-bottom: 24px;
   @include sp{

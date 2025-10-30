@@ -6,6 +6,7 @@
   display: grid;
   grid-template-columns: 280px 1fr;
   height: 100vh;
+  background-color: $BgPurple;
   @include tab{
     grid-template-columns: 1fr; /* 1列レイアウト */
     grid-template-rows: auto 1fr; /* サイドバーを上、コンテンツを下に配置 */
@@ -30,14 +31,16 @@
   top: 0;
   overflow-y: auto;
   z-index: 101;
-  box-shadow: 2px 0 4px 0 rgba(0,0,0,0.04);
+  box-shadow: 2px 0 4px 0 rgba(0,0,0,0.08);
+  border-radius: 0 28px 28px 0;
   @include tab{
     position: fixed;
+    border-radius: 0;
     height: 80px;
     padding: 20px;
     overflow-y: initial;
     box-shadow: none;
-    box-shadow: 0px 4px 4px 0 rgba(0,0,0,0.04);
+    box-shadow: 0px 4px 4px 0 rgba(0,0,0,0.08);
   }
   @include sp{
     padding: 16px 16px 16px 8px;
@@ -91,15 +94,17 @@
     a{
       text-decoration: none;
       color: $TextDefault;
-      padding: 12px;
+      padding: 14px 20px;
       font-size: 14px;
       display: block;
-      border-left:4px solid $BorderDefault;
+      // border-left:4px solid $BorderDefault;
       transition: all 0.3s ease-in-out;
       line-height: 1;
+      border-radius:24px;
       &:hover{
-        background: $PrimaryLowest;
-        border-left: 4px solid $PrimaryDefault;
+        background: #f0f0f0;
+        box-shadow: 0 0 4px 0 rgba(0,0,0,0.04);
+        // border-left: 4px solid $PrimaryDefault;
       }
       &:active{
         opacity: 0.7;
@@ -112,8 +117,8 @@
 .header__nav-links li a.current {
   // color: $PrimaryHigher;
   background-color: $PrimaryLowest;
-  border-left: 4px solid $PrimaryDefault;
-  font-weight: bold;
+  // border-left: 4px solid $PrimaryDefault;
+  box-shadow: 0 0 4px 0 rgba(0,0,0,0.04);
   @include tab{
     border: 2px solid $PrimaryHigher;
   }
@@ -1727,7 +1732,7 @@ input[type="text"] {
   width: 100%;
   text-align: center;
   font-size: 16px;
-  padding: 16px 8px;
+  padding: 12px;
   background:$PrimaryDefault;
   color: $neutral-white;
   border-radius: 100px;
