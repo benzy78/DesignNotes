@@ -16,7 +16,7 @@ body {
 }
 
 body {
-  font-family: "Noto Sans JP", "Meiryo UI", "Meiryo", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "Noto Sans Japanese", roboto, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Meiryo", "Noto Sans JP", "Noto Sans CJK JP", sans-serif;
   font-size: 16px;
   font-weight: 500;
   color: #404040;
@@ -623,12 +623,13 @@ select:focus {
 .header__nav-links li a {
   text-decoration: none;
   color: #404040;
-  padding: 14px 20px;
+  padding: 12px 16px;
   font-size: 14px;
   display: block;
   transition: all 0.3s ease-in-out;
   line-height: 1;
   border-radius: 24px;
+  font-weight: 600;
 }
 .header__nav-links li a:hover {
   background: #f0f0f0;
@@ -639,12 +640,14 @@ select:focus {
 }
 
 .header__nav-links li a.current {
+  color: #573ED3;
   background-color: #f0edff;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.04);
 }
 @media (max-width: 992px) {
   .header__nav-links li a.current {
     border: 2px solid #2e1f7c;
+    color: #2e1f7c;
   }
 }
 
