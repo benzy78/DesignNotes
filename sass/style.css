@@ -2302,6 +2302,11 @@ input[type=text] {
   }
 }
 
+.art__img img {
+  width: 100%;
+  height: auto;
+}
+
 .external-link--good {
   display: block;
   text-decoration: underline !important;

@@ -1757,6 +1757,12 @@ input[type="text"] {
   } 
 }
 
+.art__img{
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
 
 // 外部リンクのルール
 .external-link--good{
