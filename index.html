@@ -482,6 +482,29 @@
                     </div>
                 </section>
                 <section class="sub-section">
+                    <h3 class="section-hed3"><img alt="" aria-hidden="true" class="icon--h3" src="./images/icon_h3.svg">ボタンのサイズに関して</h3>
+                    <p class="section-p">
+                        <span class="marker">ボタンサイズは「高さは固定」「横幅は内容に応じて可変」を基本とする。</span>
+                        横幅はラベルの長さに対して一定の左右余白を与えることで自然に伸縮させ、最低限の最小幅だけを定めておけば、多言語対応や文言変更があってもレイアウトが破綻しない。
+                        通常のアプリUIではこの可変式を標準とする。
+                    </p>
+                    <p class="section-p">
+                        一部の例外として、<span class="marker">モーダル内で複数ボタンの視覚的な並びを揃えたい場合や、LPのCTAなど見せ方を重視した局面に限り、幅を固定または揃える運用を許容する。</span>
+                        あくまでも例外的な扱いであり、プロダクト全体のUIでは可変式の方が再利用性・保守性ともに優れている。
+                    </p>
+                    <p class="section-p">
+                        高さはSmall / Medium / Large のように数種類に統一して定義し、32px・40px・48pxといった一般的なレンジを採用する。
+                        高さはラインハイトではなく“コンポーネントの物理的な高さ”として固定することで、各サイズの一貫性が保てる。
+                    </p>
+                    <p class="section-p">
+                        フォントサイズは、ボタンの高さと視認性のバランスで決める。Medium（40px）では14px〜16pxが標準的で、Smallでは12px〜14px、Largeでは16px前後が適切となる。
+                        フォントサイズに合わせて上下余白を都度調整するのではなく、あくまで固定された高さの中で自然に中央に揃うように行間（line-height）を調整し、上下余白は結果として導かれる形にすると整合性が保たれる。
+                    </p>
+                    <p class="section-p">
+                        最終的には、「高さは固定」「横幅は可変」「例外時のみ幅固定を許容」という3点を一貫して運用することで、視認性・操作性・再利用性が安定し、デザインシステムとしても破綻しない仕様になる。
+                    </p>
+                </section>
+                <section class="sub-section">
                     <h3 class="section-hed3"><img alt="" aria-hidden="true" class="icon--h3" src="./images/icon_h3.svg">ボタンのスタイルに関して</h3>
                     <ul class="section-list">
                         <li>プライマリーボタン：塗りを目立つ色（プライマリーカラー）、テキストを白塗り。＊下記例を参考に</li>
