@@ -441,9 +441,9 @@
                 <div class="block">
                     <ul class="section-list">
                         <li>
-                            <span class="marker">押せる範囲（タップエリア）を44px×44px以上を推奨基準とする。</span>
-                            ただし、ボタンを44px×44pxにすると見栄えが悪い等の場合、ボタンの見かけ上の大きさは24px〜32px程度にし、
-                            <span class="marker">44px×44pxの透明の余白を入れるか、ターゲットエリアを44px×44px以上確保するようにする。</span></li>
+                            <span class="marker">ターゲットエリア（操作を受け付ける有効範囲全体）は44px×44px以上とする。</span>
+                        </li>
+                        <li>タップエリア（視覚的に描画されている部分）に関しては、各ガイドラインで明確な基準は示されていないが、操作性の観点から、基本的には28px×28px以上あるのが望ましい。</li>
                         <li>ボタンが並ぶ場合、タップエリア間は最低16px以上離す。これは特にタブレット・スマホで誤操作を避けるために重要。</li>
                     </ul>
                 </div>
@@ -451,42 +451,47 @@
                 <section class="sub-section">
                     <h3 class="section-hed3"><img alt="" aria-hidden="true" class="icon--h3" src="./images/icon_h3.svg">ボタンの文言</h3>
                     <p class="section-p">
-                        <span class="marker">ボタンの文言は、曖昧で誤解を招くようなものではなく、明確に意味のわかるものにする。</span>
+                        <span class="marker">ボタンの文言は、曖昧で誤解を招くようなものではなく、簡潔かつ論理的なものにする。</span>
                         悪い例だと、カートに移動するボタンの文言が「購入する」「注文する」などになっているパターンなど。
                         こうゆう場合は、ボタンの文言も「カートに移動する」、次のページで「注文を確定する」といった文言にする。
                     </p>
                     <p class="section-p">
-                        文字数の制約がなければ、ボタンの文言は基本的に名詞ではなく動詞で表現する。例：「注文」ではなく「注文する」など。
-                        <br>
+                        文字数の制約がなければ、ボタンの文言は基本的に<span class="marker">名詞ではなく動詞で表現</span>する。例：「注文」ではなく「注文する」など。
                         これは、押した後に何が起こるかをユーザーが瞬時に理解しやすくするという目的がある。
-                        また、ボタンの文言が名詞だと、今の状態を表しているのか、次の動作を意味しているのかわかりづらい（フリップフロップ問題）。
-
+                        また、<span class="marker">ボタンの文言が名詞だと、今の状態を表しているのか、次の動作を意味しているのかわかりづらい（フリップフロップ問題）</span>。
+                    </p>
+                    <p class="section-p">
+                        「戻る」、「キャンセル」などの<span class="marker">否定的なアクションのボタンの文言に関しては、HIGでは「キャンセル」という文言で統一する</span>ように提唱されている。
                     </p>
                 </section>
                 <section class="sub-section">
                     <h3 class="section-hed3"><img alt="" aria-hidden="true" class="icon--h3" src="./images/icon_h3.svg">ステートの作成</h3>
                     <p class="section-p">
-                        ボタンを作ったら、必ずhover時、押下時のデザインも作成する。inputやtextareaの場合はfocus時のデザインも作成する。仕様によっては、無効状態等のデザインも作る。
+                        ボタンを作ったら、必ずhover時、押下時のデザインも作成する。inputやtextareaの場合はfocus時のデザインも作成する。仕様によっては、無効状態（disable）のデザインも作る。
                         ボタンのデザインは、デフォルトの階調の中から明度・彩度を調整したものを使うことが多い。
                         一般的なのは、hover時はデフォルトより少し暗く、押下時はさらに暗く、フォーカス時は色をそのままで境界線を入れるデザイン。
                     </p>
                     <div class="box">
                         <p class="box-label">ステートのデザイン例</p>
                         <div class="btn__cont">
-                            <a href="" class="btn btn--default">default</a>
-                            <a href="" class="btn btn--hover">hover時</a>
-                            <a href="" class="btn btn--press">押下時</a>
-                            <a href="" class="btn btn--focus">focus時</a>
+                            <a href="" class="btn btn--default">enable</a>
+                            <a href="" class="btn btn--hover">hover</a>
+                            <a href="" class="btn btn--press">press</a>
+                            <a href="" class="btn btn--focus">focus</a>
                         </div>
                     </div>
                 </section>
                 <section class="sub-section">
-                    <h3 class="section-hed3"><img alt="" aria-hidden="true" class="icon--h3" src="./images/icon_h3.svg">ボタンの色に関する注意</h3>
+                    <h3 class="section-hed3"><img alt="" aria-hidden="true" class="icon--h3" src="./images/icon_h3.svg">ボタンのスタイルに関して</h3>
+                    <ul class="section-list">
+                        <li>プライマリーボタン：塗りを目立つ色（プライマリーカラー）、テキストを白塗り。＊下記例を参考に</li>
+                        <li>セカンダリーボタン：白塗りつぶしで、アウトラインとテキストをプライマリーカラーに</li>
+                        <li>ターシャリーボタン：塗りもアウトラインもない、テキストボタン（テキストのカラーはプライマリーまたはテキストカラー）に</li>
+                        <li>破壊的なアクションボタン：後戻りできない削除の操作などでは、赤系統の目立つ色を用いる。並列する他のアクションボタンとの役割を考え、赤塗りつぶしにするか、アウトラインとテキストだけ赤かを選択する。</li>
+                    </ul>
                     <p class="section-p">
-                        セカンダリーボタン、ターシャリーボタンは、プライマリーボタンより濃い色のものは使わない。
-                        プライマリーボタンより濃い色を使うと、ユーザーがボタンの重要度を誤認する恐れがあるから。
-                        <!-- 基本的に、プライマリーボタンは、bgcをプライマリーカラー、フォントcolorを白にして、セカンダリーボタンはborderとフォントcolorをプライマリーカラーに、ターシャリーは文字と下線で表現。
-                        セカンダリーボタンを、bgcをセカンダリーカラー、フォントを白にしてしまうと、ユーザーにとっては、プライマリーボタンとセカンダリーボタンのどちらが重要度の高いボタンなのかわかりづらい。 -->
+                        セカンダリーボタンもプラリマリーボタンと別の色で塗りつぶしにする事例もあるが、基本的に、塗りつぶしは目立つボタンになるので、
+                        セカンダリーボタンも塗りつぶしにしてしまうと、ユーザーが重要度を誤認したり、迷う恐れがあるので、基本はセカンダリーはアウトライン型にする。
                     </p>
                     <div class="box">
                         <p class="box-label">ボタンの例</p>
@@ -503,9 +508,42 @@
                     </div>
                 </section>
                 <section class="sub-section">
+                    <h3 class="section-hed3"><img alt="" aria-hidden="true" class="icon--h3" src="./images/icon_h3.svg">ボタンの使い分けに関して</h3>
+                    <ul class="section-list">
+                        <li>基本的に一つのグループ内にプライマリーボタンは一つまで。セカンダリー、ターシャリーは複数あっても良い</li>
+                        <li>プライマリーボタンは、ユーザーが最も選択する可能性の高いアクションに対して適用</li>
+                        <li>セカンダリーボタンは中程度の選択肢で、ユーザーの主なタスクを妨げない重要なアクションに用いる</li>
+                        <li>ターシャリーボタンはセカンダリーボタンより低い可能性の選択肢、または補足的なアクションに用いる</li>
+                    </ul>
+                </section>
+                <section class="sub-section">
+                    <h3 class="section-hed3"><img alt="" aria-hidden="true" class="icon--h3" src="./images/icon_h3.svg">並列するボタンの配置に関して</h3>
+                    <p class="para">
+                        ダイアログ内にアクションボタンを 3 つ以上配置することは、HIG・Material Design いずれのガイドラインでも推奨されていない。
+                        アクションボタンの数は 2つまでに絞るのが基本である。配置は横並びを標準とし、縦配置はレイアウト上の制約などでスペースが確保できない場合に限られる。
+                    </p>
+                    <p class="para">
+                        横に並べる際は、左右の役割が明確に分かれる。<br>
+                        右側：主要アクション（primary action）、ユーザーが最も選択する可能性が高い行動を置く。例：OK / Save / Continue などの肯定的・前向きな操作。
+                        <br>
+                        左側：重要度の低いアクション・否定的アクション（secondary）、Cancel / Back など、操作を中断したり戻ったりする行動を配置する。この左右の視覚的序列により、ユーザーはどちらが“進むための操作”なのかを瞬時に判断できる。
+                    </p>
+                    <p class="para">
+                        縦並びでは、上下の序列がそのまま優先順位になる。
+                        上：主要アクション、
+                        下：副次的・否定的アクション
+                        横配置と同様に、より選択してほしい行動を知覚的な終端（この場合は上）に置くことで、行動の優先度を明確に示すことができる。
+                    </p>
+                    <p class="para">詳細に関しては下記記事にまとめている。<a href="https://note.com/aganir_seshisa/n/n44d8ab108cc8" target="_blank" rel="noopener noreferrer"><img src="./images/icon_open.svg" alt="" aria-hidden="true" width="16px" height="16px">配置・スタイル・文言から考えるダイアログのボタン設計</a></p>
+                    <div class="art__img">
+                        <img src="./images/modalDialog.png" alt="ボタンの配置例">
+                    </div>
+                    
+                </section>
+                <section class="sub-section">
                     <h3 class="section-hed3"><img alt="" aria-hidden="true" class="icon--h3" src="./images/icon_h3.svg">hover時のアニメーション</h3>
                     <p class="section-p">
-                        プライマリーボタンをセカンダリーボタンの色に反転させるのはやめた方がいい（そうしてるサイト多いけど）。
+                        プライマリーボタンをセカンダリーボタンの色に反転させるのはやめた方が良い。
                         プライマリー、セカンダリーは重要度を決める役割なのだから、ホバー時に反転させるのは適切なアニメーションではない。
                         基本的には、box-shadowをつけるか、色の濃さを一段階あげたものを使うなどが良い。
                     </p>
@@ -1916,10 +1954,10 @@
             <section class="section" id="bibliography">
                 <h2 class="section-hed2">参考文献</h2>
                 <ul class="section-list bibli-list">
-                    <li><a href="https://developer.apple.com/jp/design/human-interface-guidelines">Apple「ヒューマンインターフェースガイドライン」<span class="bibli-link">（https://developer.apple.com/jp/design/human-interface-guidelines）</span></a></li>
-                    <li><a href="https://m3.material.io">Google「Material Design」<span class="bibli-link">(https://m3.material.io)</span></a></li>
-                    <li><a href="https://waic.jp/translations/WCAG21/">Web Content Accessibility Guidelines (WCAG)2.1 <span class="bibli-link">(https://waic.jp/translations/WCAG21/)</span></a></li>
-                    <li><a href="https://www.digital.go.jp/policies/servicedesign/designsystem">デジタル庁「デザインシステム」<span class="bibli-link">(https://www.digital.go.jp/policies/servicedesign/designsystem)</span></a></li>
+                    <li><a href="https://developer.apple.com/jp/design/human-interface-guidelines" target="_blank" rel="noopener noreferrer">Apple「ヒューマンインターフェースガイドライン」<span class="bibli-link">（https://developer.apple.com/jp/design/human-interface-guidelines）</span></a></li>
+                    <li><a href="https://m3.material.io" target="_blank" rel="noopener noreferrer">Google「Material Design」<span class="bibli-link">(https://m3.material.io)</span></a></li>
+                    <li><a href="https://waic.jp/translations/WCAG21/" target="_blank" rel="noopener noreferrer">Web Content Accessibility Guidelines (WCAG)2.1 <span class="bibli-link">(https://waic.jp/translations/WCAG21/)</span></a></li>
+                    <li><a href="https://www.digital.go.jp/policies/servicedesign/designsystem" target="_blank" rel="noopener noreferrer">デジタル庁「デザインシステム」<span class="bibli-link">(https://www.digital.go.jp/policies/servicedesign/designsystem)</span></a></li>
                 </ul>
             </section>
 

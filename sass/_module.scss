@@ -125,6 +125,13 @@
   }
 }
 
+.art__img{
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+
 .section-shade{
   background-color: $BgSubtle;
   color: $TextDefault;
