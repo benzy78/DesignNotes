@@ -49,7 +49,7 @@
                     <span class="menu-label">Menu</span>
                 </button>
                 <ul class="header__nav-links">
-                    <li><a href="#uxprocess">UI/UX設計プロセス</a></li>
+                    <li><a href="#designprocess">デザインプロセス</a></li>
                     <!-- <li><a href="#uiprocess">UI設計プロセス</a></li> -->
                     <li><a href="#color">カラー</a></li>
                     <li><a href="#typography">タイポグラフィ</a></li>
@@ -79,92 +79,72 @@
                     自身のリファレンスとして蓄積しつつ、同じ分野に関心を持つ方の実務や学習にも役立てていただけることを目指しています。
                 </p>
             </section>
-            <section class="section" id="uxprocess">
-                <h2 class="section-hed2">UI/UX設計プロセス</h2>
-
-                <div class="art__img">
-                    <img src="./images/designProcess.png" alt="デザインプロセス">
-                </div>
-
-                <!-- <section class="sub-section">
-                    <h3 class="section-hed3"><img alt="" aria-hidden="true" class="icon--h3" src="./images/icon_h3.svg">UX設計プロセスの概略</h3>
-                    <ol class="ol mb32">
-                        <li>課題認識/仮説立て</li>
-                        <li>ターゲット層の設定（暫定的）</li>
-                        <li>前提知識の強化</li>
-                        <li>ユーザーリサーチ（探索型の定性調査）</li>
-                        <li>競合リサーチ</li>
-                        <li>ペルソナ設計</li>
-                        <li>カスタマージャーニー作成</li>
-                        <li>課題整理と課題解決策の設計</li>
-                        <li>要件定義</li>
-                        <li>情報設計</li>
-                        <li>ワイヤフレーム/プロトタイプ作成</li>
-                        <li>検証・フィードバック・再設計</li>
-                    </ol>
-                    <div class="btn__cont--ux">
-                        <a href="./html/uxprocess.html" class="btn--ux">UX設計プロセスの詳細を見る</a>
+            <section class="section" id="designprocess">
+                <h2 class="section-hed2">Design Process（GDDベース）</h2>
+                <div class="column2">
+                    <div class="column-card">
+                        <h3 class="column-card-h3">①リサーチ</h3>
+                        <ul class="column-card-list">
+                            <li><span class="marker">ビジネス・戦略理解</span>：ビジネス目標やKPI,KGIの理解、プロダクトの目的や製品ビジョン、マネタイズ手法等の理解</li>
+                            <li><span class="marker">文献調査</span>：プロダクトに関連する文献（競合製品や既存製品、社内資料）の分析</li>
+                            <li><span class="marker">競合分析</span>：競合サービスの特徴や、強み、弱み、差別化ポイントの分析</li>
+                            <li><span class="marker">ステークホルダーインタビュー</span>：各部門（主にマーケティングやエンジニア、営業）と制約条件やプロダクトの目的等の確認</li>
+                            <li><span class="marker">顧客インタビュー</span>：プロダクトを購入する人へのインタビュー。製品を購入する上でのゴールや、既存の課題などを把握する</li>
+                            <li><span class="marker">ユーザーインタビュー＆行動観察</span>：ユーザーのニーズや不満、モチベーション、ゴール等を把握</li>
+                        </ul>
                     </div>
-                </section> -->
+                    <div class="column-card">
+                        <h3 class="column-card-h3">②ペルソナモデリング</h3>
+                        <ul class="column-card-list">
+                            <li><span class="marker">基本属性</span>：名前、年齢、職業、居住地など</li>
+                            <li><span class="marker">背景・文脈</span>：どのような環境にいて、どんなライフスタイル送っているか</li>
+                            <li><span class="marker">ゴール</span>：そのサービスや製品を通じて何を成し遂げたいか</li>
+                            <li><span class="marker">ニーズと動機</span>：なぜそれが必要なのか、どのような価値を求めているか</li>
+                            <li><span class="marker">ペイン</span>：何に困っていて、何がストレスや不満になってるか</li>
+                            <li><span class="marker">行動特性</span>：製品や特定の状況に対してどのような振る舞いや考え方をするか</li>
+                            <li><span class="marker">優先付け</span>：場合によってはプライマリー、セカンダリーとペルソナタイプを決める</li>
+                        </ul>
+                    </div>
+                    <div class="column-card">
+                        <h3 class="column-card-h3">③要件定義</h3>
+                        <ul class="column-card-list">
+                            <li><span class="marker">問題ステートメント策定</span>：リサーチとペルソナから導き出された、解決すべき本質的な課題や不満点を言語化</li>
+                            <li><span class="marker">ソリューション・コンセプトの定義</span>：どのような体験を提供したいか、そのためにどんな解決策を提供するかを決める</li>
+                            <li><span class="marker">ユースケース・シナリオの作成</span>：ペルソナがゴールを達成するために、どのような流れで製品を利用するのか、そのために何ができる必要があるか整理</li>
+                            <li><span class="marker">要件の抽出</span>：ユースケースから具体的なデータ要素、機能要素に分けて必要なものを洗い出す</li>
+                        </ul>
+                    </div>
+                    <div class="column-card">
+                        <h3 class="column-card-h3">④情報設計・インタラクションデザイン</h3>
+                        <ul class="column-card-list">
+                            <li><span class="marker">ユーザーフローの整理</span>：ペルソナがゴールに達成するまでの行動を整理。類似サービスがあればフローを参考にする</li>
+                            <li><span class="marker">情報のグルーピングと階層構造の整理</span>：抽出したデータ要素や機能を、論理的なまとまり（カテゴリー）に分類する。また、情報の親子関係や優先順位を整理し、全体像を俯瞰できる階層構造を構築</li>
+                            <li><span class="marker">画面遷移とナビゲーション</span>：各画面がどのように繋がり、ユーザーが迷わず目的の場所へ移動できるかという動線を設計する</li>
+                            <li><span class="marker">レイアウト設計（ワイヤーフレーム）</span>：視覚的な装飾を排し、情報の配置、UI要素の優先度、コンテンツのボリュームを具体化する。ブラウザのレンダリング構造や実装の実現性を考慮しつつ、骨組みを作る</li>
+                            <li><span class="marker">プロトタイピング</span>：実際のデバイスでの操作感、インタラクション、画面間のつながりに違和感がないかを確認する</li>
+                        </ul>
+                    </div>
+                    <div class="column-card">
+                        <h3 class="column-card-h3">⑤ビジュアルデザイン</h3>
+                        <ul class="column-card-list">
+                            <li><span class="marker">デザインコンセプト・トンマナ策定</span>：サービスが提供したい価値や感情を言語化し、色、タイポグラフィ、雰囲気の方向性を決める</li>
+                            <li><span class="marker">スタイルガイド・デザインシステムの構築</span>：カラーパレット（プライマリー、アクセント、背景色）、フォントサイズ、余白（Spacing）、角丸などの基本ルールを規定する</li>
+                            <li><span class="marker">デザインの精緻化</span>：ワイヤーフレームに基づき、情報をより直感的に伝えるための視覚的な強弱、アイコン、画像などを適用し、完成図を作る</li>
+                            <li><span class="marker">マイクロインタラクション</span>：ボタンのホバー状態、ローディングアニメーション、画面遷移の演出など、操作の手応え（フィードバック）を設計</li>
+                        </ul>
+                    </div>
+                    <div class="column-card">
+                        <h3 class="column-card-h3">⑥検証・改善</h3>
+                        <ul class="column-card-list">
+                            <li><span class="marker">ヒューリスティック評価</span>：UIデザインの原則や視認性のガイドラインに照らし合わせ、レイアウトやナビゲーションに論理的な破綻がないか、実装前にセルフチェックを行う</li>
+                            <li><span class="marker">ユーザービリティテスト</span>：プロトタイプを用いて、ユーザーが迷わず操作できるか、認知負荷が高い箇所はないかなど、実際の振る舞いからインターフェースの課題を抽出する</li>
+                            <li><span class="marker">アクセシビリティテスト</span>：デバイス環境や身体的状況に関わらず、誰もが情報を正しく受け取り、操作を完結できる品質（コントラスト比や操作性）に達しているかを確認</li>
+                            <li><span class="marker">ゴール達成度の検証</span>：プロダクトが「ユーザーの抱える課題」を本当に解決できているか、当初定義したペルソナの「ゴール」を最短で達成できる設計になっているかを検証</li>
+                            <li><span class="marker">テストや検証で改善が必要な部分の改善</span></li>
+                        </ul>
+                    </div>
+                </div>
             </section>
-            <!-- ux process end -->
-
-            <!-- <section class="section" id="uiprocess">
-                <h2 class="section-hed2">UI設計プロセス</h2>
-                <section class="sub-section">
-                    <h3 class="section-hed3"><img alt="" aria-hidden="true" class="icon--h3" src="./images/icon_h3.svg">UI設計プロセスの概略</h3>
-                    <ol class="ol">
-                        <li>要件整理</li>
-                        <li>ビジュアル設計前の準備：タイポグラフィー、配色、レイアウト、コンポーネント等</li>
-                        <li>ビジュアル設計</li>
-                        <li>インタラクション設計</li>
-                        <li>プロトタイプ作成</li>
-                        <li>プロトタイプをもとにフィードバック ＊主にユーザビリティの観点で</li>
-                        <li>デザインシステムの構築</li>
-                        <li>検証：ユーザビリティ、アクセシビリティチェック</li>
-                    </ol>
-                </section>
-
-                <section class="sub-section">
-                    <h3 class="section-hed3"><img alt="" aria-hidden="true" class="icon--h3" src="./images/icon_h3.svg">要件整理</h3>
-                    <ul class="section-list">
-                        <li>各画面の目的、アクション、遷移の確認</li>
-                        <li>各要素のステート</li>
-                        <li>アクセシビリティ、利用シーン、利用端末等の制約を整理</li>
-                        <li>ユーザービリティ等のUIに関わる課題やニーズの確認</li>
-                        <li>命名規則</li>
-                        <li>デザイン原則等の設計方針（この時点では大まかな方向性だけ決め、細かいUIが整ってきたら詳細をつめる）</li>
-                    </ul>
-                </section>
-
-                <section class="sub-section">
-                    <h3 class="section-hed3"><img alt="" aria-hidden="true" class="icon--h3" src="./images/icon_h3.svg">ビジュアル設計前の準備</h3>
-                    <ul class="section-list">
-                        <li>タイポグラフィー</li>
-                        <li>配色</li>
-                        <li>アイコン設定（太さや角などの仕様統一）</li>
-                        <li>ロゴ</li>
-                        <li>コンポーネント設計：ワイヤフレームを参考にある程度まとめておく。</li>
-                        <li>バリアブル/ローカルスタイル管理：配色、余白、タイポグラフィー、エレベーション等</li>
-                    </ul>
-                </section>
-
-                <section class="sub-section">
-                    <h3 class="section-hed3"><img alt="" aria-hidden="true" class="icon--h3" src="./images/icon_h3.svg">デザインシステムの構築</h3>
-                    <p class="para">
-                        設計全体を通じて得られたスタイル・コンポーネント・設計原則を体系化し、再利用可能なガイドラインとしてまとめるフェーズ。
-                        本フェーズでは、実装チームとの連携やプロダクトの長期的な保守性を見据えて、設計の一貫性・効率性・拡張性を担保するための共通ルールを整備する。
-                        具体的には以下の要素を含む。
-                    </p>
-                    <ul class="section-list">
-                        <li>スタイルガイド：配色、タイポグラフィー、アイコン、余白、エレベーション、角丸などのビジュアル要素のルール</li>
-                        <li>コンポーネントライブラリ：UI上で共通して使用されるボタン、入力欄、カードなどのパーツ群とそのバリエーションをまとめる</li>
-                        <li>命名規則・構成ルール：各コンポーネントの命名ルール、階層構成、バリアントの設計方針</li>
-                        <li>設計原則：アクセシビリティ方針、UI/UX上の判断基準、設計思想の明文化</li>
-                    </ul>
-                </section>
-            </section> -->
-            <!-- ui process end -->
 
             <section class="section" id="color">
                 <h2 class="section-hed2">Color</h2>
@@ -1958,7 +1938,6 @@
                         <li><span class="accent">VI(Visual Identity)</span>：ロゴ・色・フォントなどの視覚要素</li>
                         <li><span class="accent">アフォーダンス</span>：オブジェクトの形状や見た目から操作方法を直感的に理解させる性質。</li>
                         <li><span class="accent">ヒューリスティック評価</span>：経験則や既知の原則に基づいてUIを評価する方法。ユーザーテストの前段階によく使われる。</li>
-                        <li><span class="accent">アフォーダンス</span>：オブジェクトの形状や見た目から操作方法を直感的に理解させる性質。</li>
                         
                     </ul>
                 </section>
@@ -1987,7 +1966,6 @@
             <footer class="footer">
                 <p class="footer__caption">©2025 Yuki Nishimura / Design Notes. All rights reserved.</p>
             </footer>
-
         </main>
     </div>
     
